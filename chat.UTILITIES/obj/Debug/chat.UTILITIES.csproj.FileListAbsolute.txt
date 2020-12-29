@@ -1,0 +1,34 @@
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.UTILITIES\bin\Debug\chat.UTILITIES.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.UTILITIES\bin\Debug\chat.UTILITIES.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.UTILITIES\obj\Debug\chat.UTILITIES.csprojAssemblyReference.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.UTILITIES\obj\Debug\chat.UTILITIES.csproj.CoreCompileInputs.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.UTILITIES\obj\Debug\chat.UTILITIES.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.UTILITIES\obj\Debug\chat.UTILITIES.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.UTILITIES\bin\Debug\chat.UTILITIES.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.UTILITIES\bin\Debug\chat.UTILITIES.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.csprojAssemblyReference.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\bin\Debug\chat.UTILITIES.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\bin\Debug\chat.UTILITIES.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.csprojAssemblyReference.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\bin\Debug\Sipay.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\bin\Debug\Sipay.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\bin\Debug\Newtonsoft.Json.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\bin\Debug\chat.UTILITIES.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\bin\Debug\chat.UTILITIES.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\bin\Debug\Sipay.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\bin\Debug\Sipay.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.UTILITIES\obj\Debug\chat.UTILITIES.pdb

@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "getFavList";
+    Layout = "~/Areas/Customer/Views/Shared/_CustomerLayout.cshtml";
+}
+@model List<chat.DTO.EEntity.CusFavDTO>
+
+<h4>Favori Modelleriniz</h4>
+<div class="card-content collapse show">
+    <div class="card-body">
+        <div class="row">
+            <table class="table table-striped table-bordered default-ordering">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Model Durumu</th>
+                        <th>Profil Fotoğrafı</th>
+                        <th>Yönet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                      
+                    <tr>
+                        <td>@item.ModelName</td>
+
+                        @if (item.StatusID == 1)
+                        {
+                            <td><button data-toggle="modal" data-target="#callShowPopUp" type="button" value="Oku" mid="@item.ModelID" class="btn btn-sm btn-success  sendFavEmpId"><i class="la la-phone"></i></button></td>
+
+                        }
+                        else
+                        {
+                            <td>Meşgul</td>
+                        }
+
+                        @if(item.ImageUrl==null)
+                        {
+                        item.ImageUrl = "/Areas/Assets/ModelImg/women.png";
+                        }
+                        <td>
+                            <div class="media-left pr-1">
+                                <span class="avatar avatar-md ">
+                                    <img class="media-object rounded-circle" src="@item.ImageUrl" />
+
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <button data-toggle="modal" data-target="#showFavConfirm" type="button" value="Oku" mid="@item.ModelID" class="btn btn-sm btn-warning sendtoBtnFavId">Favoriden Kaldır</button>
+
+                        </td>
+                    </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="showFavConfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mesaj İçeriği</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-content" style="word-wrap: break-word !important; padding:10px;">
+                Kullanıcıyı favorilerden kaldırmak üzeresiniz, eminmisiniz ?
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-success sendFavId" eid="" data-dismiss="modal">Onayla</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="callShowPopUp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-primary">
+                <h5> Özel Odada Görüşme Yapmak İstediğinize Eminmisiniz ?</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-12 form-group user-form-group">
+                                    <label class="control-label">Özel odada yaptığınız görüşmeler 5 dakikası 5 kredidir.Görüşme esnasında kredi otomatik olarak düşülecektir.</label>
+
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm pull-left">Kapat</button>
+                    <a href="#" class="btn btn-success btn-sm make makeFavCall" empFavid>Onayla</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

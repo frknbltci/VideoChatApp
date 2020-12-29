@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Employee/Views/Shared/_EmployeeLayout.cshtml";
+}
+@model List<chat.DTO.EEntity.EPayChartDTO>
+<!-- Zero configuration table -->
+<section id="configuration">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title"><b> Size Yapılan Ödemelerin Tablosu</b></h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="card-body card-dashboard">
+                        <p class="card-text">
+                            Bugüne kadar size yapılan ödemeler aşağıdaki tabloda gösterilmektedir. Arama yaparak inceleyebilirsiniz.
+                        </p>
+                        <table class="table table-striped table-bordered zero-configuration">
+                            <thead>
+                                <tr>
+                                    <th>Gönderici</th>
+                                    <th>Miktar</th>
+                                    <th>Gönderim Zamanı</th>
+                                    <th>Birim</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.AdminName</td>
+                                        <td>@item.Quantity </td>
+                                        <td>@item.CreatedTime.Date</td>
+                                        <td>@*<input  imgUrl="@item.sPayImg" type="button" data-target="#showImg" data-toggle="modal" value="Göster" class="btn btn-success btn-sm showD"  />*@ <i class="la la-money">TL</i></td>
+
+                                    </tr>
+                                }
+                           
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="showImg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-primary">
+                <h5> Paranızın Yatırıldığına Dair</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-12 form-group user-form-group">
+
+                                    
+                                    <img id="showDk" src="" width="400" height="400" />
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm pull-left">Kapat</button>
+                </div>
+            </div>
+        </div>
+ 
+    </div>
+
+</div>

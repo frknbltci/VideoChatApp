@@ -1,0 +1,547 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Canlı Sohbet Evi</title>
+    <meta name="description"
+          content="Türkiyenin en buyuk ve bedava chat odalarına katılarak birbirinden farklı oyunlar ile eğlenebilirsiniz. Hem eğlenip hem sohbet ederek yeni insanlar ile tanışabilirsiniz." />
+    <meta name="keywords"
+          content="ücretsiz canlı sohbet, canlı sohbet siteleri, üyeliksiz canlı sohbet siteleri, ücretsiz canlı sohbet siteleri, bedava canlı sohbet siteleri" />
+    <meta name="google-site-verification" content="tGqQH5Vg5gq8-NGRBrqMCh2N5R_u6TPMq-BFkCeiFUg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/Assets/Custom/Images/Logos/logo.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link href="~/Assets/OutAssets/sevsohbet.css" rel="stylesheet" />
+    <link href="~/Assets/OutAssets/sev-res.css" rel="stylesheet" />
+
+    <!-- STYLE -->
+    <link href="~/Assets/OutAssets/chat.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;subset=latin-ext"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&amp;subset=latin-ext"
+          rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script src="~/Assets/OutAssets/js/jquery-ui.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-148162007-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "UA-148162007-3");
+    </script>
+
+    <link href="~/Assets/toastr/toastr.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/css/vendors.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN MODERN CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/css/app.css">
+    <!-- END MODERN CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/css/core/colors/palette-gradient.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Assets/assets/css/style.css">
+
+    <link href="~/Assets/Custom/Styles/css/own.css" rel="stylesheet" />
+
+
+
+    <style>
+        div#first-block img {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+
+        body {
+            background: url(/Assets/Custom/Images/bannerbg2.jpg) no-repeat fixed top center / 100% rgba(0, 1, 2, 0);
+        }
+
+        form.form-horizontal label {
+            color: white;
+        }
+
+        .bankcs {
+            background-color: rgb(244, 243, 243);
+            text-align: center;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        div#quickTool {
+            position: fixed;
+            bottom: 186px;
+            background: rgba(238, 232, 233, 1);
+            padding-right: 20px;
+            padding-left: 20px;
+            right: 6px;
+            padding-top: 10px;
+            padding-bottom: 2px;
+            border-radius: 24px;
+            z-index: 99999;
+        }
+
+        ul.listtype li {
+            float: left;
+            margin-left: 20px;
+            list-style-type: none;
+        }
+
+            ul.listtype li a {
+                font-size: 16px;
+            }
+
+        ul.listtype {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btLightSkin a, .btDarkSkin .btLightSkin a {
+            color: #444;
+        }
+
+        .leftft {
+            float: left;
+        }
+
+            .leftft img {
+                width: 75px;
+            }
+
+        .rightft {
+            float: right;
+        }
+
+        span.wtitle {
+            display: block;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-top: 5px;
+            margin-inline-end: 0px;
+            font-size: 12px;
+        }
+
+        span.whatsapp {
+            display: block;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-top: 5px;
+            margin-inline-end: 0px;
+            font-size: 11px;
+        }
+
+        .rightft {
+            float: right;
+        }
+    </style>
+
+
+</head>
+
+<body onload="brwoControl()" class="size-1140">
+    <header>
+        <nav>
+            <div class="top-nav">
+                <div class="logo hide-l">
+                    <a href="/#">
+
+                        <img src="~/Assets/Custom/Images/Logos/logo.png" />
+                    </a>
+                </div>
+                <p class="nav-text">Menü</p>
+                <div class="top-nav s-12 l-5">
+                    <ul class="right top-ul chevron">
+                        <li><a href="/PoolLogin/LoginIndex">ANASAYFA</a></li>
+                        <li>
+                            <a href="/Home/AboutUs">HAKKIMIZDA</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="s-12 l-2">
+                    <li class="logo hide-s hide-m">
+                        <a href="/#">
+
+                            <img src="~/Assets/Custom/Images/Logos/logo.png" />
+                        </a>
+                    </li>
+                </ul>
+                <div class="top-nav s-12 l-5">
+                    <ul class="top-ul chevron" style="
+    height: 58px;">
+                        <li>
+                            <a href="/Home/Rules">KURALLAR</a>
+                        </li>
+                        <li>
+                            <a href="/Home/Contact">İLETİŞİM</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="top-nav s-12 l-2">
+                    @*<ul class="top-ul chevron">
+                            <li>
+                                <a href="/Home/PayPage">ÖDEME</a>
+                            </li>
+
+                        </ul>*@
+
+                </div>
+
+
+
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+    <!-- FOOTER -->
+
+    <div id="first-block">
+        <div class="line">
+            <div class="margin">
+                <div class="s-12 m-6 l-3 margin-bottom">
+                    <center>
+                        <img src="~/Assets/Custom/Images/1.png" alt="ibo" height="64" width="64" />
+                    </center>
+                    <h3>Canlı Sohbet Evi</h3>
+                    <p>
+                        2004 Yılından beri hizmet veren kaliteli sohbet odaları ile
+                        kullanıcılarına hizmet veren sohbet sitesidir.
+                    </p>
+                </div>
+                <div class="s-12 m-6 l-3 margin-bottom">
+                    <center>
+                        <img src="~/Assets/Custom/Images/2.png" alt="duyuru" height="64" width="64" />
+                    </center>
+                    <h3>Duyurular</h3>
+                    <p>
+                        Yenilenen Web, sitemize istediğiniz yerden hızlı bir şekilde
+                        ister mobil ister netten erişebilirsiniz.
+                    </p>
+                </div>
+                <div class="s-12 m-6 l-3 margin-bottom">
+                    <center>
+                        <img src="~/Assets/Custom/Images/3.png" alt="sevgi" height="64" width="64" />
+                    </center>
+                    <h3>Sohbet</h3>
+                    <p>
+                        Sohbet odalarımız üzerinden yeni insanlarla tanışabilir, onlarla
+                        chat yapabilir, Radyo dinleyebilirsiniz.
+                    </p>
+                </div>
+                <div class="s-12 m-6 l-3 margin-bottom">
+                    <center>
+                        <img src="~/Assets/Custom/Images/4.png" alt="mail" height="64" width="64" />
+                    </center>
+                    <h3>Destek</h3>
+
+                    <p>
+                        Her konudaki istek ve şikayetlerinizi admin@canlishobetevi.com
+                        adresinden bize gönderebilirsiniz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="second-block">
+        <div class="line">
+            <div class="margin-bottom">
+                <div class="margin">
+                    <article class="s-12 l-8 center">
+                        <h1>CANLI SOHBET EVİ CHAT ODALARI</h1>
+                        <p class="margin-bottom">
+                            Bedava Sohbet Odalarımıza Üyeliksiz bir şekilde bağlanabilir,
+                            Chat partnerinizi bulabilirsiniz.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="third-block">
+        <div class="line">
+            <h2>SOHBET ODALARI</h2>
+
+            <p class="subtitile">
+                Canlı Sohbet Evi, kullanıcılarının chat yapabilmesini sağlayan en kaliteli sohbet sitelerinden birisidir. Bu site siz kullanıcılarını daha rahat ve daha samimi insanlardan oluşan bir sohbet ortamında ağırlamaktadır. Sizlere en iyi şekilde hizmet verme hedefi gütmekteyiz. Hemen sende bulunduğun ortamda ağ bağlantısı bulunan bir noktada sohbet odalarımızı ziyaret edebilirsin.
+
+                Sohbet odalarımız sayesinde günlük hayatınızda chat sitelerine girmek isterseniz bizi ziyaret edebilirsiniz. Çünkü biz Türkiyenin en çok beğeni alan en yenilikçi sohbet sitelerinden birtanesiyiz. Sohbet ailesi olarak sizleri chat odalarımızda ağırlamaktan memnun ve kıvanç duyarız. Sizlere sunmuş olduğumuz yenilikci hizmetlerden dolayı kesinlikle sizlerden herhangi bir ek ücret talep etmemekteyiz. Sizlerde çevrenizdeki insanlarla daha iyi bir iletişim ve etkileşim kurmak istiyorsanız eğer yapamanız gereken tek şey sohbet odalarını ziyaret etmek olacaktır. Sohbet odalarımızda daha samimi bir ortam , dostluk ve arkadaşlık avantajlarımızdan yararlanabilirsiniz.
+
+                Günümüzde birbirinden farklı sohbet siteleri bulunmakla beraber bunların pek az bir oranı seviye ve kaliteyi yakalamış bulunmakta. Sizde kendiniz için daha kolay ve güvenilir bir  ortam kurabilmek için hemen sohbet odalarımıza bağlanabilirsiniz. Sizlere yenilikci teknoloji imkanları ile hizmet vermekteyiz. Chat siterinin zaten ana amacı şudur ki kullanıcıların internet ortamındaki zamanını en güzel en verimli şekilde geçirmesine olanak ve imkan sağlamasıdır. Sizleri sohbet odalarımıza davet ediyoruz. Kesintisiz sohbet odalarımızda sürekli internet ortamında sizlere hizmet vermeye açığız.
+
+                İnternet ortamı üzerinden sizlere yazılı ve görüntülü olarak hizmet veren siteyiz. Sizlere sunmuş olduğumuz hizmetler karşısında sizlerden hiçbir şekilde ek ücret talep etmemekteyiz. Tamaman sohbet odalarımızda kendinize en uygun her kesimdeki insanlara din,dil, ırk ve tercih ayrımı gözetmeksizin hizmet vermektedir. Bütün bu yeniliklerden haberdar olmak ve zamanınızı internet üzerinden en verimli şekilde geçirmek için bizden ayrılmayın.
+
+                Son olarak internet aleminde sizlere en güzel şekilde hizmet vermeyi hedeflemiş bir canlı sohbet sitesi olduğumuzu belirtelim. Kesinlikle zamanınızı bizimle en güzel şekilde geçirebileceğinize kanaat getiriyoruz. Değişen teknoloji ile beraber; sohbet odalarımızda kendisini güncellemekte vede yenilemektedir. Chat odalarımıza bağlanmak için odalarımızı ziyaret etmeniz ve bizi takip etmeniz yeterli olacaktır. Türkiyenin her noktasında ister mobil ister bilgisayar aracılığı ile odalarımıza bağlanabilirsiniz.
+
+            </p>
+            <h2>SIKÇA SORULAN SORULAR</h2>
+            <p class="subtitile">
+                <b>Üyelik ücretli mi ? </b> Sitemize üyelik ücretsizdir. sistemimize tıklayarak sitemize üye olabilir ve "Online kameralı üyeler" bölümünde görmüş olduğunuz üyelerin odalarına giriş yapabilirsiniz. <br />
+                <b>Neden üye olamıyorum ?</b>  Üye olurken seçtiğiniz kullanıcı ismi, daha evvel başka bir kullanıcı tarafından seçilmiş ise aynı isimle 2. bir üyelik açamazsınız. Bu yüzden başka bir kullanıcı deneyiniz. <br />
+                <b> "Genel Oda" ve "Özel Oda" nedir ? </b> <br />  Genel oda, tüm üyelerimizin ücretsiz giriş yapabildikleri, ortak sohbet edebildikleri odadır. Özel oda ise, süre satın almış üyelerimizin, kameralı üyeler ile bire bir, canlı sohbet edebildikleri odadır. Genel ve Özel odalarda iletişim bilgisi vermek kesinlikle yasaktır. <br />
+                <b> Neden yazamıyorum ? </b>  <br /> Genel odalarda yazabilmek için daha önce en az bir defa süre satın almış olmanız gerekmektedir. <br />
+                <b> Nasıl süre alırım ? </b> <br /> Süre satın alabilmek için sitemizin üyesi olmalısınız. Sitemize üye olduktan sonra "Süre Al" butonuna tıklayarak, Havale, Kredi Kartı ve Mobil Ödeme yöntemlerinin herhangi biri ile süre satın alabilirsiniz. <br />
+                <b> Özel Oda'ya nasıl geçerim ? </b> <br /> Hesabınızda mevcut süreniz var ise, kameralı üyelerin odalarına giriş yaptıktan  "Özel Odaya Geç" butonunu kullanarak kameralı üyelerle özel odaya geçebilir ve birebir sohbet edebilirsiniz. <br />
+                <b> "Kameralı üye tarafından engellendiniz" ne demek ? </b> <br /> Kameralı üyeler de diğer üyeler gibi dilediği üyelerle sohbet edebilir, istemediği üyeleri odalarından atabilir ya da engelleyebilirler. Bu durum karşısında servis sağlayıcı olarak canlisohbetevi.com yapabileceği bir eylem bulunmamaktadır. <br />
+                <b>   Hangi durumlarda hesabım kapatılır ? </b> <br /> Odalarda genel ahlaka aykırı yazışmalarda bulunulması, reklam ve benzeri metinlerin paylaşılması hesabınızın dondurulmasına, tekrarı durumunda hesabınızın kapatılmasına yol açar. Genel ve Özel odalarda iletişim bigisi (msn, telefon, e-posta vb.) vermek ise kesinlikle yasak olup, iletişim bilgisi paylaşımı durumunda herhangi bir uyarı verilmeksizin hesabınız kapatılır. <br />
+
+            </p>
+
+            @*<h3>Seviyeli Sohbet Etmek Mümkün</h3>
+                <p class="subtitile">
+                    İlk online canlı sohbet siteleri 90’lı yıllarda kullanılmaya
+                    başlanılmasına rağmen pek çok kişide sohbet sitelerine karşı bir
+                    önyargı olmaktadır. Birçok farklı konsepte sohbet sitesi olmasına
+                    karşı, genel olarak sitelerin öncelikleri kişilerin birbirleriyle
+                    saygılı ve seviyeli konuşmalarıdır. Bundan dolayı sanılanın aksine
+                    seviyeli sohbet etmek mümkündür. Argo, küfür, kaba, hakaret ve
+                    cinsel içerikli yazılar yazanlar hemen şikâyet edilip tekrar sohbet
+                    sitelerine girmesi engellenmektedir. Çünkü sohbet sitelerinde temel
+                    amaç insanların birbirleri ile sohbet etmesi, kaynaşması ve bir
+                    şeyleri paylaşmasıdır. Bunu kötüye kullanan kişiler, maalesef,
+                    çıktığından dolayı, bu kişiler diğer üyeler tarafından hemen şikâyet
+                    edilmeli ve sohbet sitelerinin seviyesini ve saygısını korumaya
+                    yardımcı olmalıdırlar. Eğer sohbet etmek isteyen kullanıcı diğer
+                    kullanıcılara nasıl yaklaşırsa öyle geri dönüş alır. Genelde olduğu
+                    gibi sohbet siteleri içerisinde kelimeleri büyük harfle yazmak
+                    bağırmak anlamına geldiği için kaba olarak algılanmaktadır. Bundan
+                    dolayı yazım kurallarına dikkat ederek ve saygılı bir şekilde
+                    konuşmak, diğer insanlarında öyle yaklaşmasını sağlayacaktır.
+                </p>
+                <h4>Mobil Canlı Chat</h4>
+                <p class="subtitile">
+                    Sohbet siteleri ilk ortaya çıktığı zaman insanlar bilgisayar
+                    üzerinden konuşuyorlardı. Zaman içinde teknolojinin gelişmesi ile
+                    birlikte cep telefonları birer bilgisayar haline geldi ve hemen
+                    hemen bilgisayarlarda yapılan her işlem ve uygulama telefonlarda da
+                    yapılır hale geldi. Aynı zamanda bilgisayarda sadece bilgisayar
+                    başında olunduğu zaman canlı sohbet siteleri kullanma şansı
+                    olmaktaydı. Bundan dolayı birçok sohbet sitesi uygulamalarını mobile
+                    taşıyarak, mobil canlı sohbet siteleri oluşturmuşlardır. Bu sayede
+                    kullanıcılar telefonları ile her an ve her yerde rahatlıkla diğer
+                    kullanıcılar ile doya doya sohbet etme keyfini yaşamaları mümkündür.
+                    Mobil chat sitelerinde de aynı kurallar geçerli olmaktadır. Birçok
+                    site ücretli ve üyelikle mobil sohbet hizmeti sunarken, bazı
+                    sitelerde tamamen ücretsiz bir şekilde hizmet vermektedir. Fakat
+                    telefona indirilecek sohbet sitesinin mobil uygulamasının güvenli
+                    olduğundan emin olunmalıdır. Bazı siteler telefonlara kendi
+                    uygulamalarının yanı sıra başka uygulamalarda otomatik
+                    indirmektedir. Bundan dolayı sitelerin öncelikle güvenilir olduğu
+                    araştırılmalı ve ona göre mobil uygulaması ve chat odaları
+                    kullanılmalıdır.
+                </p>
+                <h5>Sohbet Odaları Kuralları</h5>
+                <p class="subtitile">
+                    Sohbet edecek kişiler arasında düzeni sağlamak ve kötü niyetli
+                    kişileri engellemek adına canlı sohbet siteleri belirli kurallar
+                    koymaktadır. Belirli başlı kurallar siteden siteye değişmekle
+                    beraber genel olarak benzerdir. Kullanıcı adı ve sohbet kanallarının
+                    sorumlulukları sohbet sitelerinin sorumluluğundadır. Bundan dolayı
+                    ilgili kullanıcıya ve kanala müdahale etme hakkı bulunmaktadır.
+                    Kullanıcının söylemleri ise o kullanıcıya aittir ve eğer kullanıcı
+                    politik, ırkçı, cinsiyetçi, hakaret ve küfür içerikli paylaşım
+                    yaparsa kanaldan ve siteden engellenmektedir. Bu söylemlerin yanı
+                    sıra diğer kullanıcılara veya sitelere karşı zararlı veya çıkarcı
+                    eylemlerde yasaklanmıştır. Eylemin boyutuna bağlı olarak hukuki
+                    olarakta yaptırım yapılabilinmektedir. Genel olarak sohbet siteleri
+                    için yaş sınırlaması bulunmaktadır. Bu sınır 18 yaş olmakla birlikte
+                    bazı sitelerde 15 yaşa kadar kabul edilebilmektedir. Sohbet
+                    kanallarının özelliklerine bağlı olarak reklam, satış içerikli
+                    paylaşımların yapılması, ev adresi gibi özel adreslerin
+                    paylaşılması, cep telefonu, sosyal medya hesapları gibi kişisel
+                    bilgilerin paylaşılması da yasaklanmıştır. Kişiler üyesiz olarak
+                    veya üye olarak oluşturdukları hesap ile sohbet kanallarına dâhil
+                    olup bu kurallar çerçevesinde sohbet edebilmektedirler. Bu
+                    kuralların yanında yazılı olmayan etik kurallarda bulunmaktadır.
+                    Canlı sohbet siteleri için saygı önemli bir unsurdur. Bundan dolayı
+                    karşıdaki insanların etnik ve kültürlerine hakaret amaçlı
+                    söylemlerde bulunulmamalıdır. Kimse kimseyi sohbet etmek için
+                    zorlamamalıdır. Bu tür zorlamalar sıklıkla yaşanmaktadır. Bundan
+                    dolayı olabildiğince kaçınılmalıdır.
+                </p>
+                <h5>Sohbet Odası Çeşitleri</h5>
+                <p class="subtitile">
+                    Sohbet sitelerinde herkes kendi isteğine göre kişileri ve grupları
+                    bulabilmektedir. Her kesime ve her isteğe hitap eden çok çeşitli
+                    sohbet siteleri bulunmaktadır. Böylelikle canlı sohbet siteleri
+                    kullanan kişiler kendi kafa yapılarına göre istedikleri kişilerle
+                    sohbet etme imkânı bulabilmektedirler. Bu sohbet sitelerine örnek
+                    olarak Avrupa ya da gurbetçi sohbet odaları örnek verilebilir.
+                    Gurbette yaşayan Türk vatandaşları kendi vatandaşları ile rahatlıkla
+                    konuşup sohbet edebileceği bir platform oluşturarak vakitlerini en
+                    güzel şekilde değerlendirme fırsatı yakalıyorlar. Arkadaşlık veya
+                    evlilik siteleri iste arkadaş olmak isteyen veya kendine eş arayan
+                    insanların kullandığı sohbet siteleridir. Her geçen gün internetten
+                    tanışıp evlenen insanların sayısı artmaktadır. Bu durumun evlilik
+                    sitelerinin payı da bir hayli fazladır. İslami sohbet siteleri, dini
+                    hassasiyetlerini ve inançlarını ön palanda tutan kişilerin
+                    paylaştığı sohbet siteleridir.
+                </p>
+                <h5>Şehirlere Ve Ülkelere Göre Sohbet Siteleri</h5>
+                <p class="subtitile">
+                    Sohbet sitelerine üye olunup ve sohbet edilmeye başlandığı zaman çok
+                    çeşitli ve her yerden insanla karşılaşmak mümkündür. Fakat insanlar
+                    kendi memleketlerinden veya belirli bir şehirden insanlarla tanışıp
+                    arkadaş olmak ve onlarla sohbet etmek istemektedir. Bu durumlar için
+                    şehirlere ve ülkelere özel canlı sohbet siteleri bulunmaktadır.
+                    Türkiye’nin 81 iline özel ve Almanya, Hollanda gibi Türk nüfusunun
+                    fazla olduğu ülkeler için özel sohbet odaları bulunmaktadır. Bu
+                    sohbet odalarında insanlar, birbirleriyle kısa veya uzun süreli
+                    canlı bir şekilde sohbet etme imkânı bulmaktadırlar. Bu özel sohbet
+                    odaları kullanıcılar tarafında yoğun ilgi görmektedir. Bu sohbet
+                    siteleri sayesinde insanlar, boş vakitlerinde yeni insanlar
+                    tanıyarak ve sohbet ederek geçirmektedirler. Hem farklı kültürlerden
+                    insanları tanımanın yanı sıra hemşerilerini de tanıma fırsatı
+                    bulmaktadır.
+                </p>
+                <h6>Günümüz Chat Siteleri</h6>
+                <p class="subtitile">
+                    İnternet üzerinde chat siteleri ilk açıldığı zamandan bu zamana
+                    kadar siteler gelişim göstermişlerdir. Çok geniş ağa sahip ve geniş
+                    kitleye hitap eder hale gelmişlerdir. Bu bakımdan da sohbet
+                    sitelerinin popülerliği her geçen gün artmaktadır. Günümüz chat
+                    siteleri kullanıcılara eğlenceli vakit geçirme fırsatı sunmaktadır.
+                    Canlı sohbet siteleri ile karşılıklı sohbet edercesine sohbet etmek
+                    mümkündür. Görüntülü veya mesaj ile sohbet edilebilme imkânı
+                    bulunmaktadır. Böylece insanlar yeni insanlarla tanışmanın yanı sıra
+                    çok güzel arkadaşlıklarda kurabilmektedirler. Sohbet sitelerine ise
+                    üye olmak ve sohbete başlamak çok kolaydır. Birçok site kişiler için
+                    üye olmadan sadece kullanıcı adı belirleyerek giriş yapma fırsatı
+                    sunmaktadır. Bunun yanında ayrıntılı üye olarak ve üyelik sırasında
+                    istenen, kişiyi tanıtıcı bilgilerle de üye olmak ve sohbete başlamak
+                    mümkündür. Üye olma metottu tamamen kişinin isteğine kalmıştır.
+                    Böylece sınırsız sohbetin keyfini çıkarmak mümkündür.
+                </p>*@
+
+        </div>
+    </div>
+    <div class="container-fluid bankcs"><img alt="bankalar" class="altbankalar" height="30" src="~/Assets/Custom/Images/Logos/alt_bankalar.png" width="1120"></div>
+
+    <footer>
+        <ul class="listtype">
+            <li><a href="/Home/PrivacyPrinciples">Gizlilik İlkeleri</a></li>
+            <li><a href="/Home/ReturnAndExchangeConditions">İade ve Değişim Koşulları</a></li>
+            <li><a href="/Home/BankAndAccountInformation">Banka ve Hesap Bilgileri</a></li>
+            <li><a href="/Home/ProtectionOfPersonalData">Kişisel Verilerin Korunması</a></li>
+            <li><a href="/Home/TermsOfUse">Kullanım Koşulları</a></li>
+        </ul>
+        <div class="line">
+            <div class="s-12 l-12" style=" text-align: center; ">
+                <p>@@ Copyright 2020 ~ CANLISOHBETEVİ ~ Tüm Hakları Saklıdır</p>
+            </div>
+        </div>
+    </footer>
+    <div id="quickTool">
+        
+            <div class="leftft">
+                <img src="~/Assets/Custom/Images/Logos/whatsapp-logo.png">
+            </div>
+      
+
+            <div class="rightft">
+                <span class="wtitle">CANLI DESTEK</span>
+                <a target="_blank" href="https://wa.me/905524127818/?text=Merhaba" );">
+                    <span class="wtel">+90 552 412 78 18</span>
+                </a>
+                <span class="wtitle">Whatsapp ile İletişim</span>
+                @*<span class="whatsapp">WHATSAPP</span>*@
+                <a target="_blank" href="https://wa.me/905523534874/?text=Merhaba" );">
+                    <span class="wtel">+90 552 353 48 74</span>
+                </a>
+
+
+
+            </div>
+    </div>
+    
+
+    <script src="~/Assets/OutAssets/js/responsee.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- BEGIN VENDOR JS-->
+    <script src="~/Assets/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    @*<script src="~/Scripts/jquery-1.6.4.js"></script>*@
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="~/Assets/app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
+    <script src="~/Assets/app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
+    <script src="~/Assets/app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
+    <script src="~/Assets/app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js"
+            type="text/javascript"></script>
+    <script src="~/Assets/app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js"
+            type="text/javascript"></script>
+    <script src="~/Assets/app-assets/data/jvector/visitor-data.js" type="text/javascript"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!--BEGIN TABLE SCRİPTS-->
+    @*<script src="~/Assets/app-assets/js/scripts/tables/datatables/datatable-basic.js"></script>*@
+
+    <!--END TABLE SCRİPTS-->
+    <!-- BEGIN MODERN JS-->
+    <script src="~/Assets/app-assets/js/core/app-menu.js" type="text/javascript"></script>
+    <script src="~/Assets/app-assets/js/core/app.js" type="text/javascript"></script>
+    @*<script src="~/Assets/app-assets/js/scripts/customizer.js" type="text/javascript"></script>*@
+    <!-- END MODERN JS-->
+    <script src="~/Assets/app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <script src="~/Assets/app-assets/js/scripts/tables/datatables/datatable-advanced.js"></script>
+    <!-- BEGIN PAGE LEVEL JS-->
+    @*<script src="~/Assets/app-assets/js/scripts/pages/dashboard-sales.js" type="text/javascript"></script>*@
+
+    <script src="~/Assets/Custom/chatFolder/peer.min.js"></script>
+
+    <script src="~/Assets/toastr/toastr.js"></script>
+    <script src="~/Assets/Custom/PoolUtil.js"></script>
+
+
+    <script src="~/Scripts/jquery.signalR-2.4.1.js"></script>
+    <script src="/signalr/hubs"></script>
+
+    <script>
+        var strchrome = "https://www.google.com.tr/chrome/";
+        function brwoControl() {
+            if (window.chrome) {
+
+            } else {
+
+                alert("Tarayıcınızın Google Chrome olması gerekmektedir. ");   
+                setTimeout(function myfunction() {
+                    window.location.href = "https://www.google.com/intl/tr_tr/chrome/";
+                }, 2000);
+            }
+         }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.SERVICES\bin\Debug\chat.SERVICES.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.SERVICES\bin\Debug\chat.SERVICES.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.SERVICES\obj\Debug\chat.SERVICES.csproj.CoreCompileInputs.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.SERVICES\obj\Debug\chat.SERVICES.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.SERVICES\obj\Debug\chat.SERVICES.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\chat.SERVICES.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\chat.SERVICES.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\chat.CORE.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\chat.DATA.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\EntityFramework.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\chat.CORE.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\chat.DATA.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\chat.DATA.dll.config
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\EntityFramework.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\obj\Debug\chat.SERVICES.csprojAssemblyReference.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\obj\Debug\chat.SERVICES.csproj.CoreCompileInputs.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\obj\Debug\chat.SERVICES.csproj.CopyComplete
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\obj\Debug\chat.SERVICES.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\obj\Debug\chat.SERVICES.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\chat.DTO.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\chat.DTO.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\AutoMapper.Net4.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\AutoMapper.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\AutoMapper.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\AutoMapper.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.SERVICES\bin\Debug\AutoMapper.Net4.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\AutoMapper.Net4.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\chat.SERVICES.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\chat.SERVICES.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\AutoMapper.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\chat.CORE.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\chat.DATA.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\chat.DTO.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\EntityFramework.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\chat.CORE.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\chat.DATA.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\chat.DATA.dll.config
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\chat.DTO.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\AutoMapper.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\AutoMapper.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\AutoMapper.Net4.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\bin\Debug\EntityFramework.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.csprojAssemblyReference.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.csproj.CopyComplete
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\AutoMapper.Net4.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.SERVICES.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.SERVICES.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\AutoMapper.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.CORE.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.DATA.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.DTO.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\EntityFramework.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.CORE.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.DATA.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.DATA.dll.config
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.DTO.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\AutoMapper.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\AutoMapper.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\AutoMapper.Net4.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\EntityFramework.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.csprojAssemblyReference.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.csproj.CopyComplete
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.UTILITIES.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\chat.UTILITIES.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\Sipay.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\Sipay.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.SERVICES\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\AutoMapper.Net4.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.SERVICES.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.SERVICES.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\AutoMapper.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.CORE.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.DATA.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.DTO.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.UTILITIES.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\Sipay.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.CORE.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.DATA.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.DATA.dll.config
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.DTO.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\chat.UTILITIES.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\AutoMapper.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\AutoMapper.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\AutoMapper.Net4.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\Sipay.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.SERVICES\obj\Debug\chat.SERVICES.pdb

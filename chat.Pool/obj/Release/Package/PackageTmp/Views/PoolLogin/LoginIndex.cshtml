@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "LoginIndex";
+    Layout = "~/Views/Shared/_LayoutBeforeLogin.cshtml";
+}
+
+<section>
+    <div id="head">
+        <div class="line">
+            <form enctype="multipart/form-data" method="post" onsubmit="return poolLoginPost(this)" accept-charset="utf-8">
+                <div class="sign-up-form" align="center">
+                    <div class="line-divider"></div>
+                    <div class="form-wrapper">
+                        <h4>Sohbet Girişi</h4>
+                        <div>
+                            <fieldset class="form-group">
+                                <input type="email"
+                                       name="Email" required
+                                       id="cEmail"
+                                       class="form-control login-box-inputs nickname"
+                                       placeholder="Email" />
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <input type="password"
+                                       name="Password"
+                                       id="cPassword"
+                                       class="form-control login-box-inputs password"
+                                       placeholder="Şifre" required>
+                            </fieldset>
+
+                        </div>
+                        <div class="">
+                            <div class="">
+
+                                <p class=""> Hesabınız yok mu ? <a href="/Register/Index">Hesap Oluştur</a></p>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn-secondary" value="Giriş Yap" />
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+</section>
+

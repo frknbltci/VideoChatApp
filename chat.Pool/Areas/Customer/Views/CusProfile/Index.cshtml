@@ -1,0 +1,209 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Customer/Views/Shared/_CustomerLayout.cshtml";
+}
+@model chat.DTO.EEntity.CustomerProfileDTO
+
+<style>
+    .galImgCus {
+        width: 120px;
+        height: 120px;
+        padding: 15px;
+        overflow: auto;
+        margin-left: 25px;
+        margin-top: 15px;
+    }
+
+        .galImgCus:hover {
+            border: 1px solid black;
+            width: 180px;
+            height: 180px;
+        }
+
+</style>
+
+<form method="post" enctype="multipart/form-data" action="/CusProfile/ProfileSave">
+    <div class="col-xl-12 col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Kişisel Bilgileriniz</h4>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+
+                    <div class="tab-content px-1 pt-1 border-grey border-lighten-2 border-0-top">
+                        <div role="tabpanel" class="tab-pane active" id="tab21" aria-expanded="true" aria-labelledby="base-tab21">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                            <div class="heading-elements">
+                                                <ul class="list-inline mb-0">
+                                                    <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                                    <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                                </ul>
+                                            </div>
+                              
+                                            <div class="form-group">
+                                                <div class="media-left pl-2 pt-2">
+                                                    <a href="#" target="_blank" class="profile-image">
+                                                        <img id="uploadImage" src="@Model.ImageUrl" class="rounded-circle img-border height-100" alt="@Model.UserName">
+                                                        <input name="editCusOldImg" style="display:none;" type="text" value="@Model.ImageUrl" class="hidden" />
+                                                        <input name="uploadImgCus" style="display:none;" type="text" readonly value="" class="hidden sendValImgCus" />
+                                                    </a>
+                                                    <label>Profil resminizi galeriden seçerek güncelleyebilirsiniz</label>
+                                                </div>
+                                                <br />
+                                                <div class="col-md-9">
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".mediaList">Galeri</button>
+
+                                                    @*<label id="projectinput8" class="file center-block">
+                                                        <input type="file" name="resim" id="EmpProfilePhoto">
+                                                    </label>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @if (TempData["mes"] == null)
+                                        {
+                                            <span></span>
+                                        }
+                                        else
+                                        {
+                                            if (TempData["mes"].ToString() != "err")
+                                            {
+
+                                                <span>@Html.Raw(TempData["mes"].ToString())</span>
+
+                                            }
+                                            else if (TempData["mes"].ToString() == "err")
+                                            {
+                                                <span class="errGoster">Güncelleme Başarısız</span>
+                                            }
+
+                                        }
+
+                                        <div class="card-content collpase show">
+                                            <div class="card-body">
+                                                <div class="form-body">
+                                                    <h4 class="form-section"><i class="la la-user"></i> Kullanıcı Bilgileri</h4><br />
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="userinput3">Kullanıcı Adı</label>
+                                                                <div class="col-md-9">
+                                                                    <input type="text" readonly id="userinput3" class="form-control border-primary" value="@Model.UserName" placeholder="Kullanıcı Adı" name="UserName">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="userinput3">Şifre</label>
+                                                                <div class="col-md-9">
+                                                                    <input value="@Model.Password" required type="text" id="EmpPassword" class="form-control border-primary" placeholder="Şifre" name="Password">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="userinput5">Email</label>
+                                                                <div class="col-md-9">
+                                                                    <input name="Email" readonly required value="@Model.Email" class="form-control border-primary" type="email" placeholder="Email">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="status">Çevrim Durumunuz </label>
+                                                                <div class="col-md-9">
+                                                                    <select id="status" name="StatusID" class="form-control">
+                                                                        @foreach (var item in Model.StatusList)
+                                                                        {
+                                                                            if (item.ID == Model.StatusID)
+                                                                            {
+                                                                                <option value="@item.ID" selected>@item.StatusName</option>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <option value="@item.ID">@item.StatusName</option>
+                                                                            }
+                                                                        }
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                          
+
+
+
+                                                    
+
+
+                                                        </div>
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions right">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="la la-check-square-o"></i> Kaydet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="modal fade mediaList" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <b style="text-align:center; margin-top:5px;">Profil Fotoğrafınızı seçin</b>
+            <div class="row">
+                @{ string[] filePaths = Directory.GetFiles(Server.MapPath("~/Areas/Assets/StaticCustomerImages/"));
+                    foreach (string filePath in filePaths)
+                    {
+
+                        string fileName = Path.GetFileName(filePath);
+
+
+                        <img class="galImgCus" src="/Areas/Assets/StaticCustomerImages/@fileName" />
+
+                    }
+                }
+
+
+            </div>
+
+            <div class="modal-footer">
+                <button data-dismiss="modal" fname="" class="btn btn-success saveResCus">Seç</button>
+                <button data-dismiss="modal" class="btn btn-danger">Vazgeç</button>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

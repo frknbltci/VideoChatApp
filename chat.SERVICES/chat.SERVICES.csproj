@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C31BF589-0885-461E-832D-AAAB25A32477}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>chat.SERVICES</RootNamespace>
+    <AssemblyName>chat.SERVICES</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\Admin\IAdminCustomerService.cs" />
+    <Compile Include="Interfaces\Admin\IAdminUserService.cs" />
+    <Compile Include="Interfaces\Customer\ICustomerUserService.cs" />
+    <Compile Include="Interfaces\Employee\IEmployeeUserService.cs" />
+    <Compile Include="Interfaces\ICustomerPaymentService.cs" />
+    <Compile Include="Interfaces\IFavoritesService.cs" />
+    <Compile Include="Interfaces\IMessageEmpAdminService .cs" />
+    <Compile Include="Interfaces\IMessageCusAdminService.cs" />
+    <Compile Include="Interfaces\IMessagesService.cs" />
+    <Compile Include="Interfaces\IPayChartService.cs" />
+    <Compile Include="Interfaces\IPaymentService.cs" />
+    <Compile Include="Interfaces\IPoolBanService.cs" />
+    <Compile Include="Interfaces\IPoolLoginService.cs" />
+    <Compile Include="Interfaces\ITimeLineService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Admin\AdminCustomerService.cs" />
+    <Compile Include="Services\Admin\AdminUserService.cs" />
+    <Compile Include="Services\CustomerPaymentService.cs" />
+    <Compile Include="Services\Customer\CustomerUserService.cs" />
+    <Compile Include="Services\Employee\EmployeeUserService.cs" />
+    <Compile Include="Services\FavoritesService.cs" />
+    <Compile Include="Services\MessageCusAdminService.cs" />
+    <Compile Include="Services\MessageEmpAdminService .cs" />
+    <Compile Include="Services\MessagesService.cs" />
+    <Compile Include="Services\PayChartService.cs" />
+    <Compile Include="Services\PaymentService.cs" />
+    <Compile Include="Services\PoolBanService.cs" />
+    <Compile Include="Services\PoolLoginService.cs" />
+    <Compile Include="Services\TimeLineService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\chat.CORE\chat.CORE.csproj">
+      <Project>{B2137B6D-B95C-40AC-97E0-A030653C4516}</Project>
+      <Name>chat.CORE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\chat.DATA\chat.DATA.csproj">
+      <Project>{4B84BB7B-4467-4E0B-9352-C103CC54B466}</Project>
+      <Name>chat.DATA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\chat.DTO\chat.DTO.csproj">
+      <Project>{E78238A3-045B-47F0-9AF4-B95CB74DA22F}</Project>
+      <Name>chat.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\chat.UTILITIES\chat.UTILITIES.csproj">
+      <Project>{006bd551-a3c0-4da0-94f4-28ab19d636af}</Project>
+      <Name>chat.UTILITIES</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+</Project>

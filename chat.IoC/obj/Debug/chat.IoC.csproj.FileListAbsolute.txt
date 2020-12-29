@@ -1,0 +1,203 @@
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\chat.IoC.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\chat.IoC.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\obj\Debug\chat.IoC.csprojAssemblyReference.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\obj\Debug\chat.IoC.csproj.CoreCompileInputs.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\obj\Debug\chat.IoC.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\obj\Debug\chat.IoC.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\chat.IoC.dll.config
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\chat.CORE.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\chat.DATA.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\CommonServiceLocator.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.Helpers.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.Mvc.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.Razor.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.WebPages.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Abstractions.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Configuration.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Container.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Interception.Configuration.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Interception.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Mvc5.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.RegistrationByConvention.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.ServiceLocation.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\EntityFramework.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\chat.CORE.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\chat.DATA.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\chat.DATA.dll.config
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\CommonServiceLocator.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.Helpers.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.Mvc.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.Razor.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.WebPages.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Abstractions.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Configuration.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Container.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Interception.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.Interception.Configuration.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.RegistrationByConvention.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\Unity.ServiceLocation.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\bin\Debug\EntityFramework.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.IoC\obj\Debug\chat.IoC.csproj.CopyComplete
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.IoC.dll.config
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.IoC.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.IoC.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.CORE.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.DATA.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\CommonServiceLocator.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.Helpers.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.Mvc.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.Razor.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Abstractions.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Configuration.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Container.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Interception.Configuration.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Interception.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Mvc5.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.RegistrationByConvention.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.ServiceLocation.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\EntityFramework.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.CORE.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.DATA.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.DATA.dll.config
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\CommonServiceLocator.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.Helpers.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.Mvc.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.Razor.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Abstractions.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Configuration.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Container.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Interception.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.Interception.Configuration.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.RegistrationByConvention.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\Unity.ServiceLocation.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\EntityFramework.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\obj\Debug\chat.IoC.csprojAssemblyReference.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\obj\Debug\chat.IoC.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\obj\Debug\chat.IoC.csproj.CopyComplete
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\obj\Debug\chat.IoC.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\obj\Debug\chat.IoC.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.SERVICES.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.DTO.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\AutoMapper.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.SERVICES.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\chat.DTO.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\AutoMapper.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.IoC\bin\Debug\AutoMapper.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.IoC.dll.config
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.IoC.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.IoC.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.CORE.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.DATA.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.SERVICES.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\CommonServiceLocator.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.Helpers.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.Mvc.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.Razor.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Abstractions.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Configuration.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Container.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Interception.Configuration.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Interception.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Mvc5.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.RegistrationByConvention.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.ServiceLocation.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\EntityFramework.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.DTO.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\AutoMapper.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.CORE.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.DATA.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.DATA.dll.config
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.SERVICES.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\CommonServiceLocator.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.Helpers.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.Mvc.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.Razor.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Abstractions.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Configuration.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Container.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Interception.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.Interception.Configuration.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.RegistrationByConvention.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\Unity.ServiceLocation.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\EntityFramework.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\chat.DTO.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\AutoMapper.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\AutoMapper.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\obj\Debug\chat.IoC.csprojAssemblyReference.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\obj\Debug\chat.IoC.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\obj\Debug\chat.IoC.csproj.CopyComplete
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\obj\Debug\chat.IoC.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\obj\Debug\chat.IoC.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.IoC\bin\Debug\AutoMapper.Net4.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\AutoMapper.Net4.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.IoC.dll.config
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.IoC.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.IoC.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.CORE.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.DATA.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.SERVICES.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\CommonServiceLocator.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.Helpers.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.Mvc.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.Razor.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Abstractions.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Configuration.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Container.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Interception.Configuration.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Interception.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Mvc5.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.RegistrationByConvention.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.ServiceLocation.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.DTO.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\AutoMapper.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.CORE.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.DATA.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.DATA.dll.config
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.SERVICES.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\CommonServiceLocator.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.Helpers.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.Mvc.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.Razor.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Abstractions.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Configuration.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Container.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Interception.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.Interception.Configuration.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.RegistrationByConvention.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\Unity.ServiceLocation.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\chat.DTO.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\AutoMapper.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\bin\Debug\AutoMapper.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\obj\Debug\chat.IoC.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\obj\Debug\chat.IoC.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\obj\Debug\chat.IoC.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\obj\Debug\chat.IoC.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.IoC\obj\Debug\chat.IoC.pdb

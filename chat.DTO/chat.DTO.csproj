@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E78238A3-045B-47F0-9AF4-B95CB74DA22F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>chat.DTO</RootNamespace>
+    <AssemblyName>chat.DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EEntity\AdminDeserveDTO.cs" />
+    <Compile Include="EEntity\AdminHomeDTO.cs" />
+    <Compile Include="EEntity\APaymentDTO.cs" />
+    <Compile Include="EEntity\CCustomerDTO.cs" />
+    <Compile Include="EEntity\ConversationDTO.cs" />
+    <Compile Include="EEntity\CusBanDTO.cs" />
+    <Compile Include="EEntity\CusEmpDTO.cs" />
+    <Compile Include="EEntity\CusFavDTO.cs" />
+    <Compile Include="EEntity\CustomerProfileDTO.cs" />
+    <Compile Include="EEntity\EAdminAdetlerDTO.cs" />
+    <Compile Include="EEntity\EAdminCustomerDTO.cs" />
+    <Compile Include="EEntity\EDeserveDTO.cs" />
+    <Compile Include="EEntity\EmployeeInfoDTO.cs" />
+    <Compile Include="EEntity\EPayChartDTO.cs" />
+    <Compile Include="EEntity\EEmployeeDTO.cs" />
+    <Compile Include="EEntity\MessageDTO.cs" />
+    <Compile Include="EEntity\PaymentDTO.cs" />
+    <Compile Include="EEntity\PoolLoginDTO.cs" />
+    <Compile Include="EEntity\PoolMainDTO.cs" />
+    <Compile Include="EEntity\EmployeeProfileDTO.cs" />
+    <Compile Include="EEntity\EAdminUserDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\chat.CORE\chat.CORE.csproj">
+      <Project>{b2137b6d-b95c-40ac-97e0-a030653c4516}</Project>
+      <Name>chat.CORE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,1552 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMainPool.cshtml";
+
+    var tip = ((chat.UTILITIES.SessionOperations.EmpCusSessionContext)Session["EmpCusSessionContext"]).Type;
+
+    //tip 2 == emp
+    //tip 1 == cus
+}
+@model  chat.DTO.EEntity.PoolMainDTO
+<style>
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        display: contents;
+    }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 160px;
+            background-color: dodgerblue;
+            color: black;
+            height: 130px;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+    .bani {
+        font-size: 31px !important;
+        float: right;
+        margin-right: 15px;
+        margin-top: 13px;
+    }
+
+    .cmodelyazi {
+        justify-content: flex-start;
+        display: flex;
+        margin-left: 40px;
+        margin-top: 15px;
+    }
+
+    #collapseOne h5 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 13px;
+        margin-top: 13px;
+        line-height: 20px;
+        padding-left: 2px;
+    }
+
+    /*MESSAGE FOR*/
+
+    p.intro {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        margin: 0 0 -50px;
+    }
+
+    .body {
+        background: #303030;
+        padding: 1px;
+        min-height: 100vh;
+    }
+
+    .chat-cont {
+        position: relative;
+        z-index: 1;
+        width: 350px;
+        box-shadow: 0 5px 10px -4px rgba(0,0,0,0.5);
+        background: #fff;
+        margin: 50px auto;
+        color: #999;
+    }
+
+    @@media (max-width: 767px) {
+        .body .chat-cont {
+            width: 90%;
+        }
+
+        .body {
+            padding-bottom: 100px;
+        }
+    }
+
+    .chat-cont > div {
+        padding: 15px;
+        background: #0af;
+        color: #fff;
+    }
+
+    .chat-cont .chat-body {
+        background: #eee;
+        display: flex;
+        align-items: flex-end;
+        min-height: 350px;
+    }
+
+        .chat-cont .chat-body .chats-text-cont {
+            width: 100%;
+            padding: 5px;
+            padding-right: 15px;
+            max-height: 350px;
+            overflow-y: overlay;
+            overflow-x: hidden;
+        }
+
+    .body *::-webkit-scrollbar {
+        width: 5px;
+        background: transparent;
+        position: absolute;
+        left: 0;
+    }
+
+    .body *::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,0);
+        border-radius: 5px;
+    }
+
+    .body *:hover::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,.3);
+        border-radius: 5px;
+    }
+
+    .chat-cont .chat-body .chat-text {
+        margin-bottom: 15px;
+        text-align: right;
+    }
+
+        .chat-cont .chat-body .chat-text img {
+            height: 26px;
+            padding: 5px;
+        }
+
+        .chat-cont .chat-body .chat-text > span {
+            padding: 5px 15px;
+            border-radius: 10px;
+            background: #0af;
+            display: inline-block;
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+
+    .chat-cont .chat-header {
+        display: flex;
+    }
+
+    .chat-header .name {
+        position: relative;
+        line-height: 40px;
+        display: inline-block;
+        flex: 2;
+        position: relative;
+        padding-left: 50px;
+    }
+
+        .chat-header .name:before {
+            content: '';
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background: #fff url(http://main.buildabazaar.com/img/shrd/html_widget_images/38/14/604/12a5a8d897be2_nobodym.original.jpg.999xx.jpg) center no-repeat / 100%;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    .chat-header .menu {
+        display: flex;
+        position: relative;
+    }
+
+        .chat-header .menu .burg-menu ul.list, .emoji-dashboard {
+            display: none;
+            padding: 0;
+            position: absolute;
+            top: 110%;
+            margin: 0;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+            background: #fff;
+            list-style-type: none;
+            color: #a0a0a0;
+            right: 0;
+            z-index: 9999;
+        }
+
+    .emoji-dashboard {
+        bottom: 45px;
+        top: auto;
+    }
+
+    .chat-header .menu .burg-menu ul.list li {
+        padding: 10px 25px;
+        white-space: nowrap;
+        border-bottom: solid 1px #eee;
+        cursor: pointer;
+    }
+
+        .chat-header .menu .burg-menu ul.list li:last-child {
+            border: none;
+        }
+
+        .chat-header .menu .burg-menu ul.list li:hover {
+            background: #eee;
+        }
+
+    .chat-header .menu .attach, .chat-header .menu .menu-ico {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        margin-left: 10px;
+        overflow: hidden;
+    }
+
+        .chat-header .menu .attach input {
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 0;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .chat-header .menu .attach:focus, .chat-header .menu .menu-ico:focus, .chat-header .menu .attach:active, .chat-header .menu .menu-ico:active {
+            background: rgba(255,255,255,.2);
+        }
+
+        .chat-header .menu .attach:before, .chat-header .menu .menu-ico:before {
+            content: '';
+            font-family: fontAwesome;
+            line-height: 40px;
+            font-size: 30px;
+            font-weight: normal;
+            -webkit-text-stroke: .5px #0af;
+        }
+
+        .chat-header .menu .attach:before {
+            content: '\f0c6';
+        }
+
+        .chat-header .menu .menu-ico:before {
+            content: '\f142';
+            -webkit-text-stroke: 2px #0af;
+        }
+
+    .chat-cont > div.chat-inp {
+        background: #ddd;
+        display: flex;
+        padding: 10px;
+        position: relative;
+    }
+
+    .chat-inp .chat-input {
+        flex: 2;
+        position: relative;
+        z-index: 999;
+    }
+
+    .input img {
+        height: 25px;
+    }
+
+    .input br {
+        display: none;
+    }
+
+    .chat-inp .chat-input input, .input {
+        height: 100%;
+        width: 100%;
+        border: solid 1px transparent;
+        padding: 5px;
+        height: 35px;
+        color: #a0a0a0;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.06), 0 2px 10px 0 rgba(0,0,0,.02);
+        transition: all .25s;
+        background: #fff;
+        overflow-y: overlay;
+    }
+
+    .chat-input.lined .input {
+        height: 80px;
+        margin-top: -35px;
+        margin-bottom: -5px;
+    }
+
+    .chat-inp .chat-input input:focus, .input:focus {
+        outline: none;
+        /*box-shadow:0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);*/
+    }
+
+    .chat-inp .emoji {
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+        background: #fff;
+        text-align: center;
+        cursor: pointer;
+        float: left;
+        top: 0;
+        left: 10px;
+        bottom: 0;
+        margin: auto;
+    }
+
+        .chat-inp .emoji:before {
+            content: '\f118';
+            font-family: fontAwesome;
+            line-height: 35px;
+            font-size: 20px;
+            font-weight: normal;
+            color: #a0a0a0;
+        }
+
+    .chat-inp .opts {
+        background: #fff;
+        top: 0;
+        right: 10px;
+        height: 35px;
+        bottom: 0;
+        margin: auto;
+        width: 35px;
+        overflow: hidden;
+    }
+
+        .chat-inp .opts a {
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            transition: all .25s;
+        }
+
+            .chat-inp .opts a:before {
+                content: '\f118';
+                font-family: fontAwesome;
+                line-height: 35px;
+                font-size: 20px;
+                font-weight: normal;
+                color: #a0a0a0;
+            }
+
+            .chat-inp .opts a.send:before {
+                content: '\f1d9';
+            }
+
+            .chat-inp .opts a.mic:before {
+                content: '\f130';
+            }
+
+    .chat-inp .lined + .opts a {
+        transform: translateY(-35px);
+    }
+
+    a:hover {
+        outline: none;
+        text-decoration: none;
+    }
+
+    .emoji-dashboard .emojis {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        height: 200px;
+        overflow-y: overlay;
+        overflow-x: hidden;
+    }
+
+        .emoji-dashboard .emojis li {
+            margin: 5px 15px;
+            cursor: pointer;
+        }
+
+    /*Message End*/
+
+    /*Conversation Message*/
+
+    p.intro {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        padding: 15px;
+        margin: 0 0 -50px;
+    }
+
+    .body {
+        background: #303030;
+        padding: 1px;
+        min-height: 100vh;
+    }
+
+    .chat-cont {
+        position: relative;
+        z-index: 1;
+        width: 350px;
+        box-shadow: 0 5px 10px -4px rgba(0,0,0,0.5);
+        background: #fff;
+        margin: 50px auto;
+        color: #999;
+    }
+
+    @@media (max-width: 767px) {
+        .body .chat-cont {
+            width: 90%;
+        }
+
+        .body {
+            padding-bottom: 100px;
+        }
+    }
+
+    .chat-cont > div {
+        padding: 15px;
+        background: #0af;
+        color: #fff;
+    }
+
+    .chat-cont .chat-body {
+        background: #eee;
+        display: flex;
+        align-items: flex-end;
+        min-height: 350px;
+    }
+
+        .chat-cont .chat-body .chats-text-cont {
+            width: 100%;
+            padding: 5px;
+            padding-right: 15px;
+            max-height: 350px;
+            overflow-y: overlay;
+            overflow-x: hidden;
+        }
+
+    .body *::-webkit-scrollbar {
+        width: 5px;
+        background: transparent;
+        position: absolute;
+        left: 0;
+    }
+
+    .body *::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,0);
+        border-radius: 5px;
+    }
+
+    .body *:hover::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,.3);
+        border-radius: 5px;
+    }
+
+    .chat-cont .chat-body .chat-text {
+        margin-bottom: 15px;
+        text-align: right;
+    }
+
+        .chat-cont .chat-body .chat-text img {
+            height: 26px;
+            padding: 5px;
+        }
+
+        .chat-cont .chat-body .chat-text > span {
+            padding: 5px 15px;
+            border-radius: 10px;
+            background: #0af;
+            display: inline-block;
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+
+    .chat-cont .chat-header {
+        display: flex;
+    }
+
+    .chat-header .name {
+        position: relative;
+        line-height: 40px;
+        display: inline-block;
+        flex: 2;
+        position: relative;
+        padding-left: 50px;
+    }
+
+        .chat-header .name:before {
+            content: '';
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background: #fff url(http://main.buildabazaar.com/img/shrd/html_widget_images/38/14/604/12a5a8d897be2_nobodym.original.jpg.999xx.jpg) center no-repeat / 100%;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    .chat-header .menu {
+        display: flex;
+        position: relative;
+    }
+
+        .chat-header .menu .burg-menu ul.list, .emoji-dashboardcnv {
+            display: none;
+            padding: 0;
+            position: absolute;
+            top: 110%;
+            margin: 0;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+            background: #fff;
+            list-style-type: none;
+            color: #a0a0a0;
+            right: 0;
+            z-index: 9999;
+        }
+
+    .emoji-dashboardcnv {
+        bottom: 45px;
+        top: auto;
+    }
+
+    .chat-header .menu .burg-menu ul.list li {
+        padding: 10px 25px;
+        white-space: nowrap;
+        border-bottom: solid 1px #eee;
+        cursor: pointer;
+    }
+
+        .chat-header .menu .burg-menu ul.list li:last-child {
+            border: none;
+        }
+
+        .chat-header .menu .burg-menu ul.list li:hover {
+            background: #eee;
+        }
+
+    .chat-header .menu .attach, .chat-header .menu .menu-ico {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        margin-left: 10px;
+        overflow: hidden;
+    }
+
+        .chat-header .menu .attach inputcnv {
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 0;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .chat-header .menu .attach:focus, .chat-header .menu .menu-ico:focus, .chat-header .menu .attach:active, .chat-header .menu .menu-ico:active {
+            background: rgba(255,255,255,.2);
+        }
+
+        .chat-header .menu .attach:before, .chat-header .menu .menu-ico:before {
+            content: '';
+            font-family: fontAwesome;
+            line-height: 40px;
+            font-size: 30px;
+            font-weight: normal;
+            -webkit-text-stroke: .5px #0af;
+        }
+
+        .chat-header .menu .attach:before {
+            content: '\f0c6';
+        }
+
+        .chat-header .menu .menu-ico:before {
+            content: '\f142';
+            -webkit-text-stroke: 2px #0af;
+        }
+
+    .chat-cont > div.chat-inpcnv {
+        background: #ddd;
+        display: flex;
+        padding: 10px;
+        position: relative;
+    }
+
+    .chat-inpcnv .chat-inputcnv {
+        flex: 2;
+        position: relative;
+        z-index: 999;
+    }
+
+    .inputcnv img {
+        height: 25px;
+    }
+
+    .inputcnv br {
+        display: none;
+    }
+
+    .chat-inpcnv .chat-inputcnv inputcnv, .inputcnv {
+        height: 100%;
+        width: 100%;
+        border: solid 1px transparent;
+        padding: 5px;
+        height: 35px;
+        color: #a0a0a0;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.06), 0 2px 10px 0 rgba(0,0,0,.02);
+        transition: all .25s;
+        background: #fff;
+        overflow-y: overlay;
+    }
+
+    .chat-inputcnv.lined .inputcnv {
+        height: 80px;
+        margin-top: -35px;
+        margin-bottom: -5px;
+    }
+
+    .chat-inpcnv .chat-inputcnv inputcnv:focus, .inputcnv:focus {
+        outline: none;
+        /*box-shadow:0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);*/
+    }
+
+    .chat-inpcnv .emojicnv {
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+        background: #fff;
+        text-align: center;
+        cursor: pointer;
+        float: left;
+        top: 0;
+        left: 10px;
+        bottom: 0;
+        margin: auto;
+    }
+
+        .chat-inpcnv .emojicnv:before {
+            content: '\f118';
+            font-family: fontAwesome;
+            line-height: 35px;
+            font-size: 20px;
+            font-weight: normal;
+            color: #a0a0a0;
+        }
+
+    .chat-inpcnv .optscnv {
+        background: #fff;
+        top: 0;
+        right: 10px;
+        height: 35px;
+        bottom: 0;
+        margin: auto;
+        width: 35px;
+        overflow: hidden;
+    }
+
+        .chat-inpcnv .optscnv a {
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            transition: all .25s;
+        }
+
+            .chat-inpcnv .optscnv a:before {
+                content: '\f118';
+                font-family: fontAwesome;
+                line-height: 35px;
+                font-size: 20px;
+                font-weight: normal;
+                color: #a0a0a0;
+            }
+
+            .chat-inpcnv .optscnv a.sendcnv:before {
+                content: '\f1d9';
+            }
+
+            .chat-inpcnv .optscnv a.mic:before {
+                content: '\f130';
+            }
+
+    .chat-inpcnv .lined + .optscnv a {
+        transform: translateY(-35px);
+    }
+
+    a:hover {
+        outline: none;
+        text-decoration: none;
+    }
+
+    .emoji-dashboardcnv .emojiscnv {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        height: 200px;
+        overflow-y: overlay;
+        overflow-x: hidden;
+    }
+
+        .emoji-dashboardcnv .emojiscnv li {
+            margin: 5px 15px;
+            cursor: pointer;
+        }
+
+
+
+    /*Conversation Message End*/
+    .musname {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        margin-top: 45px;
+    }
+
+    p img {
+        height: 25px;
+    }
+
+    .poolPP {
+        height: 60px;
+    }
+
+    .infoIcon {
+        font-size: xx-large !important;
+        /* margin-left: 120px;
+        margin-top: 24px;*/
+        /*    position: absolute;*/
+    }
+
+    .chat-inp .chat-input input, .input {
+        height: 100%;
+        width: 100%;
+        border: solid 1px transparent;
+        padding: 5px;
+        height: 35px;
+        color: #535be2;
+        font-weight: 700;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.06), 0 2px 10px 0 rgba(0,0,0,.02);
+        transition: all .25s;
+        background: #fff;
+        overflow-y: overlay;
+    }
+
+    .leyla {
+        height: 300px;
+        width: 350px;
+        z-index: 1;
+        margin-left: 300px;
+        border: 1px solid black;
+        background-color: black;
+        display: block !important;
+    }
+    .empS {
+        height: 80px;
+        width: auto;
+        display: block !important;
+        border: 1px solid black;
+        position: absolute;
+        /* margin-bottom: 42px; */
+        position: fixed;
+        bottom: 0;
+    }
+    .empS:hover{
+
+        height:180px;
+    }
+    .empStream{
+        display:block !important;
+    }
+    #headingOne :focus{
+        outline:none;
+    }
+</style>
+
+
+<div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+    <div class="main-menu-content">
+        <!-- <ul class="navigation navigation-main " id="main-menu-navigation" data-menu="menu-navigation"> -->
+
+        @if (Convert.ToString(TempData["type"]) == "cus")
+        {
+            <div class="boxVideo">
+                <video style="height: 300px; width: 350px; background-color:black;" class="empStream"></video>
+                <video class="empS" id="videoElement" autoplay></video>
+            </div>
+        }
+        else if (Convert.ToString(TempData["type"]) == "emp")
+        {
+            <div class="boxVideo">
+                <video style="height:300px; width:350px; background-color:black;" id="videoElement" autoplay></video>
+                <video  style="background-color:black;" class="empStream empS"></video>
+            </div>
+        }
+        else
+        {
+            <div>
+                <video style="height: 300px; width: 350px;" id="videoElement" autoplay></video>
+            </div>
+        }
+
+        <div class="" id="accordionExample">
+            <div class="">
+                <div class="" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Notlar <i class="la la-arrow-right"></i>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div style="padding:0px !important;" class="card-body">
+                        <h4><strong>*</strong> Arama-mesaj gönderiminde veya alımında bir problem olduğunu düşünürseniz sayfayı yenileyebilirsiniz.(Ctrl+f5) <br /></h4>
+                        <h4><strong>*</strong> Bilgilerinizi düzenlemek,görüntülemek ve kredi işlemleri için ayarlar ikonuna tıklayabilirsiniz. <br /></h4>
+                        <h4><strong>*</strong> Herhangi bir problem veya şikayetleriniz için sistemdeki whatsapp hattı ve mail üzerinden bizlere ulaşabilirsiniz. <br /></h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--  </ul>-->
+</div>
+
+<h3 id="info" class="getCallStatus hidden" style="color:violet; margin-left:150px;">Disconnected</h3>
+
+
+
+<div style="background-color:white;" class="app-content content">
+
+    <h4 class="cmodelyazi col-md-6">
+        @if (tip == 1)
+        {
+            <b> Çevrimiçi Modeller</b>
+        }
+        else
+        {
+            <b>Çevrimiçi Üyeler</b>
+        }
+    </h4>
+    <h4 class="cmodelyazi "> <b> Sohbet Havuzu</b> </h4>
+    <div class="sidebar-left sidebar-fixed">
+
+        <div class="sidebar">
+
+            <div class="sidebar-content card d-none d-lg-block">
+                @*<div class="card-body chat-fixed-search">
+                        <fieldset class="form-group position-relative has-icon-left m-0">
+                            <input type="text" class="form-control" id="iconLeft4" autocomplete="off" placeholder="Model Ara">
+                            <div class="form-control-position">
+                                <i class="ft-search"></i>
+                            </div>
+                        </fieldset>
+                    </div>*@
+                @if (tip == 1)
+                {
+                    <div id="users-list" class="list-group position-relative">
+
+                        <div style="overflow-x:scroll;" class="users-list-padding media-list">
+
+                            @foreach (var item in Model.EmployeeList)
+                            {
+                                if (item.ImageURL == null)
+                                {
+                                    item.ImageURL = "/Areas/Assets/ModelImg/women.png";
+                                }
+
+                                <div class="media border-0">
+                                    <!--Special Room href    pop up açılcak tıklarsa gidecek-->
+                                    <div class="media-left pr-1">
+                                        <span id="listStatus" class="avatar avatar-md avatar-online">
+                                            <img class="media-object rounded-circle" src="@item.ImageURL" />
+
+                                        </span>
+                                    </div>
+                                    <div class="media-body w-100">
+                                        <h6 class="list-group-item-heading">
+                                            @item.UserName
+                                            <span class=""><button class="btn btn-warning btn-sm showPopUpConv" type="button" eid="@item.ID" data-toggle="modal" data-target="#messagePopUp"><i class="la la-envelope"></i></button></span>
+
+                                            <span class=""><button class="btn btn-success btn-sm showPopUpCall" type="button" eid="@item.ID" data-toggle="modal" data-target="#customer2"><i class="la la-phone"></i></button></span>
+                                            @{ bool issetId = false; }
+                                            @foreach (var item2 in Model.FavList)
+                                            {
+
+                                                if (item.ID == item2.EmployeeID)
+                                                {
+
+                                                    issetId = true;
+                                                }
+                                            }
+
+                                            @if (issetId)
+                                            {
+
+                                                <span class="addPopUpIcon@{@item.ID} ">
+                                                    <a href="javascript:void(0)" class="faviadd" efid="@item.ID" style="text-decoration:none;" data-target="#favnotPopUp" data-toggle="modal">
+                                                        <i class="la la-info-circle infoIcon"></i>
+                                                    </a>
+
+                                                    <span class="addFavIcon@{@item.ID}"><i class="la la-heart" style="color:red"></i></span>
+                                                </span>
+
+                                            }
+                                            else
+                                            {
+
+                                                <span class="addPopUpIcon@{@item.ID} "><a class="faviadd" efid="@item.ID" href="javascript:void(0)" style="text-decoration:none;" data-target="#favPopUp" data-toggle="modal"> <i class="la la-info-circle infoIcon"></i></a></span>
+                                                <span class="addFavIcon@{@item.ID}"></span>
+
+                                            }
+
+                                        </h6>
+                                        <p class="list-group-item-text text-muted mb-0">
+
+                                            @(DateTime.Now.Year - item.BirthDate.Year)
+                                            @*<span class="float-right primary"><button class="btn btn-success btn-sm showPopUpCall" type="button" eid="@item.ID" data-toggle="modal" data-target="#customer2"><i class="la la-phone"></i></button></span>*@
+                                        </p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div id="users-list" class="list-group position-relative">
+
+                        <div style="overflow-x:scroll;" class="users-list-padding media-list">
+
+                            @foreach (var item in Model.CustomerList)
+                            {
+                                if (item.ImageURL == null)
+                                {
+                                    item.ImageURL = "/Areas/Assets/CustomerImg/men.png";
+                                }
+
+                                <div class="media border-0">
+                                    <!--Special Room href    pop up açılcak tıklarsa gidecek-->
+                                    <div class="media-left pr-1">
+                                        <span id="listStatus" class="avatar avatar-md avatar-online">
+                                            <img class="media-object rounded-circle" src="@item.ImageURL" />
+                                        </span>
+                                    </div>
+                                    <div class="media-body w-100">
+                                        <h6 class="list-group-item-heading">
+                                            @item.UserName
+                                            <b>(@item.BtPrice) @*<span style="font-size:14px;">Kredisi Bulunmaktadır</span>*@ </b>
+                                        </h6>
+                                        <p class="list-group-item-text text-muted mb-0">
+
+
+                                            <span class="float-right primary"><button class="btn btn-warning btn-sm showMessagePanel" type="button" cusid="@item.ID" data-toggle="modal" data-target="#messagePanel"><i class="la la-envelope"></i></button></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="content-right col-md-12" style="padding:0">
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <section class="chat-app-window">
+                    <div class="badge badge-default mb-1">Konuşma Geçmişi</div>
+                    <div class="chats">
+                        <div class="chats pshMes">
+
+                        </div>
+                    </div>
+                </section>
+                <section class="chat-app-form">
+                    @*<form class="chat-app-input d-flex">
+                            <fieldset class="form-group position-relative has-icon-left col-10 m-0">
+                                <div class="form-control-position">
+
+                                </div>
+                                <input type="text" class="form-control" id="demo1"  autocomplete="off" placeholder="Mesaj Yaz">
+
+                            </fieldset>
+                            <fieldset class="form-group position-relative has-icon-left col-2 m-0">
+                                <button type="button" class="btn btn-info">
+                                    <i class="la la-paper-plane-o d-lg-none"></i>
+                                    <span class="d-none d-lg-block">Gönder</span>
+                                </button>
+                            </fieldset>
+
+                            <div id="container"></div>
+
+                        </form>*@
+                    <div class="container">
+
+                        <div class="chat-inp">
+                            <div class="col-md-10">
+                                <div class="chat-input">
+                                    <div class="input" id="poolMess" contenteditable="true"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2" style=" padding: 0; ">
+                                <div class="emoji"></div>
+                                <div class="opts">
+                                    <a class="send"></a>
+                                    <a class="send"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+
+
+            </section>
+        </div>
+
+        <div class="col-md-12">
+            <div class="emoji-dashboard">
+                <ul class="emojis">
+                    <li class="emoji" data-clipboard-text="--1"><i class="em em---1"></i></li>
+                    <li class="emoji" data-clipboard-text="-1"><i class="em em--1"></i></li>
+                    <li class="emoji" data-clipboard-text="100"><i class="em em-100"></i></li>
+                    <li class="emoji" data-clipboard-text="1234"><i class="em em-1234"></i></li>
+                    <li class="emoji" data-clipboard-text="8ball"><i class="em em-8ball"></i></li>
+                    <li class="emoji" data-clipboard-text="a"><i class="em em-a"></i></li>
+                    <li class="emoji" data-clipboard-text="ab"><i class="em em-ab"></i></li>
+                    <li class="emoji" data-clipboard-text="abc"><i class="em em-abc"></i></li>
+                    <li class="emoji" data-clipboard-text="abcd"><i class="em em-abcd"></i></li>
+                    <li class="emoji" data-clipboard-text="accept"><i class="em em-accept"></i></li>
+                    <li class="emoji" data-clipboard-text="aerial_tramway"><i class="em em-aerial_tramway"></i></li>
+                    <li class="emoji" data-clipboard-text="airplane"><i class="em em-airplane"></i></li>
+                    <li class="emoji" data-clipboard-text="alarm_clock"><i class="em em-alarm_clock"></i></li>
+                    <li class="emoji" data-clipboard-text="alien"><i class="em em-alien"></i></li>
+                    <li class="emoji" data-clipboard-text="ambulance"><i class="em em-ambulance"></i></li>
+                    <li class="emoji" data-clipboard-text="anchor"><i class="em em-anchor"></i></li>
+                    <li class="emoji" data-clipboard-text="angel"><i class="em em-angel"></i></li>
+                    <li class="emoji" data-clipboard-text="anger"><i class="em em-anger"></i></li>
+                    <li class="emoji" data-clipboard-text="angry"><i class="em em-angry"></i></li>
+                    <li class="emoji" data-clipboard-text="anguished"><i class="em em-anguished"></i></li>
+                    <li class="emoji" data-clipboard-text="ant"><i class="em em-ant"></i></li>
+                    <li class="emoji" data-clipboard-text="apple"><i class="em em-apple"></i></li>
+                    <li class="emoji" data-clipboard-text="aquarius"><i class="em em-aquarius"></i></li>
+                    <li class="emoji" data-clipboard-text="aries"><i class="em em-aries"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_backward"><i class="em em-arrow_backward"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_double_down"><i class="em em-arrow_double_down"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_double_up"><i class="em em-arrow_double_up"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_down"><i class="em em-arrow_down"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_down_small"><i class="em em-arrow_down_small"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_forward"><i class="em em-arrow_forward"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_heading_down"><i class="em em-arrow_heading_down"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_heading_up"><i class="em em-arrow_heading_up"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_left"><i class="em em-arrow_left"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_lower_left"><i class="em em-arrow_lower_left"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_lower_right"><i class="em em-arrow_lower_right"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_right"><i class="em em-arrow_right"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_right_hook"><i class="em em-arrow_right_hook"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_up"><i class="em em-arrow_up"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_up_down"><i class="em em-arrow_up_down"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_up_small"><i class="em em-arrow_up_small"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_upper_left"><i class="em em-arrow_upper_left"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_upper_right"><i class="em em-arrow_upper_right"></i></li>
+                    <li class="emoji" data-clipboard-text="arrows_clockwise"><i class="em em-arrows_clockwise"></i></li>
+                    <li class="emoji" data-clipboard-text="arrows_counterclockwise"><i class="em em-arrows_counterclockwise"></i></li>
+                    <li class="emoji" data-clipboard-text="art"><i class="em em-art"></i></li>
+                    <li class="emoji" data-clipboard-text="articulated_lorry"><i class="em em-articulated_lorry"></i></li>
+                    <li class="emoji" data-clipboard-text="astonished"><i class="em em-astonished"></i></li>
+                    <li class="emoji" data-clipboard-text="atm"><i class="em em-atm"></i></li>
+                    <li class="emoji" data-clipboard-text="b"><i class="em em-b"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="customer2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-primary">
+                <h5> Özel Odada Görüşme Yapmak İstediğinize Eminmisiniz ?</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-12 form-group user-form-group">
+                                    <label class="control-label">Özel odada yaptığınız görüşmeler 5 dakikası 5 kredidir.Görüşme esnasında kredi otomatik olarak düşülecektir.</label>
+
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm pull-left">Kapat</button>
+                    <a href="#" class="btn btn-success btn-sm make makeCall">Onayla</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="favPopUp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-primary">
+                <h5 style=" font-size: 1.1rem; ">
+                    Kullanıcıyı favorilerinize eklemek istediğinizden eminmisiniz ?
+                    <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm">X</button>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-12 form-group user-form-group">
+                                    <label class="control-label">Engellediğiniz ve favorilerinize  eklediğiniz kullanıcıları profilinizden düzenleyebilirsiniz.</label>
+                                    <div class="container" style="margin-top:25px;" id="empData"> </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <br />
+                    <a style=" position: absolute; left: 5px; bottom: 10px;" href="#" eid="" data-dismiss="modal" class="btn btn-danger btn-sm center addBan">Engelle<i class="la la-ban"></i></a>
+                    <a style=" position: absolute; right: 5px; bottom: 10px;" href="#" eid="" data-dismiss="modal" class="btn btn-success btn-sm center addFav">Favorilere Ekle<i class="la la-heart-o"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+<div class="modal fade" id="favnotPopUp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-primary">
+                <h5>
+                    Kullanıcıyı favorilerinize eklemek istediğinizden eminmisiniz ?
+                    <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm">X</button>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-12 form-group user-form-group">
+                                    <label class="control-label">Engellediğiniz ve favorilerinize  eklediğiniz kullanıcıları profilinizden düzenleyebilirsiniz.</label>
+                                    <div class="container" style="margin-top:25px;" id="empData2"> </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <br />
+                    <a style=" position: absolute; left: 5px; bottom: 10px;" href="#" eid="" data-dismiss="modal" class="btn btn-danger btn-sm center addBan">Engelle<i class="la la-ban"></i></a>
+                    <a style=" position: absolute; right: 5px; bottom: 10px;" href="#" eid="" data-dismiss="modal" class="btn btn-success btn-sm center delFav">Favorilerden Çıkar<i style="color:red;" class="la la-heart"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+@*<div class="modal fade" id="popUpMessage" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-primary">
+                    <h5> Mesaj Gönderim Ekranı</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <div class="col-md-12 form-group user-form-group">
+                                        <label class="control-label">Yapım Aşamasında</label>
+
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                        <div>
+                            <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm pull-left">Kapat</button>
+                            <a href="#" class="btn btn-success btn-sm make makeCall">Onayla</a>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+    </div>*@
+
+
+
+<div class="modal fade" id="messagePopUp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header modal-header-primary">
+                <h5> Mesaj başlatmak üzeresiniz, onayla butonuna tıkladığınızda gün içerisinde aynı kişiyle konuşma başlattıysanız, kredi ödemezsiniz. Ancak ilk defa görüşme başlatıyorsanız 1 kredi hesabınızdan düşecektir.</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-12 form-group user-form-group">
+                                    <label class="control-label">Mesaj görüşmesi başlatmak istermisiniz ?</label>
+
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm pull-left">Kapat</button>
+                    <a href="#" data-dismiss="modal" data-target="#messagePanel" eid data-toggle="modal" class="btn btn-success btn-sm ConvMake">Onayla</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+<div class="modal fade" id="messagePanel" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="content-right col-md-12" style="padding:0">
+                <div class="content-wrapper">
+                    <div class="content-header row">
+                    </div>
+                    <div class="content-body">
+                        <section class="chat-app-window">
+                            <div class="badge badge-default mb-1">Konuşma Geçmişi</div>
+                            <div class="chats">
+                                <div class="chats spMessage">
+
+                                </div>
+                            </div>
+                        </section>
+                        <section class="chat-app-form">
+
+                            <div class="container">
+
+                                <div class="chat-inpcnv">
+                                    <div class="col-md-10">
+                                        <div class="chat-inputcnv">
+                                            <div class="inputcnv" id="ConvMess" contenteditable="true"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2" style=" padding: 0; ">
+                                        <div class="emojicnv"></div>
+                                        <div class="optscnv">
+                                            <a class="sendcnv"></a>
+                                            <a class="sendcnv"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                    </div>
+
+                    </section>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="emoji-dashboardcnv">
+                        <ul class="emojiscnv">
+                            <li class="emojicnv" data-clipboard-text="--1"><i class="em em---1"></i></li>
+                            <li class="emojicnv" data-clipboard-text="-1"><i class="em em--1"></i></li>
+                            <li class="emojicnv" data-clipboard-text="100"><i class="em em-100"></i></li>
+                            <li class="emojicnv" data-clipboard-text="1234"><i class="em em-1234"></i></li>
+                            <li class="emojicnv" data-clipboard-text="8ball"><i class="em em-8ball"></i></li>
+                            <li class="emojicnv" data-clipboard-text="a"><i class="em em-a"></i></li>
+                            <li class="emojicnv" data-clipboard-text="ab"><i class="em em-ab"></i></li>
+                            <li class="emojicnv" data-clipboard-text="abc"><i class="em em-abc"></i></li>
+                            <li class="emojicnv" data-clipboard-text="abcd"><i class="em em-abcd"></i></li>
+                            <li class="emojicnv" data-clipboard-text="accept"><i class="em em-accept"></i></li>
+                            <li class="emojicnv" data-clipboard-text="aerial_tramway"><i class="em em-aerial_tramway"></i></li>
+                            <li class="emojicnv" data-clipboard-text="airplane"><i class="em em-airplane"></i></li>
+                            <li class="emojicnv" data-clipboard-text="alarm_clock"><i class="em em-alarm_clock"></i></li>
+                            <li class="emojicnv" data-clipboard-text="alien"><i class="em em-alien"></i></li>
+                            <li class="emojicnv" data-clipboard-text="ambulance"><i class="em em-ambulance"></i></li>
+                            <li class="emojicnv" data-clipboard-text="anchor"><i class="em em-anchor"></i></li>
+                            <li class="emojicnv" data-clipboard-text="angel"><i class="em em-angel"></i></li>
+                            <li class="emojicnv" data-clipboard-text="anger"><i class="em em-anger"></i></li>
+                            <li class="emojicnv" data-clipboard-text="angry"><i class="em em-angry"></i></li>
+                            <li class="emojicnv" data-clipboard-text="anguished"><i class="em em-anguished"></i></li>
+                            <li class="emojicnv" data-clipboard-text="ant"><i class="em em-ant"></i></li>
+                            <li class="emojicnv" data-clipboard-text="apple"><i class="em em-apple"></i></li>
+                            <li class="emojicnv" data-clipboard-text="aquarius"><i class="em em-aquarius"></i></li>
+                            <li class="emojicnv" data-clipboard-text="aries"><i class="em em-aries"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_backward"><i class="em em-arrow_backward"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_double_down"><i class="em em-arrow_double_down"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_double_up"><i class="em em-arrow_double_up"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_down"><i class="em em-arrow_down"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_down_small"><i class="em em-arrow_down_small"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_forward"><i class="em em-arrow_forward"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_heading_down"><i class="em em-arrow_heading_down"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_heading_up"><i class="em em-arrow_heading_up"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_left"><i class="em em-arrow_left"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_lower_left"><i class="em em-arrow_lower_left"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_lower_right"><i class="em em-arrow_lower_right"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_right"><i class="em em-arrow_right"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_right_hook"><i class="em em-arrow_right_hook"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_up"><i class="em em-arrow_up"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_up_down"><i class="em em-arrow_up_down"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_up_small"><i class="em em-arrow_up_small"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_upper_left"><i class="em em-arrow_upper_left"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrow_upper_right"><i class="em em-arrow_upper_right"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrows_clockwise"><i class="em em-arrows_clockwise"></i></li>
+                            <li class="emojicnv" data-clipboard-text="arrows_counterclockwise"><i class="em em-arrows_counterclockwise"></i></li>
+                            <li class="emojicnv" data-clipboard-text="art"><i class="em em-art"></i></li>
+                            <li class="emojicnv" data-clipboard-text="articulated_lorry"><i class="em em-articulated_lorry"></i></li>
+                            <li class="emojicnv" data-clipboard-text="astonished"><i class="em em-astonished"></i></li>
+                            <li class="emojicnv" data-clipboard-text="atm"><i class="em em-atm"></i></li>
+                            <li class="emojicnv" data-clipboard-text="b"><i class="em em-b"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>*@
+<script src="~/Assets/Custom/MIndexJquerj.js"></script>
+<script src="~/Assets/Custom/chatFolder/peer.min.js"></script>
+
+@*//ARAYAN ARANAN TARAFI AYARLAYACAZ*@
+
+<script>
+
+    var streamid = 0;
+    var issetControl = 0;
+    setInterval(function () {
+
+        if (issetControl == 0) {
+            if ($('.getCallStatus').html() == "Connected") {
+                setInterval(function myfunction() {
+                    if ($('.getCallStatus').html() == "Receiving") {
+
+                        answerCalls();
+                    }
+                },1000);
+                issetControl = 1;
+            }
+            else if ($('.getCallStatus').html() == "Receiving") {
+
+                answerCalls();
+            } else {
+
+                //makeCall();
+
+                //console.log($('#info').html());
+            }
+        } else {
+
+        }
+
+    }, 3000);
+
+    let peer = null;
+
+    $(document).ready(function () {
+
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+        window.video = $(`.empStream`);
+        window.video.hide();
+        window.call = null;
+        window.receiving = false;
+
+        initPeer();
+
+    });
+
+    const initPeer = function () {
+        //Customer id for stream
+        var custid = parseInt($('.ownid').html());
+        peer = new Peer(custid, { host: 'peer.canlisohbetevi.com', port: '9000' });
+        peer.on('open', function (id) {
+            $('#info').text('Idle');
+            //console.log('Idle');
+        });
+
+        peer.on('call', function (call) {
+            $('#info').text('Receiving');
+
+            window.call = call;
+            window.receiving = true;
+        });
+    };
+    const acceptCall = function () {
+        if (receiving) {
+            answerCalls();
+        } else {
+            makeCall();
+        }
+    };
+
+    const reject = function () {
+        if (window.call) {
+            window.call.close();
+            window.call = null;
+        }
+
+        window.localStream.getTracks().forEach(track => track.stop());
+        window.video.hide();
+        $('#info').text('Idle');
+    }
+
+    $(".faviadd").on("click", function cvcbj() {
+
+        streamid = $(this).attr('efid');
+
+        var data = {
+            Id: streamid
+        };
+
+        $.ajax({
+            type: "post",
+            url: "/MainPage/getEmployeeInfo",
+            data: data,
+            dataType: "json",
+            success: function (datas) {
+                if (datas.StatusId==1) {
+                    makeCall();
+                }
+                else {
+                    warningMes("Model başka bir görüşmede", "Meşgul");
+                }
+            }
+        });
+
+    })
+
+    const makeCall = function () {
+        
+
+        if (streamid != null || streamid != undefined || streamid != 0) {
+            const peerId = streamid;
+
+            //if (!peerId) {
+            //    alert('Please enter peer id');
+            //    return;
+            //}
+            //console.log("makeCall içi");
+            navigator.getUserMedia({ audio: false, video: true }, function (stream) {
+                window.localStream = stream;
+                window.call = peer.call(peerId, stream);
+                call.on('stream', startCall);
+                call.on('close', endCall);
+            }, function () {
+                //alert("Error! Make sure to click allow when asked for permission by the browser");
+            });
+        }
+        else {
+            errorMes("Modele Erişilemedi");
+        }
+
+    };
+
+
+    const answerCalls = function () {
+        if (!window.call || !window.receiving) {
+            return;
+        }
+        //console.log("answerCall içi");
+        $('#info').text('Connecting...');
+        navigator.getUserMedia({ video: true, audio: false }, function (stream) {
+            window.localStream = stream;
+            window.call.answer(stream);
+            window.call.on('stream', startCall);
+            window.call.on('close', endCall);
+        }, function () {
+            // alert("Error! Make sure to click allow when asked for permission by the browser");
+        });
+    };
+
+
+    const startCall = function (remoteStream) {
+        window.video.get(0).src = URL.createObjectURL(remoteStream);
+        window.video.get(0).play();
+        window.video.show();
+        $('#info').text('Connected');
+        //console.log("startCall içi");
+    };
+
+    const endCall = function () {
+        window.receiving = false;
+        window.localStream.getTracks().forEach(track => track.stop());
+        window.video.hide();
+        $('#info').text('Idle');
+
+        //console.log("Idle");
+        //console.log("Calling Son");
+    };
+</script>
+
+

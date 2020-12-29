@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model chat.DTO.EEntity.AdminHomeDTO
+
+<div class="row">
+    <div class="col-lg-5 col-12">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h6 class="text-muted">Model Sayısı</h6>
+                            <h3>@Model.ModalCount</h3>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="icon-user-female success font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-5 col-12">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h6 class="text-muted">Müşteri Sayısı</h6>
+                            <h3>@Model.CustomerCount</h3>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="icon-user success font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-5 col-12">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h6 class="text-muted">Aramalar</h6>
+                            <h3>@Model.CallCount</h3>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="icon-call-end danger font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-5 col-12">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h6 class="text-muted">Toplam Üye Sayısı</h6>
+                            <h3>@Model.TotalUserCount</h3>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="icon-users danger font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-5 col-12">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h6 class="text-muted">Engel Sayısı</h6>
+                            <h3>@Model.BanCount</h3>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="icon-ban danger font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*<div class="col-lg-5 col-12">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h6 class="text-muted">Toplam Üye Sayısı</h6>
+                            <h3>@Model.TotalUserCount</h3>
+                        </div>
+                        <div class="align-self-center">
+                            <i class="icon-users danger font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+</div>
+

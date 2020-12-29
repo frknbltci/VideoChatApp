@@ -1,0 +1,184 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    
+}
+
+@model List<chat.DTO.EEntity.EEmployeeDTO>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h3 class="danger" id="AmodelPiece"></h3>
+                            <h6>Aktif Model Sayısı</h6>
+                        </div>
+                        <div>
+                            <i class="la la-female danger font-large-2 float-right"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h3 class="primary" id="AcustPiece"></h3>
+                            <h6>Aktif Üye Sayısı</h6>
+                        </div>
+                        <div>
+                            <i class="la la-user primary font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<section id="configuration">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Aktif Modeller</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="card-body card-dashboard">
+                        <table id="example" class=" file-export dataTable table table-striped table-bordered zero-configuration">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Model Görsel</th>
+                                    <th>Model Adı - Soyadı</th>
+                                    <th>Model NickName</th>
+                                    <th>Email</th>
+                                    <th>Aktiflik Durumu</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.IsActive == true)
+                                    {
+                                <tr class="text-center ">
+                                    <td class="align-self-center">
+                                        <span class="avatar" style="width:50px !important">
+                                            @if (item.ImageURL == null)
+                                            {
+                                                <img src="~/Assets/ModelImg/noimage.png" />
+                                            }
+                                            else
+                                            {
+                                                <img src="@item.ImageURL" />
+
+                                            }
+                                        </span>
+                                    </td>
+                                    <td class="align-self-center">@item.FirstName @item.LastName</td>
+                                    <td>@item.NickName</td>
+                                    <td>@item.Email</td>
+                                    <td><span class="badge badge-success">Aktif </span></td>
+                                    <td>
+                                        <a class="btn btn-danger btn-sm" href="/AdminHome/ActiveCheck/@item.ID"><i class="font-small-1 la la-minus"></i> Pasif</a>
+
+                                        <a class="btn btn-warning btn-sm" href="/Employee/Detail/@item.ID"><i class="font-small-1 la la-search"></i> Detay</a>
+
+                                    </td>
+                                </tr>
+                                    }
+
+
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="configuration">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Pasif Modeller</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="card-body card-dashboard">
+                        <table id="example" class=" file-export dataTable table table-striped table-bordered zero-configuration">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Model Görsel</th>
+                                    <th>Model Adı - Soyadı</th>
+                                    <th>Model NickName</th>
+                                    <th>Email</th>
+                                    <th>Aktiflik Durumu</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.IsActive == false)
+                                    {
+                                        <tr class="text-center ">
+                                            <td class="align-self-center">
+                                                <span class="avatar" style="width:50px !important">
+                                                    @if (item.ImageURL == null)
+                                                    {
+                                                        <img src="~/Assets/ModelImg/noimage.png" />
+                                                    }
+                                                    else
+                                                    {
+                                                        <img src="@item.ImageURL" />
+
+                                                    }
+                                                </span>
+                                            </td>
+                                            <td class="align-self-center">@item.FirstName @item.LastName</td>
+                                            <td>@item.NickName</td>
+                                            <td>@item.Email</td>
+                                            <td><span class="badge badge-danger">Pasif</span></td>
+                                            <td>
+                                                <div class="buttons-group">
+                                                    <a class="btn btn-success btn-sm" href="/AdminHome/ActiveCheck/@item.ID"><i class="font-small-1 la la-plus"></i> Aktif</a>
+
+                                                    <a class="btn btn-warning btn-sm" href="/Employee/Detail/@item.ID"><i class=" font-small-1 la la-search"></i> Detay</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>

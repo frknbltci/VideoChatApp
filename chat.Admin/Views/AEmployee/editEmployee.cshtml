@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "editEmployee";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model chat.CORE.Entities.Employee
+
+@if (@TempData["message"] == null)
+{
+    <span></span>
+}
+else
+{
+
+    <h5>@Html.Raw(TempData["message"].ToString())</h5>
+}
+
+
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Müşteri Düzenleme Ekranı</h5>
+
+    </div>
+    <div class="modal-body ">
+        <form class="form form-horizontal" enctype="multipart/form-data" action="/AEmployee/editEmp" method="post">
+
+            <div class="form-body">
+                <div class="form-group row">
+                    <label class="col-sm-2 form-control-label" for="">Model Kullanıcı Adı</label>
+                    <div class="col-sm-8">
+                        <input class="form-control row" type="text" id="editTeacherName" name="UserName" value="@Model.UserName">
+
+                        <input style="display:none;" class="hidden" type="text" name="ID" value="@Model.ID"> <input style="display:none;" class="hidden" type="text" name="StatusID" value="@Model.StatusID"> <input style="display:none;" class="hidden" type="text" name="IsActive" value="@Model.IsActive.ToString()">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-control-label" for="">Model Şifre</label>
+                    <div class="col-sm-8">
+                        <input class="form-control row" type="text" name="Password" value="@Model.Password">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 form-control-label" for="">Model Email</label>
+                    <div class="col-sm-8">
+                        <input class="form-control row" type="text" name="Email" value="@Model.Email">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 form-control-label" for="">Takma Adı</label>
+                    <div class="col-sm-8">
+                        <input class="form-control row" type="text" name="NickName" value="@Model.NickName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-control-label" for="">Model Adı</label>
+                    <div class="col-sm-8">
+                        <input class="form-control row" type="text" name="FirstName" value="@Model.FirstName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 form-control-label" for="">Model Soyadı</label>
+                    <div class="col-sm-8">
+                        <input class="form-control row" type="text" name="LastName" value="@Model.LastName">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 form-control-label" for="">IBAN</label>
+                    <div class="col-sm-8">
+                        <input class="form-control row" readonly type="text" name="IBAN" value="@Model.IBAN">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 form-control-label" for="">Banka Adı</label>
+                    <div class="col-sm-8">
+                        <input class="form-control row" readonly type="text" name="BankName" value="@Model.BankName">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success btn-block">Kaydet</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

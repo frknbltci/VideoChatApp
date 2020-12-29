@@ -1,0 +1,736 @@
+﻿@{
+
+    Layout = null;
+
+    string UserName = "";
+
+    string imgUrl = "~/Assets/Custom/Images/AnonimImg.jpg";
+    int id = 0;
+    int BtPrice = 0;
+
+    if (((chat.UTILITIES.SessionOperations.EmpCusSessionContext)Session["EmpCusSessionContext"]) != null)
+    {
+        UserName = ((chat.UTILITIES.SessionOperations.EmpCusSessionContext)Session["EmpCusSessionContext"]).UserName;
+        BtPrice = ((chat.UTILITIES.SessionOperations.EmpCusSessionContext)Session["EmpCusSessionContext"]).BtPrice;
+        id = ((chat.UTILITIES.SessionOperations.EmpCusSessionContext)Session["EmpCusSessionContext"]).ID;
+        imgUrl = ((chat.UTILITIES.SessionOperations.EmpCusSessionContext)Session["EmpCusSessionContext"]).ImageUrl;
+    }
+    else
+    {
+        //Yönlenme
+    }
+
+    if (BtPrice < 0)
+    {
+        BtPrice = 0;
+    }
+
+}
+
+<!DOCTYPE html>
+
+<html class="loading" lang="tr" data-textdirection="ltr" onunload >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
+    <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
+    <meta name="author" content="Chat">
+    <title>Canlı Sohbet Evi</title>
+
+    <link rel="apple-touch-icon" href="~/Assets/Custom/Images/Logos/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Assets/Custom/Images/Logos/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
+          rel="stylesheet">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
+          rel="stylesheet">
+
+
+    <!--ASD -->
+
+
+
+    <!--SAD -->
+    <script src="https://use.fontawesome.com/aa95071b26.js"></script>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/css/vendors.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN MODERN CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/css/app.css">
+    <!-- END MODERN CSS-->
+    <!--Pop Up için -->
+    <!--Pop Up İçin-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Assets/app-assets/css/pages/chat-application.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Assets/assets/css/style.css">
+    <!-- END Custom CSS-->
+    <link href="~/Assets/toastr/toastr.css" rel="stylesheet" />
+
+
+
+
+    <style>
+        .navbar-header.expanded img {
+            width: 49px;
+            float: left;
+            margin-right: 18px;
+        }
+
+        .navbar-header.expanded img {
+            width: 150px;
+            float: left;
+            margin-right: 18px;
+            margin-top: 14px;
+            margin-left: 8px;
+        }
+
+        .navbar-header.expanded h3 {
+            margin-top: 25px;
+        }
+
+        .chat-application .chat-app-window {
+            padding: 20px 30px;
+            overflow-y: scroll;
+            text-align: center;
+            height: 480px;
+            background-color: #fff;
+        }
+
+        .chat-application .chat-app-form {
+            position: relative;
+            padding: 12px 0px;
+            background-color: #edeef0;
+            overflow: hidden;
+        }
+
+        .btngrup button {
+            width: 100%;
+        }
+
+        .btngrup {
+            padding-left: 5px;
+            padding-right: 0;
+        }
+
+        .btnGift {
+            color: black;
+        }
+
+        .imgIcons div a img {
+            width: 70px;
+            margin-top: 40px;
+        }
+
+        body.vertical-layout.vertical-menu-modern.menu-expanded .navbar .navbar-container {
+            margin-left: 0;
+        }
+
+        body.vertical-layout.vertical-menu-modern.menu-expanded .navbar .navbar-header {
+            /*width: auto;*/
+        }
+
+        body.vertical-layout.vertical-menu-modern.menu-expanded .main-menu {
+            width: 300px;
+        }
+
+        body.vertical-layout.vertical-menu-modern.menu-expanded .content, body.vertical-layout.vertical-menu-modern.menu-expanded .footer {
+            margin-left: 300px;
+        }
+
+        .userCount {
+            border-radius: 17px;
+            position: absolute;
+            margin-top: -56px !important;
+            margin-left: 31px !important;
+        }
+
+        @@media screen and (max-width:760px) {
+            .chat-application .chat-app-window {
+                padding: 20px 30px;
+                overflow-y: scroll;
+                text-align: center;
+                height: 263px;
+                background-color: #fff;
+            }
+        }
+
+        /*CHAT */
+
+
+        p.intro {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin: 0 0 -50px;
+        }
+
+        .body {
+            background: #303030;
+            padding: 1px;
+            min-height: 100vh;
+        }
+
+        .chat-cont {
+            position: relative;
+            z-index: 1;
+            width: 350px;
+            box-shadow: 0 5px 10px -4px rgba(0,0,0,0.5);
+            background: #fff;
+            margin: 50px auto;
+            color: #999;
+        }
+
+        @@media (max-width: 767px) {
+            .body .chat-cont {
+                width: 90%;
+            }
+
+            .body {
+                padding-bottom: 100px;
+            }
+        }
+
+        .chat-cont > div {
+            padding: 15px;
+            background: #0af;
+            color: #fff;
+        }
+
+        .chat-cont .chat-body {
+            background: #eee;
+            display: flex;
+            align-items: flex-end;
+            min-height: 350px;
+        }
+
+            .chat-cont .chat-body .chats-text-cont {
+                width: 100%;
+                padding: 5px;
+                padding-right: 15px;
+                max-height: 350px;
+                overflow-y: overlay;
+                overflow-x: hidden;
+            }
+
+        .body *::-webkit-scrollbar {
+            width: 5px;
+            background: transparent;
+            position: absolute;
+            left: 0;
+        }
+
+        .body *::-webkit-scrollbar-thumb {
+            background-color: rgba(0,0,0,0);
+            border-radius: 5px;
+        }
+
+        .body *:hover::-webkit-scrollbar-thumb {
+            background-color: rgba(0,0,0,.3);
+            border-radius: 5px;
+        }
+
+        .chat-cont .chat-body .chat-text {
+            margin-bottom: 15px;
+            text-align: right;
+        }
+
+            .chat-cont .chat-body .chat-text img {
+                height: 26px;
+                padding: 5px;
+            }
+
+            .chat-cont .chat-body .chat-text > span {
+                padding: 5px 15px;
+                border-radius: 10px;
+                background: #0af;
+                display: inline-block;
+                max-width: 100%;
+                word-wrap: break-word;
+            }
+
+        .chat-cont .chat-header {
+            display: flex;
+        }
+
+        .chat-header .name {
+            position: relative;
+            line-height: 40px;
+            display: inline-block;
+            flex: 2;
+            position: relative;
+            padding-left: 50px;
+        }
+
+            .chat-header .name:before {
+                content: '';
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background: #fff url(http://main.buildabazaar.com/img/shrd/html_widget_images/38/14/604/12a5a8d897be2_nobodym.original.jpg.999xx.jpg) center no-repeat / 100%;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+        .chat-header .menu {
+            display: flex;
+            position: relative;
+        }
+
+            .chat-header .menu .burg-menu ul.list, .emoji-dashboard {
+                display: none;
+                padding: 0;
+                position: absolute;
+                top: 110%;
+                margin: 0;
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+                background: #fff;
+                list-style-type: none;
+                color: #a0a0a0;
+                right: 0;
+                z-index: 9999;
+            }
+
+        .emoji-dashboard {
+            bottom: 45px;
+            top: auto;
+        }
+
+        .chat-header .menu .burg-menu ul.list li {
+            padding: 10px 25px;
+            white-space: nowrap;
+            border-bottom: solid 1px #eee;
+            cursor: pointer;
+        }
+
+            .chat-header .menu .burg-menu ul.list li:last-child {
+                border: none;
+            }
+
+            .chat-header .menu .burg-menu ul.list li:hover {
+                background: #eee;
+            }
+
+        .chat-header .menu .attach, .chat-header .menu .menu-ico {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 10px;
+            overflow: hidden;
+        }
+
+            .chat-header .menu .attach input {
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                top: 0;
+                height: 100%;
+                z-index: 1;
+            }
+
+            .chat-header .menu .attach:focus, .chat-header .menu .menu-ico:focus, .chat-header .menu .attach:active, .chat-header .menu .menu-ico:active {
+                background: rgba(255,255,255,.2);
+            }
+
+            .chat-header .menu .attach:before, .chat-header .menu .menu-ico:before {
+                content: '';
+                font-family: fontAwesome;
+                line-height: 40px;
+                font-size: 30px;
+                font-weight: normal;
+                -webkit-text-stroke: .5px #0af;
+            }
+
+            .chat-header .menu .attach:before {
+                content: '\f0c6';
+            }
+
+            .chat-header .menu .menu-ico:before {
+                content: '\f142';
+                -webkit-text-stroke: 2px #0af;
+            }
+
+        .chat-cont > div.chat-inp {
+            background: #ddd;
+            display: flex;
+            padding: 10px;
+            position: relative;
+        }
+
+        .chat-inp .chat-input {
+            flex: 2;
+            position: relative;
+            z-index: 999;
+        }
+
+        .input img {
+            height: 25px;
+        }
+
+        .input br {
+            display: none;
+        }
+
+        .chat-inp .chat-input input, .input {
+            height: 100%;
+            width: 100%;
+            border: solid 1px transparent;
+            padding: 5px;
+            height: 35px;
+            color: #a0a0a0;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.06), 0 2px 10px 0 rgba(0,0,0,.02);
+            transition: all .25s;
+            background: #fff;
+            overflow-y: overlay;
+        }
+
+        .chat-input.lined .input {
+            height: 80px;
+            margin-top: -35px;
+            margin-bottom: -5px;
+        }
+
+        .chat-inp .chat-input input:focus, .input:focus {
+            outline: none;
+            /*box-shadow:0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);*/
+        }
+
+        .chat-inp .emoji {
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+            background: #fff;
+            text-align: center;
+            cursor: pointer;
+            float: left;
+            top: 0;
+            left: 10px;
+            bottom: 0;
+            margin: auto;
+        }
+
+            .chat-inp .emoji:before {
+                content: '\f118';
+                font-family: fontAwesome;
+                line-height: 35px;
+                font-size: 20px;
+                font-weight: normal;
+                color: #a0a0a0;
+            }
+
+        .chat-inp .opts {
+            background: #fff;
+            top: 0;
+            right: 10px;
+            height: 35px;
+            bottom: 0;
+            margin: auto;
+            width: 35px;
+            overflow: hidden;
+        }
+
+            .chat-inp .opts a {
+                display: inline-block;
+                height: 35px;
+                width: 35px;
+                position: relative;
+                text-align: center;
+                cursor: pointer;
+                transition: all .25s;
+            }
+
+                .chat-inp .opts a:before {
+                    content: '\f118';
+                    font-family: fontAwesome;
+                    line-height: 35px;
+                    font-size: 20px;
+                    font-weight: normal;
+                    color: #a0a0a0;
+                }
+
+                .chat-inp .opts a.send:before {
+                    content: '\f1d9';
+                }
+
+                .chat-inp .opts a.mic:before {
+                    content: '\f130';
+                }
+
+        .chat-inp .lined + .opts a {
+            transform: translateY(-35px);
+        }
+
+        a:hover {
+            outline: none;
+            text-decoration: none;
+        }
+
+        .emoji-dashboard .emojis {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            height: 200px;
+            overflow-y: overlay;
+            overflow-x: hidden;
+        }
+
+            .emoji-dashboard .emojis li {
+                margin: 5px 15px;
+                cursor: pointer;
+            }
+
+        .musname {
+            position: absolute;
+            z-index: 1;
+            left: 5px;
+            margin-top:10px !important;
+        }
+
+        p img {
+            height: 25px;
+        }
+
+        .poolPP {
+            height: 60px;
+        }
+
+
+        .convMsg {
+            position: absolute;
+            z-index: 9999;
+            width: 20px;
+            margin-top: -13px;
+            margin-left: 23px;
+            margin-bottom: 13px !important;
+            text-align: center;
+            color: white;
+            /*CHAT END*/
+        }
+        span.onlin {
+            font-family: cursive;
+            font-weight: 800;
+            line-height: 28px;
+            color: #1E9FF2;
+        }
+
+    </style>
+</head>
+<body   class="vertical-layout vertical-menu-modern content-left-sidebar chat-application fixed-navbar pace-done menu-collapsed"
+      data-open="click" data-menu="vertical-menu-modern" data-col="content-left-sidebar">
+    <!-- fixed-top-->
+    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-dark navbar-shadow">
+        <div class="navbar-wrapper">
+            <div class="col-md-4 navbar-header expanded">
+                <a href="/MainPage">
+                    <img class="brand-logo" src="~/Assets/Custom/Images/Logos/logo.png">
+                </a>
+            </div>
+            <div class="col-md-3">
+                <div class="col-md-12">
+                    <span class="onlin">Çevrimiçi Bayanlar </span><span class="ladyCount onlin"></span>
+                </div>
+                <div class="col-md-12">
+                    <span class="onlin">Çevrimiçi Erkekler  </span><span class="gentCount onlin"></span>
+                </div>
+                
+            </div>
+            <div class="col-md-5 navbar-container">
+                <div class="collapse navbar-collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav mr-auto float-left">
+                    </ul>
+
+                    <ul class="nav navbar-nav float-right">
+                        <li class="dropdown dropdown-notification nav-item openMsg">
+                            <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><div class="rounded-circle  badge-warning convMsg"><span class="center convCount"></span></div><i class="ficon ft-mail"></i></a>
+                            <span class="circlenotification-tag badge badge-default badge-warning float-right m-0 "></span>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+
+                                <li class="dropdown-menu-header">
+
+                                    <h6 class="dropdown-header m-0">
+
+                                        <span class="grey darken-2">Sohbetler</span>
+                                    </h6>
+                                   
+
+                                </li>
+                                <div class="appendConversation">
+
+
+                                </div>
+
+                                <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center " href="#">Tüm Sohbetler</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown dropdown-notification nav-item ">
+                            <a class="nav-link nav-link-label " onclick="sendtoHome()" data-toggle="dropdown">
+
+
+                                <i class="ficon ft-settings blue"></i>
+
+                                @*<span class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">5</span>*@
+                            </a>
+                            @*<ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+
+
+
+                                </ul>*@
+                        </li>
+                        <li class="dropdown dropdown-notification nav-item">
+                            <a class="nav-link nav-link-label takeId" href="#" data-toggle="dropdown"><i class="ficon ft-bell ">  </i></a>
+                            <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right mesages">
+
+                                <li class="dropdown-menu-header">
+
+                                    <h6 class="dropdown-header m-0">
+
+                                        <span class="grey darken-2">Bildirimler</span>
+                                    </h6>
+                                    <span class="notification-tag badge badge-default badge-warning float-right m-0 notViewed"> </span>
+
+                                </li>
+                                <div class="appendMessage">
+
+
+                                </div>
+                                <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center goMessages" href="#">Bütün Bildirimleri Gör</a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="mr-1">
+                                    <span class="user-name text-bold-700 hidden ownid">@id</span>
+                                    <input type="text" class="hidden ownid" style="display:none" ownId="@id" value="@id" />
+                                </span>
+                                <span class="mr-1">
+                                    <span class="user-name text-bold-700" id="uNamePool">@UserName</span>
+                                </span>
+                                <span class="mr-1">
+                                    <span class="user-name text-bold-700">Krediniz:<span id="kredi">@BtPrice</span></span>
+                                </span>
+                                <span class="avatar avatar-online">
+                                    <img style="height:35px;" class="imglyout" src="@imgUrl" alt="avatar"><i></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                @*<a class="dropdown-item" href="#"><i class="ft-user"></i> Edit Profile</a>
+                                    <a class="dropdown-item" href="#"><i class="ft-mail"></i> My Inbox</a>
+                                    <a class="dropdown-item" href="#"><i class="ft-check-square"></i> Task</a>
+                                    <a class="dropdown-item" href="#"><i class="ft-message-square"></i> Chats</a>*@
+                                <div class="dropdown-divider"></div><a class="dropdown-item stclr"  href="/PoolLogin/Logout"><i class="ft-power"></i> Çıkış Yap</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </nav>
+
+    @RenderBody()
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    @*<footer class="footer fixed-bottom footer-light navbar-border navbar-shadow">
+            <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+                <span class="float-md-left d-block d-md-inline-block">
+                    Copyright &copy; 2020 <a class="text-bold-800 grey darken-2" href="htt/"
+                                             target="_blank">YAZILIMER TEKNOLOJİ </a>, All rights reserved.
+                </span>
+                <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
+            </p>
+        </footer>*@
+    <!-- BEGIN VENDOR JS-->
+
+    <div class="modal fade" id="showMessagePop" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <script src="~/Assets/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN MODERN JS-->
+    <script src="~/Assets/app-assets/js/core/app-menu.js" type="text/javascript"></script>
+    <script src="~/Assets/app-assets/js/core/app.js" type="text/javascript"></script>
+    <script src="~/Assets/app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+    <!-- END MODERN JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="~/Assets/app-assets/js/scripts/pages/chat-application.js" type="text/javascript"></script>
+    <script src="~/Assets/Custom/PoolUtil.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/Assets/toastr/toastr.js"></script>
+
+    <script src="~/Scripts/jquery.signalR-2.4.1.js"></script>
+    <script src="/signalr/hubs"></script>
+
+
+    <script>
+         $.ajax({
+        type: "post",
+        url: "/MainPage/getCountOnline",
+        dataType: "json",
+             success: function (list) {
+                 
+                 if (list.length > 0) {
+                     $('.gentCount').html(list[0]);
+                     $('.ladyCount').html(list[1]);
+                     
+                 }
+                 else if (list == false) {
+                     $('.onlin').addClass('hidden');
+                 }
+                 else {
+                     $('.onlin').addClass('hidden');
+                 }
+        }
+    });
+
+
+
+    </script>
+
+
+    <!-- END PAGE LEVEL JS-->
+</body>
+</html>
+

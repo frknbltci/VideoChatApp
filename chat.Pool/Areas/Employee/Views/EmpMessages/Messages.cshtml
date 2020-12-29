@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Messages";
+    Layout = "~/Areas/Employee/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+@model List<chat.DTO.EEntity.MessageDTO>
+
+    <h6 class="text-bold-700">Adminden size gönderilen mesajlar aşağıdadır.Okunan mesajlar yeşil renkte görünür.</h6> 
+
+<div class="card-content collapse show">
+    <div class="card-body">
+        <div class="row">
+            <table class="table table-striped table-bordered default-ordering">
+                <thead>
+                    <tr>
+                        <th>Admin</th>
+                        <th>Mesaj Konusu</th>
+                        <th>Mesajı Oku</th>
+                        <th>Gönderilme Zamanı</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.AdminName</td>
+                            <td>@item.About</td>
+                            <td>@item.SendDate.Date.Day/@item.SendDate.Date.Month/@item.SendDate.Date.Year</td>
+                            @if (item.Viewed == true)
+                            {
+                                <td><input data-toggle="modal" data-target="#showMessage" type="button" value="Oku" mssg="@item.Messages" mid="@item.ID" class="btn btn-sm btn-success takems" /></td>
+                            }
+                            else
+                            {
+                                <td><input data-toggle="modal" data-target="#showMessage" type="button" value="Oku" mssg="@item.Messages" mid="@item.ID" class="btn btn-sm btn-warning takems" /></td>
+                            }
+                        </tr>
+
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="showMessage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mesaj İçeriği</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-content pushMes" style="word-wrap: break-word !important; padding:10px;">
+
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

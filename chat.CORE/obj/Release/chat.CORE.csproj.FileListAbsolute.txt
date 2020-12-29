@@ -1,0 +1,12 @@
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\bin\Release\chat.CORE.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\bin\Release\chat.CORE.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\obj\Release\chat.CORE.csprojAssemblyReference.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\obj\Release\chat.CORE.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\obj\Release\chat.CORE.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\obj\Release\chat.CORE.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\bin\Release\chat.CORE.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\bin\Release\chat.CORE.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\obj\Release\chat.CORE.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\obj\Release\chat.CORE.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\obj\Release\chat.CORE.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\obj\Release\chat.CORE.pdb

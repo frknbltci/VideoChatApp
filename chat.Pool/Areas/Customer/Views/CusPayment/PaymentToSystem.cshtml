@@ -1,0 +1,238 @@
+﻿
+@{
+    ViewBag.Title = "PaymentToSystem";
+    Layout = "~/Areas/Customer/Views/Shared/_CustomerLayout.cshtml";
+}
+
+<style>
+
+
+    p b {
+        font-size: 15px;
+    }
+
+    .pccs {
+        margin: 10px;
+        padding: 10px;
+    }
+</style>
+
+<div class="ustbosluk" id="third-block">
+    <div class="line">
+        <h2>KREDİ PAKETLERİ</h2>
+        <h3>AKBANK TR83 0004 6013 7988 8000 0352 32</h3>
+        <h4 style="font-weight:800;">Kredi yüklemek için bizimle iletişime geçiniz; </h4>
+        <div class="row col-12">
+            <div class="col-6">
+
+                <a target="_blank" href="https://wa.me/905523534874/?text=Merhaba" );"="" class="row">
+                    <img style="height:25px;" src="/Assets/Custom/Images/Logos/whatsapp-logo.png">
+                    <div>
+                        <span class="whatsapp">WHATSAPP</span>
+                        <span class="wtel">+90 552 353 48 74</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6">
+                <img style="height:25px;" src="/Assets/Custom/Images/Logos/mail.png">
+                <span>EMAİL : </span>
+                <span>admin@canlisohbetevi.com</span>
+            </div>
+        </div>
+
+        @if (TempData["mes"] == null)
+        {
+
+        }
+        else
+        {
+            <h6 style="font-weight:700; color:darkred;" id="mesErrPayment">@TempData["mes"]</h6>
+        }
+
+            <div class="col-md-12 row">
+
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>10 Kredi</b></h5>
+                        <p class="card-text"><b>20 TL</b></p>
+
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx37dsfd0" },
+                new { @class = "btn btn-purple white" })*@
+
+                    </div>
+                </div>
+
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>15 Kredi</b></h5>
+                        <p class="card-text"><b>25 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx44dsfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>30 Kredi</b></h5>
+                        <p class="card-text"><b>45 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx36dsfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>45 Kredi</b></h5>
+                        <p class="card-text"><b>55 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx348dsfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>60 Kredi</b></h5>
+                        <p class="card-text"><b>65 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>80 Kredi</b></h5>
+                        <p class="card-text"><b>85 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>90 Kredi</b></h5>
+                        <p class="card-text"><b>95 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>100 Kredi</b></h5>
+                        <p class="card-text"><b>105 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>135 Kredi</b></h5>
+                        <p class="card-text"><b>130 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>160 Kredi</b></h5>
+                        <p class="card-text"><b>170 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>195 Kredi</b></h5>
+                        <p class="card-text"><b>195 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>330 Kredi</b></h5>
+                        <p class="card-text"><b>325 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>465 Kredi</b></h5>
+                        <p class="card-text"><b>490 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>660 Kredi</b></h5>
+                        <p class="card-text"><b>600 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>990 Kredi</b></h5>
+                        <p class="card-text"><b>860 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>1330 Kredi</b></h5>
+                        <p class="card-text"><b>1100 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+
+                <div class="card col-md-3 pccs" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Assets/Custom/Images/Logos/logo.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>2700 Kredi</b></h5>
+                        <p class="card-text"><b>2100 TL</b></p>
+                        @*@Html.ActionLink("Ödeme Yap", "Index",
+                new { controller = "Checkout", id = "fbx3258xı7sfd0" },
+                new { @class = "btn btn-purple white" })*@
+                    </div>
+                </div>
+
+              
+
+            </div>
+
+    </div>
+</div>
+

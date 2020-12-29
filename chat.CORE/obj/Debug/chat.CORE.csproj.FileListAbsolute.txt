@@ -1,0 +1,24 @@
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.CORE\bin\Debug\chat.CORE.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.CORE\bin\Debug\chat.CORE.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.CORE\obj\Debug\chat.CORE.csprojAssemblyReference.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.CORE\obj\Debug\chat.CORE.csproj.CoreCompileInputs.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.CORE\obj\Debug\chat.CORE.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.CORE\obj\Debug\chat.CORE.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.CORE\bin\Debug\chat.CORE.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.CORE\bin\Debug\chat.CORE.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.CORE\obj\Debug\chat.CORE.csprojAssemblyReference.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.CORE\obj\Debug\chat.CORE.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.CORE\obj\Debug\chat.CORE.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.CORE\obj\Debug\chat.CORE.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\bin\Debug\chat.CORE.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\bin\Debug\chat.CORE.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\obj\Debug\chat.CORE.csprojAssemblyReference.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\obj\Debug\chat.CORE.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\obj\Debug\chat.CORE.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.CORE\obj\Debug\chat.CORE.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\bin\Debug\chat.CORE.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\bin\Debug\chat.CORE.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\obj\Debug\chat.CORE.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\obj\Debug\chat.CORE.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\obj\Debug\chat.CORE.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.CORE\obj\Debug\chat.CORE.pdb

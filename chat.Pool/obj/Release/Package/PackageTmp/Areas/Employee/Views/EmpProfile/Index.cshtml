@@ -1,0 +1,388 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Employee/Views/Shared/_EmployeeLayout.cshtml";
+}
+@model chat.DTO.EEntity.EmployeeProfileDTO
+
+
+<style>
+
+    .galImg {
+        width: 120px;
+        height: 120px;
+        padding: 15px;
+        overflow: auto;
+        margin-left: 25px;
+        margin-top: 15px;
+    }
+
+        .galImg:hover {
+            border: 1px solid black;
+            width: 180px;
+            height: 180px;
+        }
+
+
+</style>
+
+<form method="post" enctype="multipart/form-data" action="/EmpProfile/ProfileSave">
+    <div class="col-xl-12 col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Kişisel Bilgileriniz</h4>
+                <h6 class="text-danger">* Lütfen güncelleme yaparken tüm alanların dolu olduğundan emin olun.</h6>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="base-tab21" data-toggle="tab" aria-controls="tab21"
+                               href="#tab21" aria-expanded="true">Profil Bilgileri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="base-tab22" data-toggle="tab" aria-controls="tab22" href="#tab22"
+                               aria-expanded="false">Banka Bilgileri</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content px-1 pt-1 border-grey border-lighten-2 border-0-top">
+                        <div role="tabpanel" class="tab-pane active" id="tab21" aria-expanded="true" aria-labelledby="base-tab21">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                            <div class="heading-elements">
+                                                <ul class="list-inline mb-0">
+                                                    <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                                                    <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                                                </ul>
+                                            </div>
+                                           @if (Model.employe.ImageURL == null)
+                                           {
+                                               Model.employe.ImageURL = "/Areas/Assets/ModelImg/women.png";
+                                           }
+                                            <div class="form-group">
+                                                <div class="media-left pl-2 pt-2">
+                                                    <a href="#" target="_blank" class="profile-image">
+            <img id="uploadImage"  src="@Model.employe.ImageURL" class="rounded-circle img-border height-100" alt="@Model.employe.UserName">
+            <input name="editEmpOldImg" style="display:none;" type="text" value="@Model.employe.ImageURL" class="hidden" />
+            <input name="uploadImgEmp" style="display:none;" type="text" readonly value="" class="hidden sendValImg" />
+
+        </a>
+                                                    <label>Profil resminizi galeriden seçerek güncelleyebilirsiniz</label>
+                                                </div>
+                                                <br />
+                                                <div class="col-md-9">
+                                                    
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".mediaList">Galeri</button>
+                                                    @*<label id="projectinput8" class="file center-block">
+            <input type="file" name="resim" id="EmpProfilePhoto">
+        </label>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @if (TempData["mes"] == null)
+                                        {
+                                            <span></span>
+                                        }
+                                        else
+                                        {
+                                            if (TempData["mes"].ToString() != "err")
+                                            {
+
+                                                <span>@Html.Raw(TempData["mes"].ToString())</span>
+
+                                            }
+                                            else if (TempData["mes"].ToString() == "err")
+                                            {
+                                                <span class="errGoster">Güncelleme Başarısız</span>
+                                            }
+
+                                        }
+
+                                        <div class="card-content collpase show">
+                                            <div class="card-body">
+                                                <div class="form-body">
+                                                    <h4 class="form-section"><i class="la la-user"></i> Kullanıcı Bilgileri</h4><br />
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="FirstName">Ad</label>
+                                                                <div class="col-md-9">
+                                                                    <input type="text" required value="@Model.employe.FirstName" id="userinput1" class="form-control border-primary" placeholder="Ad" name="FirstName">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="userinput2">Soyad</label>
+                                                                <div class="col-md-9">
+                                                                    <input type="text" required value="@Model.employe.LastName" id="userinput2" class="form-control border-primary" placeholder="Soyad" name="lastname">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="userinput3">Kullanıcı Adı</label>
+                                                                <div class="col-md-9">
+                                                                    <input type="text" readonly id="userinput3" class="form-control border-primary" value="@Model.employe.UserName" placeholder="Kullanıcı Adı" name="UserName">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="userinput3">Şifre</label>
+                                                                <div class="col-md-9">
+                                                                    <input value="@Model.employe.Password" required type="text" id="EmpPassword" class="form-control border-primary" placeholder="Şifre" name="Password">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="NickName">Nick Name</label>
+                                                                <div class="col-md-9">
+                                                                    <input value="@Model.employe.NickName" required type="text" class="form-control border-primary" placeholder="Model Adınız" name="NickName">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="weight">Ağırlık(kg)</label>
+                                                                <div class="col-md-9">
+                                                                    <input value="@Model.employe.Weight" required type="number" id="weight" class="form-control border-primary" placeholder="Ağırlık" name="Weight">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="userinput5">Email</label>
+                                                                <div class="col-md-9">
+                                                                    <input name="Email" readonly required value="@Model.employe.Email" class="form-control border-primary" type="email" placeholder="Email">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="length">Boy(cm)</label>
+                                                                <div class="col-md-9">
+                                                                    <input name="Length" required value="@Model.employe.Length" class="form-control border-primary" type="number" placeholder="Uzunluk" id="length">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="projectinput6">Doğum Tarihi</label>
+                                                                <div class="col-md-9">
+                                                                    <input value="@Model.employe.BirthDate.Year-@Model.employe.BirthDate.Month-@Model.employe.BirthDate.Day"  name="BirthDate" class="form-control border-primary" type="date" id="birthdate">
+                        
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="projectinput6">Saç Rengi</label>
+                                                                <div class="col-md-9">
+                                                                    <select id="gender" name="HairColorID" class="form-control">
+                                                                        @foreach (var item in Model.hairColorList)
+                                                                        {
+                                                                            if (item.ID == Model.employe.HairColorID)
+                                                                            {
+                                                                                <option value="@item.ID" selected>@item.ColorName</option>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <option value="@item.ID">@item.ColorName</option>
+                                                                            }
+                                                                        }
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="projectinput6">Cinsiyet</label>
+                                                                <div class="col-md-9">
+                                                                    <select id="gender" name="GenderID" class="form-control">
+                                                                        @foreach (var item in Model.genderList)
+                                                                        {
+                                                                            if (item.ID == Model.employe.GenderID)
+                                                                            {
+                                                                                <option value="@item.ID" selected>@item.GenderType</option>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <option value="@item.ID">@item.GenderType</option>
+                                                                            }
+                                                                        }
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="hairType">Saç Tipi</label>
+                                                                <div class="col-md-9">
+                                                                    <select id="hairType" name="HairTypeID" class="form-control">
+                                                                        @foreach (var item in Model.hairTypesList)
+                                                                        {
+                                                                            if (item.ID == Model.employe.HairTypeID)
+                                                                            {
+                                                                                <option value="@item.ID" selected>@item.HairType</option>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <option value="@item.ID">@item.HairType</option>
+                                                                            }
+                                                                        }
+
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="projectinput6">Göz Rengi</label>
+                                                                <div class="col-md-9">
+                                                                    <select id="gender" name="EyeColorID" class="form-control">
+                                                                        @foreach (var item in Model.eyeColorList)
+                                                                        {
+                                                                            if (item.ID == Model.employe.EyeColorID)
+                                                                            {
+                                                                                <option value="@item.ID" selected>@item.ColorName</option>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <option value="@item.ID">@item.ColorName</option>
+                                                                            }
+                                                                        }
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group row">
+                                                                <label class="col-md-3 label-control" for="hairType">Vücut Tipi</label>
+                                                                <div class="col-md-9">
+                                                                    <select id="hairType" name="BodyTypeID" class="form-control">
+                                                                        @foreach (var item in Model.bodyTypesList)
+                                                                        {
+                                                                            if (item.ID == Model.employe.BodyTypeID)
+                                                                            {
+                                                                                <option value="@item.ID" selected>@item.BodyTypeName</option>
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                <option value="@item.ID">@item.BodyTypeName</option>
+                                                                            }
+                                                                        }
+
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group row">
+                                                            <label class="col-md-3 label-control" for="empAbout">Hakkımda</label>
+                                                            <div class="col-md-12">
+                                                                <textarea id="empAbout" rows="6" class="form-control border-primary" name="About"
+                                                                          placeholder="Kendinizden Bahsetmek İstermisiniz ?">@Model.employe.About</textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab22" aria-labelledby="base-tab22">
+                            <div class="column">
+                                <div class="col-md-8">
+                                    <div class="form-group row">
+                                        <label class="col-md-8 label-control" for="bankName">Banka Adı</label>
+                                        <div class="col-md-9">
+                                            <input name="BankName" value="@Model.employe.BankName" required class="form-control border-primary" type="text" placeholder="Banka Adı" id="bankName">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group row">
+                                        <label class="col-md-8 label-control" for="ibanNo">IBAN Numarası</label>
+                                        <div class="col-md-9">
+                                            <input name="IBAN" required value="@Model.employe.IBAN" class="form-control  border-primary" type="text" placeholder="Iban Numarası" id="ibanNo">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions right">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="la la-check-square-o"></i> Kaydet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<div class="modal fade mediaList" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <b style="text-align:center; margin-top:5px;">Profil Fotoğrafınızı seçin</b>
+            <div class="row">
+                @{ string[] filePaths = Directory.GetFiles(Server.MapPath("~/Areas/Assets/StaticModelImages/"));
+                    foreach (string filePath in filePaths)
+                    {
+
+                        string fileName = Path.GetFileName(filePath);
+
+
+                        <img class="galImg" src="/Areas/Assets/StaticModelImages/@fileName" />
+
+                    }
+                }
+
+
+            </div>
+
+            <div class="modal-footer">
+                <button data-dismiss="modal" fname="" class="btn btn-success saveRes">Seç</button>
+                <button data-dismiss="modal" class="btn btn-danger">Vazgeç</button>
+
+            </div>
+        </div>
+        
+
+    </div>
+</div>

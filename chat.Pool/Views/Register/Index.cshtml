@@ -1,0 +1,334 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutBeforeLogin.cshtml";
+}
+@model chat.DTO.EEntity.EmployeeProfileDTO
+
+<style>
+
+    .insidetab {
+        margin-top: 25px;
+    }
+</style>
+
+<section>
+    <div id="head">
+        <div class="line">
+            <div class="container">
+                <div class="">
+                    <p class=""> Zaten bir hesabım var. <a href="/PoolLogin/LoginIndex"> Giriş yapmak istiyorum</a></p>
+                </div>
+                <ul class="nav nav-tabs">
+
+                    <li class="col-md-6"><a data-toggle="tab" href="#menu1">Kullanıcı Kaydı</a></li>
+                    <li class="col-md-6"><a data-toggle="tab" href="#menu2">Model Kaydı</a></li>
+                </ul>
+                <div class="tab-content insidetab ">
+                    <div id="menu1" class="tab-pane fade">
+                        <form class="form-horizontal" method="post" action="/Register/makeCustomerRegister" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="cusKullaniciAdi">Kullanıcı Adı</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="cusKullaniciAdi" class="form-control border-primary" placeholder="Kullanıcı Adı Girin" name="UserName">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="cusPass">Şifre</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="cusPass" class="form-control border-primary" placeholder="Şifrenizi Girin" name="Password">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="cusEmail">Email</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="cusEmail" class="form-control border-primary" placeholder="Email Adresinizi Girin" name="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="confirmPass">Şifre Tekrarı</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="confirmPass" class="form-control border-primary" placeholder="Şifrenizi Girin" name="confirmPass">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5 center font-medium-3">
+                                    <a data-toggle="modal" data-target="#contract">Sözleşmeyi okudum kabul ediyorum</a>
+                                    <input required type="checkbox" id="contractCus" name="contractCus" value="true">
+                                    <br />
+
+                                </div>
+
+                            </div>
+                            <button style="margin-top:15px;" type="button" class="btn btn-purple btn-block cusModRegister"><i class="ft-user"></i> Üye Ol</button>
+                        </form>
+
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <form class="form-horizontal" method="post" action="/Register/makeRegister" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisFirstname">Ad</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="EmpRegisFirstName" class="form-control border-primary" placeholder="Adınızı Girin" name="FirstName">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisLastname">Soyad</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="EmpRegisLastName" class="form-control border-primary" placeholder="Soyadınızı Girin" name="LastName">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisUserName">Kullanıcı Adı</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="EmpRegisUserName" class="form-control border-primary" placeholder="Kullanıcı Adı Girin" name="UserName">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisPass">Şifre</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="EmpRegisPass" class="form-control border-primary" placeholder="Şifrenizi Girin" name="Password">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisEmail">Email</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="EmpRegisEmail" class="form-control border-primary" placeholder="Email Adresinizi Girin" name="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisConfirmPass">Şifre Tekrarı</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="EmpRegisConfirmPass" class="form-control border-primary" placeholder="Şifrenizi Girin" name="EmpRegisConfirmPass">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                @*<div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-3 label-control" for="emp-gender">Cinsiyet</label>
+                                            <div class="col-md-9">
+                                                <select id="emp-gender" name="GenderID" class="form-control">
+                                                    <option selected>Seçim Yapınız</option>
+                                                    @foreach (var item in Model.genderList)
+                                                    {
+
+                                                        <option value="@item.ID">@item.GenderType</option>
+
+                                                    }
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>*@
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisterGender">Saç Rengi</label>
+                                        <div class="col-md-9">
+                                            <select id="EmpRegisterGender" name="HairColorID" class="form-control">
+                                                <option selected value="0">Seçim Yapınız</option>
+                                                @foreach (var item in Model.hairColorList)
+                                                {
+
+                                                    <option value="@item.ID">@item.ColorName</option>
+
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisterHairType">Saç Tipi</label>
+                                        <div class="col-md-9">
+                                            <select id="EmpRegisterHairType" name="HairTypeID" class="form-control">
+                                                <option selected value="0">Seçim Yapınız</option>
+                                                @foreach (var item in Model.hairTypesList)
+                                                {
+                                                    <option value="@item.ID">@item.HairType</option>
+
+                                                }
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisterEyeColor">Göz Rengi</label>
+                                        <div class="col-md-9">
+                                            <select id="EmpRegisterEyeColor" name="EyeColorID" class="form-control">
+                                                <option selected value="0">Seçim Yapınız</option>
+                                                @foreach (var item in Model.eyeColorList)
+                                                {
+                                                    <option value="@item.ID">@item.ColorName</option>
+
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisterBodyType">Vücut Tipi</label>
+                                        <div class="col-md-9">
+                                            <select id="EmpRegisterBodyType" name="BodyTypeID" class="form-control">
+                                                <option selected value="0">Seçim Yapınız</option>
+                                                @foreach (var item in Model.bodyTypesList)
+                                                {
+                                                    <option value="@item.ID">@item.BodyTypeName</option>
+
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisBirthdate">Doğum Tarihi</label>
+                                        <div class="col-md-9">
+                                            <input name="BirthDate" class="form-control border-primary" type="date" id="EmpRegisBirthdate">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-3 label-control" for="EmpRegisNickName">Nickname</label>
+                                        <div class="col-md-9">
+                                            <input type="text" required value="" id="EmpRegisNickName" class="form-control border-primary" placeholder="Sohbet İsminizi Girin" name="Nickname">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5 center font-medium-3">
+                                    <a data-toggle="modal" data-target="#contract">Sözleşmeyi okudum kabul ediyorum</a>
+                                    <input type="checkbox" id="contractEmp" name="contractEmp" value="true">
+
+                                </div>
+                            </div>
+                            <button style="
+    margin-top: 15px;" type="button" class="btn btn-purple btn-block empModRegister">
+                                <i class="ft-user"></i> Üye Ol
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<div class="modal fade bd-example-modal-lg" id="contract" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="ttle">Üyelik Sözleşmesi ve Gizlilik İlkeleri</h5>
+            </div>
+            <div id="third-block">
+                <div style="overflow:scroll; height:400px;" class="line">
+
+                    İş bu sözleşme konusu; internet ortamında sunulan hizmetlerden yararlanma şartları, tarafların hak ve yükümlülüklerinin tespitidir.
+
+                    Sözleşme Kapsamı:
+                    İş bu sözleşmenin kapsamı, site içerisinde yer alan kullanıma, üyeliğe ve hizmetlere ilişkin www.canlisohbetevi.com. İnternet Teknolojileri tarafından hazırlanmış olan uyarı, yazı ve açıklama gibi beyanlardır. Üye, işbu sözleşme hükümlerini kabul etmekle, site içerisinde bulunan kullanıma, üyeliğe ve hizmetlere ilişkin www.canlisohbetevi.com  tarafından açıklanan her türlü beyanı kabul etmiş olmakla birlikte üye, bahsi geçen beyanlarda belirtilmiş olan her türlü hususa uygun olarak davranacağını kabul, beyan ve taahhüt eder. Sözleşme Tarafları:
+                    İş bu sözleşmenin kapsamı, site içerisinde yer alan kullanıma, üyeliğe ve hizmetlere ilişkin www.canlisohbetevi.com İnternet Teknolojileri tarafından hazırlanmış olan uyarı, yazı ve açıklama gibi beyanlardır. İşbu sözleşme, site sahibi ve işletmecisi olan; www.canlisohbetevi.com İnternet Teknolojileri" ile "siteye üye olan kişi" arasında yapılan, internet ortamında üye kaydı gerçekleşirken onaylandığı takdirde akdedilip karşılıklı olarak yürürlüğe girmiştir. Sözleşme Tanımlamaları:
+
+                    Site sahibi ve işletmecisi olan; www.canlisohbetevi.com İnternet Teknolojileri; bundan böyle www.canlisohbetevi.com olarak adlandırılacaktır. www.canlisohbetevi.com sitesinde bulunan üyelik formu doldurmuş, "Üyelik Sözleşmesi'ni okudum ve şartları kabul ediyorum." ifadesinin başındaki kutucuğu işaretlemiş ve "Kayıt Ol" butonuna basarak üye olma işlemini tamamlamış olan kişi; bundan böyle "Üye" olarak adlandırılacaktır. www.canlisohbetevi.com sitesinde bulunan üyeliğini, ücret ödeyerek Üyelik haklarına sahip olan üyeler; bundan böyle Üye olarak adlandırılacaktır. www.canlisohbetevi.com sitesine kayıtlı tüm üyelerin, kendisinin verdiği bilgilerle oluşturulan diğer üyeler tarafından görüntülenebilen üyeye özel tanıtım sayfası; bundan böyle "Üye Profili" olarak adlandırılacaktır.
+                    Yasal Hak ve Hükümlülükler İş bu sözleşme bulunan, yasal hak ve hükümlülükler; Üyelerin yasal hak ve yükümlülükleri ve www.canlisohbetevi.com hak ve hükümlülükleri olmakla birlikte Üyelerin Yasal Hak ve Hükümlülükleri Siteye üye olabilmek için, kişinin T.C. yasalarına göre 18 yaşını doldurmuş ve kanunen reşit sayılması ve işbu sözleşme hükümleri gereğince, daha önceden üyeliği iptal edilmemiş, kullanıcı adı olarak ticari bir unvan yada ahlaka aykırı bir rumuz seçilmemiş olması gerekmektedir.
+                    Reşit olmayan, üyeliği daha önce iptal edilmiş olan ve üye rumuzu olarak ticari bir unvanı yada ahlaka aykırı rumuz seçmiş olan kişilerin üyelik kayıt işlemlerini tamamlamış olmaları ve işbu sözleşmeyi onaylamaları, üyelik sonucunu doğurmayacaktır. Üye, üyelik aşamasında ilgili internet sayfası aracılığıyla belirttiği ve "Ay, Gün, Yıl" dan oluşan doğum tarihi ile reşit olduğunu beyan etmiş olur. Reşit olmadığı, üyeliğinin daha önce iptal edilmiş olduğu ve üye rumuzu olarak ticari bir unvanı yada ahlaka aykırı bir rumuz seçmiş olduğu tespit edilen üyenin üyeliği iptal edilir.
+                    Üye, üyeliği süresince, sitenin hizmetlerinden faydalanırken ve sitelerdeki hizmetlerle ilgili herhangi bir işlemi yerine getirirken işbu sözleşme içerisinde yer alan tüm şartlara, sitenin ilgili yerlerinde belirtilen kurallara ve yürürlükteki tüm mevzuata uygun hareket edeceğini, işbu sözleşme ile belirlenen tüm şart ve kuralları anladığını ve onayladığını kabul eder.
+                    Üye, www.canlisohbetevi.com yürürlükteki emredici mevzuat hükümleri gereğince, resmi makamlara açıklama yapmakla yükümlü olduğu durumlar içersinde, resmi makamlarca usulü dairesinde bu bilgilerin talep edilmesi halinde, üyelere ait gizli, özel ve/veya ticari bilgileri resmi makamlara açıklamaya yetkili olacağını ve bu sebeple www.canlisohbetevi.com  her ne nam altında olursa olsun tazminat talep edilemeyeceğini kabul eder.
+                    Üyelerin, site aracılığıyla www.canlisohbetevi.com tarafından sunulan hizmetlerden yararlanabilmek amacıyla kullandıkları sisteme erişim araçlarının (kullanıcı ismi, şifre v.b) güvenliği, saklanması, üçüncü kişilerin bilgisinden uzak tutulması, kullanılması durumlarıyla ilgili hususlar tamamen üyelerin sorumluluğundadır. Üyelerin, sisteme giriş araçlarının güvenliği, saklanması, üçüncü kişilerin bilgisinden uzak tutulması, kullanılması gibi hususlardaki tüm ihmal ve kusurlarından dolayı üyelerin ve/veya üçüncü kişilerin uğradığı veya uğrayabileceği zararlardan www.canlisohbetevi.com doğrudan veya dolaylı yoldan herhangi bir sorumluluğu yoktur.
+                    Üyeler sitelerdeki ilgili bölümlere ve üye profillerine kendileri tarafından sağlanan bilgilerin ve içeriklerin doğru ve hukuka uygun olduğunu kabul ve taahhüt etmektedirler. www.canlisohbetevi.com üyeler tarafından sitelere iletilen veya üye profillerinin oluşturulmasında ve değiştirilmesinde kendileri tarafından yüklenen, değiştirilen ve sağlanan bilgilerin ve içeriklerin doğruluğunu araştırma; bu bilgi ve içeriklerin güvenli, doğru, işbu sözleşmenin hükümlerine ve hukuka uygun olduğunu taahhüt ve garanti etmekle yükümlü ve sorumlu olmadığı gibi söz konusu bilgi ve içeriklerin yanlış veya hatalı olmasından ve/veya bu içerikler aracılığıyla diğer internet sitelerine yapılan yönlendirmelerden dolayı ortaya çıkacak hiçbir zarardan da sorumlu tutulamaz.
+                    Üye tarafından oluşturulan üye profili, www.canlisohbetevi.com tarafından onaylandıktan sonra sitelerde görüntülenir. Üye profilinde kişisel iletişim bilgileri (e-posta adresi gibi.) diğer üyeler tarafından görünmez; www.canlisohbetevi.com üye profilinde kişisel iletişim bilgileri bulunan üyelerin üyeliklerini iptal etme hakkı bulunmaktadır. Üye profilinde bulunan e-posta adresi dışındaki bilgiler, sitelerin diğer tüm üyeleri tarafından görülebilir; üye bu bilgilerin görüntülenmemesini talep edemez. Üye profilinde bulunan bilgilerin görüntülenmesine ancak üyeliğin iptal edilmesi ile son verilir. Üyeler, www.canlisohbetevi.com yazılı onayı olmadan işbu sözleşmeyi veya bu sözleşmenin kapsamındaki hak ve yükümlülüklerini, üye profillerini, üye bilgilerini kısmen veya tamamen herhangi bir üçüncü kişiye devredemez; üyelik üyenin kendisinden başka kişilerin kullanımına açılamaz. Bu tür devirler veya yetkisiz kullanımlar sonucu üçüncü kişilerin uğradıkları veya uğrayabilecekleri zararlardan dolayı www.canlisohbetevi.com doğrudan ve/veya dolaylı olarak hiçbir şekilde sorumlu tutulamaz. Üyeliğini başkasına kullandırttığı veya devrettiği tespit edilen üyenin üyeliği iptal edilir.
+
+                    Üyelerin, kendi aralarında siteler aracılığıyla yaptıkları özel mesajlaşmalar da dahil olmak üzere sitelerde yaptıkları her işlem ve eylemdeki hukuki ve cezai sorumluluk kendilerine aittir. Üye diğer üyelere, reklam ya da ticari amaçlar taşıyan mesajlar gönderemez, diğer üyeleri bir başka internet sitesine yönlendiremez. Bu tür mesajlar ileten üyenin mesajlaşma hakkı kısıtlanabilir ya da üyeliği iptal edilebilir. Üyenin yaptığı mesajlaşmaların, toplamı www.canlisohbetevi.com belirlediği ve sitelerin ilgili bölümünde bildirdiği sayıdan fazla ise, mesajlar en eski tarihten başlanarak silinebilir.
+                    Her üye, www.canlisohbetevi.com ve/veya başka bir üçüncü şahsın ayni veya şahsi haklarına, malvarlığına tecavüz teşkil edecek nitelikteki siteler dahilinde bulunan resimleri, metinleri, görsel ve işitsel imgeleri, video klipleri, dosyaları, veritabanları, katalogları ve listeleri çoğaltmayacağını, kopyalamayacağını, dağıtmayacağını, işlemeyeceğini, gerek bu eylemleri ile gerekse de başka yollarla www.canlisohbetevi.com ile doğrudan ve/veya dolaylı olarak rekabete girmeyeceğini kabul ve taahhüt etmektedir. Üyelerin işbu sözleşme hükümlerine ve hukuka aykırı olarak gerçekleştirdikleri siteler üzerindeki faaliyetleri nedeniyle üçüncü kişilerin uğradıkları veya uğrayabilecekleri zararlardan dolayı www.canlisohbetevi.com doğrudan ve/veya dolaylı olarak hiçbir şekilde sorumlu tutulamaz.
+                    Üye, sitelerin üyelik ayarları bölümünden üyeliğini iptal edebilir. Üyeliğin iptal edilmesiyle birlikte üyenin kullandığı rumuz diğer üyeler tarafından seçilip kullanılabilir hale gelebilir.
+                    Üye, siteler aracılığıyla diğer üyelere gönderdiği özel mesajlarda toplumsal ahlaka, genel nezaket kurallarına aykırı ifadeler kullanmayacağını kabul ve taahhüt eder. Özel mesajlar otomatik programlar ile taranabilir veya mesaj gönderilen Üyelerin şikayeti üzerine incelenebilir. Bu otomatik tarama sonucunda veya şikayet sonrasında yapılan incelemede gerekli görüldüğü takdirde üyenin profili yayından kaldırılabilir, mesajlaşma hakkı kısıtlanabilir, bütünüyle engellenebilir veya üyeliği tamamen iptal edilebilir.
+
+                    www.canlisohbetevi.com  Yasal Hak ve Hükümlülükleri
+
+                    www.canlisohbetevi.com , sitede sunulan hizmetleri ve içerikleri her zaman değiştirebilme hakkına sahiptir. Üyelerin sisteme yükledikleri bilgileri, içerikleri ve üye profillerini, üyeler de dahil olmak üzere üçüncü kişilerin erişimine kapatabilme ve silme hakkını saklı tutmaktadır. www.canlisohbetevi.com  bu hakkını hiçbir bildirimde bulunmadan kullanabilir. Üyeler, www.canlisohbetevi.com  talep ettiği değişiklik ve/veya düzeltmeleri ivedi olarak yerine getirmek zorundadırlar. www.canlisohbetevi.com  tarafından talep edilen değişiklik ve/veya düzeltme istekleri gerekli görüldüğü takdirde bizzat www.canlisohbetevi.com  tarafından yapabilir. www.canlisohbetevi.com  tarafından talep edilen değişiklik ve/veya düzeltme taleplerinin, üyeler tarafından zamanında yerine getirilmemesi sebebiyle doğan veya doğabilecek zararlar, hukuki ve cezai sorumluluklar tamamen üyelerin kendilerine aittir.
+                    www.canlisohbetevi.com  sitelerin işleyişine, genel kurallarına, genel ahlak kurallarına aykırı ve www.canlisohbetevi.com  tarafından kabul edilmesi mümkün olmayan mesajları, içerikleri istediği zaman ve şekilde erişimden kaldırabilir; www.canlisohbetevi.com.tr bu mesaj ve içeriği giren üyenin üyeliğine herhangi bir ihbar yapmadan son verebilir.
+                    Teknik sorunlardan Sitenin yayınlarında kesintiler olabilir. Bu kesintilerden dolayı yaşanan iletişim ve siteye ulaşmaya dair ilişkin kesintilerde Üyenin yaşayacağı sorunlardan www.canlisohbetevi.com sorumlu tutulamaz.
+
+                    Site'de yayınlanan ve Üye profillerinde yer alan her türlü görüntü, yazı, fotoğraf ve diğer materyal www.canlisohbetevi.com  izni olmadan diğer internet sitelerinde ve gazete, televizyon, radyo, dergi gibi konvansiyonel mecralarda yayınlanamaz. Sitede yer alan tüm içerik, Fikir ve Sanat Eserleri Kanunu'nun dördüncü maddesinin yedinci bendi olan, "Belli bir maksada göre ve hususi bir plan dahilinde verilerin ve materyallerin seçilip derlenmesi sonucu ortaya çıkan ve bir araç ile okunabilir veya diğer biçimdeki veri tabanları" ile koruma altında olduğu gibi eser niteliğindeki içerik ayrıca hukuki korumaya tabidir., sitelerin işleyişine, genel kurallarına, genel ahlak kurallarına aykırı ve www.canlisohbetevi.com tarafından kabul edilmesi mümkün olmayan mesajları, içerikleri istediği zaman ve şekilde erişimden kaldırabilir; www.canlisohbetevi.com  bu mesaj ve içeriği giren üyenin üyeliğine herhangi bir ihbar yapmadan son verebilir.
+
+                    Teknik sorunlardan Sitenin yayınlarında kesintiler olabilir. Bu kesintilerden dolayı yaşanan iletişim ve siteye ulaşmaya dair ilişkin kesintilerde Üyenin yaşayacağı sorunlardan www.canlisohbetevi.com sorumlu tutulamaz.
+
+                    Mucbir Sebepler
+                    Hukuken mücbir sebep sayılan tüm durumlarda, www.canlisohbetevi.com  , işbu sözleşme ile belirlenen edimlerinden herhangi birini geç veya eksik ifa etme veya ifa etmeme nedeniyle yükümlü değildir. Bu ve bunun gibi durumlar, www.canlisohbetevi.com  için, gecikme, eksik ifa etme veya ifa etmeme veya temerrüt addedilmeyecek veya bu durumlar için herhangi bir nam altında tazminat talep edilemeyecektir. "Mücbir sebep" terimi, doğal afet, isyan, savaş, grev, iletişim sorunları, altyapı ve internet arızaları, elektrik kesintisi ve kötü hava koşulları da dahil ve fakat bunlarla sınırlı olmamak kaydıyla ilgili tarafın makul kontrolü haricinde ve www.canlisohbetevi.com  gerekli özeni göstermesine rağmen önleyemediği kaçınılamayacak olaylar olarak yorumlanacaktır. Uygulanacak Hukuk ve Yetki
+                    İşbu sözleşmenin uygulanmasında, yorumlanmasında ve bu sözleşme dahilinde doğan hukuki ilişkilerin yönetiminde Türk Hukuku uygulanacaktır. İşbu sözleşmeden dolayı doğan veya doğabilecek her türlü ihtilaf halinde İstanbul Mahkemeleri ve İcra Daireleri yetkilidir.
+                    Sözleşmenin Feshi
+                    İşbu sözleşme üyenin, üyeliği iptal edilinceye kadar yürürlükte kalacak ve taraflar arası hüküm ve sonuçlarını doğurmaya devam edecek, üyenin üyelik süresinin dolması geçici veya kalıcı olarak üyeliğinin durdurulması hallerinde sona ermiş sayılacaktır.
+                    www.canlisohbetevi.com , üyelerin işbu sözleşmede belirtilen hükümleri ve site içinde yer alan kullanıma, üyeliğe ve hizmetlere ilişkin benzeri kuralları ihlal etmeleri durumunda sözleşmeyi tek taraflı olarak feshedebilecek ve üyeler fesih sebebiyle www.canlisohbetevi.com uğradığı tüm zararları tazmin etmekle yükümlü olacaktır.
+
+
+                    Gizlilik Sozlesmesi  www.canlisohbetevi.com , sitesine üye olarak hizmetlerinden faydalanan kullanıcıların özel bilgileri www.canlisohbetevi.com tarafından korunur.www.canlisohbetevi.com özel bilgilerin gizliliğinden sorumludur.
+
+                    www.canlisohbetevi.com sitesine üye olabilmek için isim soy isim veya tc kimlik numarası gibi kimlik bilgileri gerekmez. Üye olmak için geçerli mail adresi ve şifresi yeterlidir  ve üyeler tarafından belirtilen bilgiler hiçbir şekilde kimlik tespiti vs. için kullanılmaz.
+                    www.canlisohbetevi.com sitesine üye olarak gelen kişilerin üyelik bilgileri üyelerin sorumluluğundadır. Herkesin kullanımına açık alanlarda verilen bilgiler veya yazlan yazılar konusunda www.canlisohbetevi.com sorumluluk almaz. Tüm sorumluluk paylaşan kişiye aittir.
+
+                    www.canlisohbetevi.com sitesinde küfür, kötü kelime, hakaret, taciz, reklam ve tehdit yasaktır. Herkese açık genel sohbet alanı ve özel sohbet alanlarında bu tür kelimeler kullanarak üyeleri rahatsız eden kişilerin üyelikleri gerekli inceleme yapıldıktan sonra silinir.
+
+                    www.canlisohbetevi.com sitesinde üyelere ait kayıtlar ve bilgiler hiçbir gerekçe ile üçüncü şahıslara aktarılmaz. www.canlisohbetevi.com sitesinde üyeler arasında gerçekleşen özel görüşmeler sadece ilgili taraflarca görüntülenir. Site içinden, hiçbir gerekçe ile üçüncü şahıslara aktarılmaz.
+
+                    Sohbet odalarında gerçekleşen tartışma veya anlaşmazlıklarda site yönetimi sorumlu tutulamaz.
+
+                    Güvenlik www.canlisohbetevi.com sahip olduğu üye bilgilerini korumak, kötü amaçlar için kullanılmasını engellemek ve üçüncü kişilerin eline geçmesini engellemek amacıyla değişik güvenlik önlemleri ile korunur.
+
+                    18 yaş altı çocukların korunması www.canlisohbetevi.com 18 yaş altı bireylere yasaktır. Üye olmak içi tek şart 18 yaş üstü olmaktır. Herhangi bir 18 yaş altı kişi siteye üye olursa ve yaşını büyük belirtirse www.canlisohbetevi.com sitesi bu konuda sorumluluk almaz. Herhangi bir üyenin 18 yaş olduğu bilinir ve yöneticilere iletilirse kişinin üyeliği sonlandırılır.
+
+                    Üyelik İptali www.canlisohbetevi.com sitesinde sahip olunan üyeliğin üyenin kendi rızası ile iptali için www.canlisohbetevi.com'a bildirmek durumundadır.Üyeliğini sonlandıran üyenin tüm kayıtlı bilgileri sistemden silinir. Site genel kurallarına uymayan üyelerin; site içinde farklı reklam yapan, diğer üyeleri hakaret, taciz vb. şekillerde rahatsız eden ve diğer kurallara uymayan üyelerin üyelikleri site yönetimi tarafından sonlandırlır.
+                    www.canlisohbetevi.com , üyelerinin yazışmalarından ve davranışlarından dolayı sorumlu tutulamaz. www.canlisohbetevi.com 18 yaşından büyükler için uygundur.
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

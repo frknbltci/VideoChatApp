@@ -1,0 +1,189 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<chat.CORE.Entities.Customer>
+
+<style>
+
+    .btn-circle {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+    }
+
+</style>
+
+
+<h4>Müşterilerimiz</h4><br />
+
+<strong>Ml</strong>: Meşgul <br />
+<strong>Çd</strong>: Çevrimdışı <br />
+<a class="btn btn-success btn-circle"></a>: Çevrimdışı yap butonu
+
+<div class="card-content collapse show">
+    <div class="card-body">
+        <div class="row">
+            <table id="cusTbl" class="table table-striped table-bordered default-ordering">
+                <thead>
+                    <tr>
+                        <th class="hidden">ID</th>
+                        <th>Kullanıcı Adı </th>
+                        <th>Şifre</th>
+                        <th>Email</th>
+                        <th>Kredisi</th>
+                        <th>Durumu</th>
+                        <th>Çevrim Durumu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+                        <tr>
+                            <td class="hidden">@item.ID</td>
+                            <td>@item.UserName</td>
+
+                            <td>@item.Password</td>
+
+
+                            @*@if (item.StatusID == 1)
+                                {
+                                    <td><button data-toggle="modal" data-target="#callShowPopUp" type="button" value="Oku" mid="@item.ModelID" class="btn btn-sm btn-success  sendFavEmpId"><i class="la la-phone"></i></button></td>
+
+                                }
+                                else
+                                {
+                                    <td>Meşgul</td>
+                                }*@
+                            <td>@item.Email </td>
+                            <td>@item.BtPrice</td>
+                            @if (item.IsActive == false)
+                            {
+                                <td><input type="button" data-toggle="modal" data-target="#showPopUpActiveCustomer" cusid="@item.ID" class="btn btn-sm btn-warning makeActive" value="Aktif Et" /></td>
+                            }
+                            else
+                            {
+                                <td><input type="button" data-toggle="modal" data-target="#showPopUpPassiveCustomer" cusid="@item.ID" class="btn btn-sm btn-success makePassive" value="Pasif Et" /></td>
+                            }
+
+
+                            @if (item.StatusID == 1)
+                            {
+                                <td><a href="/ACustomer/editCustomer/@item.ID" class="btn btn-sm btn-primary">Düzenle </a><a  scusid="@item.ID" data-toggle="modal" data-target="#showPopUpCustomerStatus" class="btn btn-success btn-circle sTakeId"></a> </td>
+                            }
+                            else if (item.StatusID == 2)
+                            {
+                                <td><a href="/ACustomer/editCustomer/@item.ID" class="btn btn-sm btn-primary">Düzenle </a>Çd </td>
+                            }
+                            else
+                            {
+                                <td><a href="/ACustomer/editCustomer/@item.ID" class="btn btn-sm btn-primary">Düzenle </a>Ml  </td>
+
+                            }
+
+
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="showPopUpActiveCustomer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mesaj İçeriği</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-content pushMes" style="word-wrap: break-word !important; padding:10px;">
+                Müşteriyi aktif etmek üzeresiniz, onaylıyormusunuz ?
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                <button type="button" cusID class="btn btn-success onayBtn" data-dismiss="modal">Onayla</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="showPopUpCustomerStatus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mesaj İçeriği</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-content pushMes" style="word-wrap: break-word !important; padding:10px;">
+                Müşteriyi çevrimdışı yapmak üzeresiniz, onaylıyormusunuz ?
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                <button type="button" okscusid class="btn btn-success sonayBtn" data-dismiss="modal">Onayla</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="showPopUpPassiveCustomer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mesaj İçeriği</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-content pushMes" style="word-wrap: break-word !important; padding:10px;">
+                Müşteriyi pasif etmek üzeresiniz, onaylıyormusunuz ?
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                <button type="button" cusID class="btn btn-success onayBtn" data-dismiss="modal">Onayla</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+
+
+<script>
+    $(document).ready(function () {
+        $('#cusTbl').DataTable({
+            "order": [[0, "desc"]]
+        });
+    });
+</script>

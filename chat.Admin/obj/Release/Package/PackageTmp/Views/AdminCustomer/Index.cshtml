@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<chat.DTO.EEntity.EAdminCustomerDTO>
+
+<section id="configuration">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Aktif Modeller</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="card-body card-dashboard">
+                        <table id="example" class=" file-export dataTable table table-striped table-bordered zero-configuration">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Üye Görsel</th>
+                                    <th>Üye Kullanıcı Adı</th>
+                                    <th>Üye Mevcut Kredi</th>
+                                    <th>Üye Email</th>
+                                    <th>Aktiflik Durumu</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+
+                                    <tr class="text-center ">
+                                        <td class="align-self-center">
+                                            <span class="avatar" style="width:50px !important">
+                                                @if (item.ImageURL == null)
+                                                {
+                                                    <img src="~/Assets/CustomerImg/nonephoto.png" />
+                                                }
+                                                else
+                                                {
+                                                    <img src="@item.ImageURL" />
+                                                }
+                                            </span>
+                                        </td>
+                                        <td class="align-self-center">@item.UserName</td>
+                                        <td>
+                                            @if (item.BtPrice <= 10)
+                                            {
+                                                <span class="text-danger"> @item.BtPrice.ToString() Kredi</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-success"> @item.BtPrice.ToString() Kredi</span>
+
+                                            }
+                                        </td>
+                                        <td>@item.Email</td>
+                                        <td>
+                                            @if (item.IsActive == true)
+                                            {
+                                                <span class="badge badge-success">Aktif</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-danger">Pasif</span>
+
+                                            }
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-danger btn-sm" href="/AdminCustomer/BanCheck/@item.ID"><i class="font-small-1 la la-ban"></i> Engelle</a>
+                                            <a class="btn btn-warning btn-sm" href="/AdminCustomer/Detail/@item.ID"><i class="font-small-1 la la-search"></i> Detay</a>
+
+                                        </td>
+                                    </tr>
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>

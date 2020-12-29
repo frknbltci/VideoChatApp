@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "SuccessUrl";
+    Layout = "~/Areas/Customer/Views/Shared/_CustomerLayout.cshtml";
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<h1>İşlem başarıyla gerçekleştirildi.</h1>
+
+<p>@ViewBag.SuccessMessage</p>
+
+ @if(TempData["SucButNotAdd"]!=null)
+ {
+     <h3>@TempData["SucButNotAdd"]</h3>
+ }
+
+<script>
+    window.onload = function myfunction() {
+
+        this.setTimeout(this.logOut(), 8000);
+      
+    };
+
+</script>

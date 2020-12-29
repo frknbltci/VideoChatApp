@@ -1,0 +1,822 @@
+﻿
+@{
+    ViewBag.Title = "Oda";
+    Layout = "~/Views/Shared/_LayoutMainPool.cshtml";
+    var tip = ((chat.UTILITIES.SessionOperations.EmpCusSessionContext)Session["EmpCusSessionContext"]).Type;
+    var oda1 = "";
+    var oda2 = "";
+    var empId = (int)ViewData["empId"];
+    var userId = (int)ViewData["userId"];
+    var messaageId = 0;
+    int ownId;
+
+    if (tip == 1)
+    {
+        ownId = userId;
+        messaageId = (int)ViewData["empId"];
+        oda1 = (string)ViewData["roomid"];
+        oda2 = (string)ViewData["roomid2"];
+    }
+    else
+    {
+        ownId = empId;
+        messaageId = (int)ViewData["userId"];
+        oda1 = (string)ViewData["roomid2"];
+        oda2 = (string)ViewData["roomid"];
+    }
+
+
+}
+<style>
+    .navbar-header img {
+        width: 150px;
+        float: left;
+        margin-right: 18px;
+        margin-top: 14px;
+        margin-left: 80px;
+    }
+    body.vertical-layout.vertical-menu-modern.menu-collapsed .navbar .navbar-header {
+        width: 260px;
+        z-index: 1000;
+    }
+</style>
+
+
+<div class="col-md-6">
+    <div style="text-align:center;" class="col-md-12">
+        <video style="width:auto;" id="videoplay" height="260" autoplay controls></video>
+    </div>
+    <div style="text-align:center;" class="col-md-12">
+        <video style="width:auto;" id="video" height="260" controls></video>
+        <button onclick="reject()" type="button" class="btn btn-danger btn-block">
+            Sonlandır
+        </button>
+    </div>
+</div>
+<span class="specialRoomOwnId hidden" style="display:none;" ow="@ownId">@ownId</span>
+
+<div class="col-md-6">
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <section class="chat-app-window">
+                <div class="badge badge-default mb-1">Konuşma Geçmişi</div>
+                <div class="chats">
+                    <div class="chats spPushMes">
+
+
+                    </div>
+                </div>
+            </section>
+            <section class="chat-app-form">
+                <div class="container-fluid" style="padding:0">
+                    <div class="chat-inp">
+                        <div class="col-md-10">
+                            <div class="chat-input">
+                                <div class="input specialMesInput" id="specialMess" contenteditable="true"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style=" padding: 0; ">
+                            <div class="emoji"></div>
+                            @*<div class="opts">
+                                    <a class="send"></a>
+                                    <a class="send"></a>
+                                </div>*@
+                        </div>
+                    </div>
+                    <div class="col-md-6 btngrup btn1">
+                        <button onclick="gggonder()" type="button" class="btn btn-info">
+                            <i class="la la-paper-plane-o d-lg-none"></i>
+                            <span class="d-none d-lg-block ">Mesaj Gönder</span>
+                        </button>
+                    </div>
+                    <div class="col-md-6 btngrup btn2">
+                        <button data-toggle="modal" data-target="#giftPopUp" width="100%" type="button" class="btn btn-yellow">
+                            <i class="la la-gift d-lg-none"></i>
+                            <span class="d-none d-lg-block btnGift">Hediye Gönder</span>
+                        </button>
+                    </div>
+
+
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-12 show">
+            <div class="emoji-dashboard">
+                <ul class="emojis">
+                    <li class="emoji" data-clipboard-text="--1"><i class="em em---1"></i></li>
+                    <li class="emoji" data-clipboard-text="-1"><i class="em em--1"></i></li>
+                    <li class="emoji" data-clipboard-text="100"><i class="em em-100"></i></li>
+                    <li class="emoji" data-clipboard-text="1234"><i class="em em-1234"></i></li>
+                    <li class="emoji" data-clipboard-text="8ball"><i class="em em-8ball"></i></li>
+                    <li class="emoji" data-clipboard-text="a"><i class="em em-a"></i></li>
+                    <li class="emoji" data-clipboard-text="ab"><i class="em em-ab"></i></li>
+                    <li class="emoji" data-clipboard-text="abc"><i class="em em-abc"></i></li>
+                    <li class="emoji" data-clipboard-text="abcd"><i class="em em-abcd"></i></li>
+                    <li class="emoji" data-clipboard-text="accept"><i class="em em-accept"></i></li>
+                    <li class="emoji" data-clipboard-text="aerial_tramway"><i class="em em-aerial_tramway"></i></li>
+                    <li class="emoji" data-clipboard-text="airplane"><i class="em em-airplane"></i></li>
+                    <li class="emoji" data-clipboard-text="alarm_clock"><i class="em em-alarm_clock"></i></li>
+                    <li class="emoji" data-clipboard-text="alien"><i class="em em-alien"></i></li>
+                    <li class="emoji" data-clipboard-text="ambulance"><i class="em em-ambulance"></i></li>
+                    <li class="emoji" data-clipboard-text="anchor"><i class="em em-anchor"></i></li>
+                    <li class="emoji" data-clipboard-text="angel"><i class="em em-angel"></i></li>
+                    <li class="emoji" data-clipboard-text="anger"><i class="em em-anger"></i></li>
+                    <li class="emoji" data-clipboard-text="angry"><i class="em em-angry"></i></li>
+                    <li class="emoji" data-clipboard-text="anguished"><i class="em em-anguished"></i></li>
+                    <li class="emoji" data-clipboard-text="ant"><i class="em em-ant"></i></li>
+                    <li class="emoji" data-clipboard-text="apple"><i class="em em-apple"></i></li>
+                    <li class="emoji" data-clipboard-text="aquarius"><i class="em em-aquarius"></i></li>
+                    <li class="emoji" data-clipboard-text="aries"><i class="em em-aries"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_backward"><i class="em em-arrow_backward"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_double_down"><i class="em em-arrow_double_down"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_double_up"><i class="em em-arrow_double_up"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_down"><i class="em em-arrow_down"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_down_small"><i class="em em-arrow_down_small"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_forward"><i class="em em-arrow_forward"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_heading_down"><i class="em em-arrow_heading_down"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_heading_up"><i class="em em-arrow_heading_up"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_left"><i class="em em-arrow_left"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_lower_left"><i class="em em-arrow_lower_left"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_lower_right"><i class="em em-arrow_lower_right"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_right"><i class="em em-arrow_right"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_right_hook"><i class="em em-arrow_right_hook"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_up"><i class="em em-arrow_up"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_up_down"><i class="em em-arrow_up_down"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_up_small"><i class="em em-arrow_up_small"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_upper_left"><i class="em em-arrow_upper_left"></i></li>
+                    <li class="emoji" data-clipboard-text="arrow_upper_right"><i class="em em-arrow_upper_right"></i></li>
+                    <li class="emoji" data-clipboard-text="arrows_clockwise"><i class="em em-arrows_clockwise"></i></li>
+                    <li class="emoji" data-clipboard-text="arrows_counterclockwise"><i class="em em-arrows_counterclockwise"></i></li>
+                    <li class="emoji" data-clipboard-text="art"><i class="em em-art"></i></li>
+                    <li class="emoji" data-clipboard-text="articulated_lorry"><i class="em em-articulated_lorry"></i></li>
+                    <li class="emoji" data-clipboard-text="astonished"><i class="em em-astonished"></i></li>
+                    <li class="emoji" data-clipboard-text="atm"><i class="em em-atm"></i></li>
+                    <li class="emoji" data-clipboard-text="b"><i class="em em-b"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="giftPopUp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-primary">
+                <h5> Her bir hediyenin kredisi farklıdır.</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-12 form-group user-form-group imgIcons">
+                                    <div>
+
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="10" usId="@userId" iid="1" src="~/Assets/Custom/Icons/yemek.png" />
+                                        </a>
+
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="20" usId="@userId" iid="2" src="~/Assets/Custom/Icons/kis.png" />
+                                        </a>
+
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="10" usId="@userId" iid="3" src="~/Assets/Custom/Icons/hediye.png" />
+
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="15" usId="@userId" iid="4" src="~/Assets/Custom/Icons/cupcake.png" />
+                                        </a>
+
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="20" usId="@userId" iid="5" src="~/Assets/Custom/Icons/drink1.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="20" usId="@userId" iid="6" src="~/Assets/Custom/Icons/hearthCoffe.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="10" usId="@userId" iid="7" src="~/Assets/Custom/Icons/coffee.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="30" usId="@userId" iid="8" src="~/Assets/Custom/Icons/heart.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="40" usId="@userId" iid="9" src="~/Assets/Custom/Icons/beer.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="30" usId="@userId" iid="10" src="~/Assets/Custom/Icons/smoking.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="40" usId="@userId" iid="11" src="~/Assets/Custom/Icons/cocktail.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="50" usId="@userId" iid="12" src="~/Assets/Custom/Icons/champagne.png" />
+                                        </a>
+
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="10" usId="@userId" iid="13" src="~/Assets/Custom/Icons/two.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="40" usId="@userId" iid="14" src="~/Assets/Custom/Icons/tongue.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="10" usId="@userId" iid="15" src="~/Assets/Custom/Icons/novoice.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="70" usId="@userId" iid="16" src="~/Assets/Custom/Icons/money.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="40" usId="@userId" iid="17" src="~/Assets/Custom/Icons/milkshake.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="30" usId="@userId" iid="18" src="~/Assets/Custom/Icons/love.png" />
+                                        </a>
+
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="70" usId="@userId" iid="19" src="~/Assets/Custom/Icons/kis.png" />
+                                        </a>
+
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="30" usId="@userId" iid="20" src="~/Assets/Custom/Icons/kavun.png" />
+                                        </a>
+
+
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="10" usId="@userId" iid="21" src="~/Assets/Custom/Icons/hi.png" />
+                                        </a>
+
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="30" usId="@userId" iid="22" src="~/Assets/Custom/Icons/handHearth.png" />
+                                        </a>
+
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="100" usId="@userId" iid="23" src="~/Assets/Custom/Icons/flowertwo.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="100" usId="@userId" iid="24" src="~/Assets/Custom/Icons/flovers.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="70" usId="@userId" iid="25" src="~/Assets/Custom/Icons/dance.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="100" usId="@userId" iid="26" src="~/Assets/Custom/Icons/clean-car.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="200" usId="@userId" iid="27" src="~/Assets/Custom/Icons/eco-house.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="170" usId="@userId" iid="28" src="~/Assets/Custom/Icons/sedan-car-model.png" />
+                                        </a>
+                                        <a data-toggle="modal" data-target="#onay">
+                                            <img class="giftSend" cr="150" usId="@userId" iid="29" src="~/Assets/Custom/Icons/ring.png" />
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm pull-left">Vazgeç</button>
+
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+<div class="modal fade" id="onay" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-12 form-group user-form-group imgIcons">
+                                    <span class="crPush"></span> Kredi Otomatik Düşecektir.
+                                    Onaylıyormusunuz ?
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="container-fluid">
+                    <div class="col-md-6">
+                        <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm pull-left">Vazgeç</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" data-dismiss="modal" giftName="" onclick="krediDus()" class="btn btn-success btn-sm pull-right giftOnay">Gönder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div id="info" class="getCallStatus">Disconnected</div>
+
+<script src="~/Assets/Custom/chatFolder/peer.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="~/Scripts/jquery.signalR-2.4.1.js"></script>
+<script src="~/signalr/hubs"></script>
+<script>
+    setTimeout(function () {
+        if ($('.getCallStatus').html() != "Connected") {
+
+            window.location.reload();
+        } else if ($('.getCallStatus').html() == "Connected") {
+
+            var idd = $(".ownid").html();
+                        if (idd==@userId) {
+                    var data = {
+                        cusId:@userId,
+                        empid:@empId,
+                    };
+                    $.ajax({
+                        type: "post",
+                        url: "/SpecialRoom/decCreditForCalling",
+                        data: data,
+                        dataType: "json",
+                        success: function (e) {}
+                    });
+                            var kr = $('#kredi').html();
+                            kr = kr - 5;
+                            if (kr < 0) {
+                                kr = 0;
+                                $('#kredi').html(kr);
+                            } else if (kr > 0) {
+                                kr = kr;
+                                $('#kredi').html(kr);
+                            }
+                    }
+
+            setInterval(function () {
+                var ds = {
+                CustomerId:@userId,
+            };
+
+            $.ajax({
+                type: "post",
+                url: "/MainPage/isCreditSuit",
+                dataType: "json",
+                data: ds,
+                success: function (e) {
+                    if (e == true) {
+
+                        var idd = $(".ownid").html();
+                        if (idd==@userId) {
+                    var data = {
+                        cusId:@userId,
+                        empid:@empId,
+                    };
+                    $.ajax({
+                        type: "post",
+                        url: "/SpecialRoom/decCreditForCalling",
+                        data: data,
+                        dataType: "json",
+                        success: function (e) {}
+                    });
+                            var kr = $('#kredi').html();
+                            kr = kr - 5;
+                            if (kr < 0) {
+                                kr = 0;
+                                $('#kredi').html(kr);
+                            } else if (kr > 0) {
+                                kr = kr;
+                                $('#kredi').html(kr);
+                            }
+                    }
+                        }
+                    else {
+                        alert("Kredi yetersiz yönlendiriliyorsunuz");
+                        window.location.href = "/";
+                    }
+                      }
+            });
+            }, 300000);
+
+        }
+    }, 30000);
+
+    var videoplay = document.getElementById('videoplay');
+
+    // Get access to the camera!
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // Not adding `{ audio: true }` since we only want video now
+        navigator.mediaDevices.getUserMedia({ audio: false,video: true }).then(function (stream) {
+            //video.src = window.URL.createObjectURL(stream);
+            videoplay.srcObject = stream;
+            videoplay.play();
+        });
+    }
+
+
+    var issetControl = 0;
+    setInterval(function () {
+
+        if (issetControl == 0) {
+            if ($('.getCallStatus').html() == "Connected") {
+
+                issetControl = 1;
+            }
+            else if ($('.getCallStatus').html() == "Receiving") {
+
+                answerCalls();
+            } else {
+
+                makeCall();
+
+            }
+
+        } else {
+
+        }
+
+    }, 3000);
+
+
+    let peer = null;
+
+    $(document).ready(function () {
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+        window.video = $('#video');
+        window.video.hide();
+        window.call = null;
+        window.receiving = false;
+        initPeer();
+
+        $.connection.hub.start();
+        var mes = $.connection.notificationHub;
+
+        mes.client.sendMessageOther = function (messageSpecial, uname, imgUrl, recId) {
+
+            var ownName = $('#uNamePool').html();
+            var ownId = $('.specialRoomOwnId').attr('ow');
+
+            if (recId == ownId) {
+
+                var html = `<div style="padding:8px;" class="chat chat-left">
+                                    <div class="chat-avatar">
+                                        <a class="avatar" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="">
+                                            <img class="poolPP" src="${imgUrl}" alt="avatar" />
+                                <span class="musname">${uname}</span>
+                                        </a>
+                                    </div>
+                                    <div class="chat-body">
+                                        <div class="chat-content">
+                                            <p>${messageSpecial}</p>
+                                        </div>
+                                    </div>
+                                </div>`;
+
+            } else {
+                var html = `<div style="padding:8px;" class="chat">
+                                    <div class="chat-avatar">
+                                        <a class="avatar" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="">
+                                            <img class="poolPP" src="${imgUrl}" alt="avatar" />
+                                <span class="musname">${uname}</span>
+                                        </a>
+                                    </div>
+                                    <div class="chat-body">
+                                        <div class="chat-content">
+                                            <p>${messageSpecial}</p>
+                                        </div>
+                                    </div>
+                                </div>`;
+            }
+
+
+            $(".spPushMes").append(html);
+
+        }
+
+        mes.client.sendMessageGift = function (gift, uname, imgUrl, recId) {
+
+            var ownName = $('#uNamePool').html();
+            var ownId = $('.specialRoomOwnId').attr('ow');
+
+            if (recId == ownId) {
+
+                var html = `<div style="padding:8px;" class="chat chat-left">
+                                    <div class="chat-avatar">
+                                        <a class="avatar" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="">
+                                            <img class="poolPP" src="${imgUrl}" alt="avatar" />
+                                <span class="musname">${uname}</span>
+                                        </a>
+                                    </div>
+                                    <div class="chat-body">
+                                        <div class="chat-content">
+                                            <img class="poolPP" src="${gift}" alt="avatar" />
+                                        </div>
+                                    </div>
+                                </div>`;
+
+            } else {
+                var html = `<div style="padding:8px;" class="chat">
+                                    <div class="chat-avatar">
+                                        <a class="avatar" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="">
+                                            <img class="poolPP" src="${imgUrl}" alt="avatar" />
+                                <span class="musname">${uname}</span>
+                                        </a>
+                                    </div>
+                                    <div class="chat-body">
+                                        <div class="chat-content">
+                                             <img class="poolPP" src="${gift}" alt="avatar" />
+                                        </div>
+                                    </div>
+                                </div>`;
+            }
+            $(".spPushMes").append(html);
+        }
+    });
+    const initPeer = function () {
+
+        peer = new Peer("@oda2",{ host: 'peer.canlisohbetevi.com', port: '9000' });
+        peer.on('open', function (id) {
+            $('#info').text('Idle');
+
+        });
+
+        peer.on('call', function (call) {
+            $('#info').text('Receiving');
+            window.call = call;
+            window.receiving = true;
+        });
+    };
+
+    const acceptCall = function () {
+        if (receiving) {
+            answerCalls();
+        } else {
+            makeCall();
+        }
+    };
+
+    const reject = function () {
+        if (window.call) {
+            window.call.close();
+            window.call = null;
+        }
+
+        window.localStream.getTracks().forEach(track => track.stop());
+        window.video.hide();
+        $('#info').text('Idle');
+
+        alert("Arama sonlandı");
+
+          var dataSt = {
+             CusID:@userId,
+             EmpID:@empId,
+        };
+
+            $.ajax({
+                type: "post",
+                url: "/SpecialRoom/fromRoomChangeStatus",
+                data: dataSt,
+                dataType: "json",
+                success: function (e) {
+                }
+            });
+
+        window.location.href = "/";
+    };
+    let c = false;
+    const makeCall = function () {
+        const peerId = "@oda1";
+
+        if (!peerId) {
+            alert('Please enter peer id');
+            return;
+        }
+
+        $('#info').text('Calling...');
+
+        navigator.getUserMedia({ audio: true, video: true }, function (stream) {
+            window.localStream = stream;
+            window.call = peer.call(peerId, stream);
+            call.on('stream', startCall);
+            call.on('close', endCall);
+        }, function () {
+            //alert("Error! Make sure to click allow when asked for permission by the browser");
+        });
+    };
+
+  const answerCalls = function () {
+        if (!window.call || !window.receiving) {
+            return;
+        }
+
+        $('#info').text('Connecting...');
+
+        navigator.getUserMedia({ video: true, audio: true }, function (stream) {
+            window.localStream = stream;
+            window.call.answer(stream);
+            window.call.on('stream', startCall);
+            window.call.on('close', endCall);
+        }, function () {
+           // alert("Error! Make sure to click allow when asked for permission by the browser");
+        });
+    };
+
+    const startCall = function (remoteStream) {
+        window.video.get(0).src = URL.createObjectURL(remoteStream);
+        window.video.get(0).play();
+        window.video.show();
+        $('#info').text('Connected');
+    };
+
+    const endCall = function () {
+        window.receiving = false;
+        window.localStream.getTracks().forEach(track => track.stop());
+        window.video.hide();
+        $('#info').text('Idle');
+    };
+
+    function gggonder() {
+
+        var val = $(".specialMesInput").html();
+        if (val.length > 0) {
+
+            //$.connection.hub.start();
+            //var mess = $.connection.notificationHub;
+
+            var messageSpecial = val;
+            var uname = $("#uNamePool").html();
+            var imgUrl = $(".imglyout").attr('src');
+            var recId=@messaageId;
+
+            $.connection.hub.start();
+            var mes = $.connection.notificationHub;
+
+            mes.server.sendSpecialMessage(messageSpecial, uname, imgUrl, recId);
+
+        }
+        $(".specialMesInput").html('');
+        //$('.chats-text-cont div').remove();
+
+    }
+
+    //Enter Active for sending message
+
+    var input = document.getElementById("specialMess");
+    input.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+
+            var val = $('.specialMesInput').html();
+            if (val.length > 0) {
+
+            var messageSpecial = val;
+            var uname = $("#uNamePool").html();
+            var imgUrl = $(".imglyout").attr('src');
+            var recId=@messaageId;
+
+            $.connection.hub.start();
+            var mes = $.connection.notificationHub;
+
+            mes.server.sendSpecialMessage(messageSpecial, uname, imgUrl, recId);
+
+            }
+            $(".specialMesInput").html('');
+        }
+    });
+
+
+
+</script>
+
+<script>
+    var crd = "";
+    var iconid = 0;
+    $(".giftSend").on("click", function () {
+
+        crd= $(this).attr('cr');
+        $('.crPush').html(crd);
+
+        iconid = $(this).attr('iid');
+
+        var img = $(this).attr('src');
+
+        $('.giftOnay').attr('giftName', img);
+
+    });
+
+    var kredi;
+    function krediDus() {
+
+        var uname = $("#uNamePool").html();
+
+        var Uname = {
+            UserName: uname
+        };
+
+        $.ajax({
+            type: "post",
+            url: "/SpecialRoom/getCredit",
+            data: Uname,
+            dataType: "json",
+            success: function (e) {
+                if (e == false) {
+                    warningMes("Kullanıcıya ulaşılamadı");
+                }
+                else {
+                    kredi = e.BtPrice;
+
+                    if (kredi > crd) {
+
+                        var smdata = {
+                            iconid: iconid,
+                            cr: crd
+                        };
+
+                        $.ajax({
+                            type: "post",
+                            url: "/SpecialRoom/sameCredit",
+                            data: smdata,
+                            dataType: "json",
+                            success: function (e) {
+                                if (e==true) {
+                                          try {
+        var gift = $('.giftOnay').attr('giftName');
+        var uname = $("#uNamePool").html();
+        var imgUrl = $(".imglyout").attr('src');
+        var recId =@messaageId;
+
+        $.connection.hub.start();
+        var mes = $.connection.notificationHub;
+
+        mes.server.sendSpecialGift(gift, uname, imgUrl, recId);
+
+            var uname = {
+                UserName: uname
+            };
+
+            $.ajax({
+                type: "post",
+                url: "/SpecialRoom/empOrCus",
+                data: uname,
+                dataType: "json",
+                success: function (e) {
+                    if (e == "cus") {
+                        var data = {
+                            cusid: $('.specialRoomOwnId').attr('ow'),
+                            empid: recId,
+                            crd: crd
+                        };
+                        $.ajax({
+                            type: "post",
+                            url: "/specialroom/decreaseforgift",
+                            data: data,
+                            datatype: "json",
+                            success: function (e) {
+                                if (e == false) {
+                                    warningmes("hata ile karşılaşıldı", "hata kodu 38");
+                                }
+                            }
+                        });
+                        var kr2 = $('#kredi').html();
+                        var kr2= kr2 - crd;
+                        $('#kredi').html(kr2);
+                    } else {
+
+                    }
+
+                }
+            });
+
+        } catch (e) {
+                warningMes("Hata ile karşılaşıldı", "Hata Kodu 02");
+        }
+                                } else {
+                                    warningMes("Hata ile karşılaşıldı", "Hata Kodu 03");
+                                }
+                            }
+                        });
+        }
+        else if (kredi == undefined || kredi == null) {
+
+            warningMes("Hata Kodu:44", "Gönderim Yapamazsınız");
+        }
+        else {
+            warningMes("Yetersiz Kredi");
+        }
+                }
+            }
+        });
+    }
+
+</script>

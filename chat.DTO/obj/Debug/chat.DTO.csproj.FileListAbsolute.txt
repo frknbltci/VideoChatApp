@@ -1,0 +1,39 @@
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DTO\bin\Debug\chat.DTO.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DTO\bin\Debug\chat.DTO.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DTO\obj\Debug\chat.DTO.csprojAssemblyReference.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DTO\obj\Debug\chat.DTO.csproj.CoreCompileInputs.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DTO\obj\Debug\chat.DTO.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DTO\obj\Debug\chat.DTO.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.DTO\bin\Debug\chat.DTO.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.DTO\bin\Debug\chat.DTO.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.DTO\obj\Debug\chat.DTO.csprojAssemblyReference.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.DTO\obj\Debug\chat.DTO.csproj.CoreCompileInputs.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.DTO\obj\Debug\chat.DTO.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat\chat.DTO\obj\Debug\chat.DTO.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.DTO\bin\Debug\chat.DTO.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.DTO\bin\Debug\chat.DTO.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.DTO\obj\Debug\chat.DTO.csprojAssemblyReference.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.DTO\obj\Debug\chat.DTO.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.DTO\obj\Debug\chat.DTO.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.DTO\obj\Debug\chat.DTO.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.DTO\bin\Debug\chat.CORE.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.DTO\bin\Debug\chat.CORE.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.DTO\obj\Debug\chat.DTO.csproj.CopyComplete
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DTO\bin\Debug\chat.DTO.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DTO\bin\Debug\chat.DTO.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DTO\bin\Debug\chat.CORE.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DTO\bin\Debug\chat.CORE.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DTO\obj\Debug\chat.DTO.csprojAssemblyReference.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DTO\obj\Debug\chat.DTO.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DTO\obj\Debug\chat.DTO.csproj.CopyComplete
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DTO\obj\Debug\chat.DTO.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DTO\obj\Debug\chat.DTO.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DTO\bin\Debug\chat.DTO.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DTO\bin\Debug\chat.DTO.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DTO\bin\Debug\chat.CORE.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DTO\bin\Debug\chat.CORE.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DTO\obj\Debug\chat.DTO.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DTO\obj\Debug\chat.DTO.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DTO\obj\Debug\chat.DTO.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DTO\obj\Debug\chat.DTO.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DTO\obj\Debug\chat.DTO.pdb

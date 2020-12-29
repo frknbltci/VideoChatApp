@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "AllUserSend";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <h4>Tüm Kullanıcılara mesaj gönderme ekranı</h4>
+
+   <section>
+
+                    <form enctype="multipart/form-data" method="post" onsubmit="return sendToMessageAllUsers(this)">
+                        <div class="modal-content" style="word-wrap: break-word !important; padding:10px;">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label class="col-md-6 label-control" for="EmpRegisterGender">Konu</label>
+                                        <div class="col-md-12">
+                                            <input class="form-control row" type="text" name="About">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-md-12 label-control" for="EmpRegisterGender">Mesajınız</label>
+                                        <div class="col-md-12">
+                                            <textarea class="form-control row" name="Messages"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                          
+                            <button type="submit" class="btn btn-success btn-block">Gönder</button>
+                  
+
+                    </form>
+    </section>

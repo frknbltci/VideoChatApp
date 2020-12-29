@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Customer/Views/Shared/_CustomerLayout.cshtml";
+}
+@model  chat.DTO.EEntity.Lists
+
+<form method="post" enctype="multipart/form-data" action="/EmpProfile/ProfileSave">
+    <div class="col-xl-12 col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Kişisel İşlemleriniz</h4>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="base-tab21" data-toggle="tab" aria-controls="tab21"
+                               href="#tab21" aria-expanded="true">Site İçi Alımlarınız (Gönderilen Hediyeler)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="base-tab22" data-toggle="tab" aria-controls="tab22" href="#tab22"
+                               aria-expanded="false">Yaptığınız Görüşmeler</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content px-1 pt-1 border-grey border-lighten-2 border-0-top">
+                        <div role="tabpanel" class="tab-pane active" id="tab21" aria-expanded="true" aria-labelledby="base-tab21">
+                            <div class="card-content collapse show">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <table class="table table-striped table-bordered default-ordering">
+                                            <thead>
+                                                <tr>
+                                                    <th class="hidden">ID</th>
+                                                    <th>Model </th>
+                                                    <th>Kredi</th>
+                                                    <th>Görüşme Zamanı</th>
+                                                  
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.gifts)
+                                                {
+
+                                                    <tr>
+                                                        <td class="hidden">@item.ID</td>
+                                                        <td>@item.EmployeeName</td>
+
+                                                        <td>@item.Credit</td>
+
+
+                       
+                                                        <td>@item.Time.Date</td>
+                                                      
+                                                    </tr>
+                                                }
+
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab22" aria-labelledby="base-tab22">
+                            <div role="tabpanel" class="tab-pane active" id="tab21" aria-expanded="true" aria-labelledby="base-tab21">
+                                <div class="card-content collapse show">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <table class="table table-striped table-bordered default-ordering">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="hidden">ID</th>
+                                                        <th>Aranan Kullanıcı</th>
+                                                        <th>Kredi</th>
+                                                        <th>Görüşme Zamanı</th>
+                                                        
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var item in Model.calls)
+                                                    {
+
+                                                        <tr>
+                                                            <td class="hidden">@item.ID</td>
+                                                            <td>@item.EmployeeName</td>
+
+                                                            <td>@item.Credit</td>
+
+
+
+                                                            <td>@item.Time.Date</td>
+
+                                                        </tr>
+                                                    }
+
+                                                </tbody>
+
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="form-actions right">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="la la-check-square-o"></i> Kaydet
+                            </button>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

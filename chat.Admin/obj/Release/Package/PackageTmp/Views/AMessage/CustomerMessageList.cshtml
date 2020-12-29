@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewBag.Title = "CustomerMessageList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<chat.DTO.EEntity.MessageDTO>
+
+
+<h4>Müşterilere Gönderilen Mesajlar</h4>
+
+<a data-toggle="modal" data-target="#showSendMessageCus" class="btn btn-danger btn-lg">Müşteriye mesaj gönder</a>
+
+
+<div class="card-content collapse show">
+    <div class="card-body">
+        <div class="row">
+            <table class="table table-striped table-bordered default-ordering">
+                <thead>
+                    <tr>
+                        <th>Admin </th>
+                        <th>Müşteri Kullanıcı Adı</th>
+                        <th>Email</th>
+                        <th>Gönderim Zamanı</th>
+                        <th>Konu</th>
+                        <th>Mesaj</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+                        <tr>
+                            <td>@item.AdminName</td>
+
+                            <td>@item.Name</td>
+
+                            <td>@item.Email</td>
+
+                            <td>@item.SendDate</td>
+
+                            <td>@item.About</td>
+
+                            <td>
+
+                                <input type="button" mess="@item.Messages" class="btn btn-primary sendMesCus" value="Göster" data-toggle="modal" data-target="#showMessageCus" />
+
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="showMessageCus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mesaj İçeriği</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-content pushMesCus" style="word-wrap: break-word !important; padding:10px;">
+
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="showSendMessageCus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mesaj İçeriği</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+
+            <form enctype="multipart/form-data"  method="post" onsubmit="return sendToMessagePost(this)">
+                <div class="modal-content" style="word-wrap: break-word !important; padding:10px;">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group row">
+                                <label class="col-md-6 label-control" for="CustomerAdminMessage">Müşteriler</label>
+                                <div class="col-md-10">
+                                    <select id="CustomerAdminMessage" name="ReceiveID" class="form-control">
+                                        <option selected value="0">Seçim Yapınız</option>
+                                        @foreach (var item in Model[0].CustomerList)
+                                        {
+
+                                            <option value="@item.ID">@item.UserName</option>
+
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                <label class="col-md-6 label-control" for="EmpRegisterGender">Konu</label>
+                                <div class="col-md-12">
+                                    <input class="form-control row" type="text" name="About">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-12 label-control" for="EmpRegisterGender">Mesajınız</label>
+                                <div class="col-md-12">
+                                    <textarea class="form-control row" name="Messages"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger float-left" data-dismiss="modal">Vazgeç</button>
+                    <button type="submit" class="btn btn-success">Gönder</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+

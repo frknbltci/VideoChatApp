@@ -1,0 +1,260 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Customer/Views/Shared/_CustomerLayout.cshtml";
+}
+
+<style type="text/css">
+    table tbody tr td {
+        border-top: solid 1px #CCCCCC;
+        border-right: solid 1px #CCCCCC;
+        width: 80px;
+    }
+
+    table {
+        border-collapse: initial;
+    }
+
+    .expiry-container .expiry-wrapper select {
+        width: 50%;
+    }
+
+    .ui.segment {
+        border: none;
+        box-shadow: none;
+        padding: .5em 1em;
+    }
+
+    .recurring {
+        padding: 15px 0;
+        font-size: 15px;
+    }
+
+        .recurring label {
+            font-weight: bold;
+            padding-left: 10px;
+        }
+
+    .ui.form .recurring input[type=checkbox], .ui.form textarea {
+        vertical-align: unset !important;
+    }
+</style>
+
+
+@if (!String.IsNullOrEmpty(ViewBag.ResultMessage))
+{
+    @Html.Raw(ViewBag.ResultMessage)}
+
+<form method="post" enctype="multipart/form-data" action="/Checkout/SendForm" id="payment-form" name="form" class="ui form fluid" style="padding:10px;">
+    <input type="hidden" name="Is3D" />
+
+    <h4 class="ui horizontal divider header hidden">
+        <span style="text-decoration: underline; color: black" class="tab">Sipariş Bilgileri</span>
+    </h4>
+
+    <div class="two fields hidden">
+        <div class="field">
+            <input class="cvc half hidden" value="@ViewData["id"]" name="Amount" placeholder="Miktar" required>
+        </div>
+        <div class="field">
+            <input class="cvc half hidden" value="@ViewData["guid"]" name="OrderId" placeholder="Sipariş No" required>
+        </div>
+        <input class="hidden" value="" name="CustomerId" id="paymentCusId" required />
+    </div>
+
+    <h4 class="ui horizontal divider header">
+        <span style="text-decoration: underline; color: black" class="tab">Ödeme Bilgileri</span>
+    </h4>
+
+    <div class="card-js" data-stripe="true">
+
+        <input class="name" id="the-card-name-id" name="CardholderName" placeholder="Kart Sahibinin Adı" required>
+        <input class="card-number my-custom-class" name="card-number" id="CardNumber" placeholder="Kart Numarası" required>
+        <input class="expiry-month" name="ExpireMonth" required>
+        <input class="expiry-year" name="ExpireYear" required>
+        <input class="cvc" name="CardCode" placeholder="Güvenlik Kodu (CVV)" required>
+    </div>
+
+    @*<div class="recurring">
+        <input id="recurringPayment" name="is_recurring_payment" type="checkbox">
+        <label>Recurring payment</label>
+
+        <div id="recurringArea" class="three fields" style="display:none;">
+            <div class="field">
+                <input type="number" name="recurring_payment_number" placeholder="Toplam Ödeme Sayısı">
+            </div>
+            <div class="field">
+                <select name="recurring_payment_cycle" id="recurring_payment_cycle">
+                    <option value="">Ödeme Tekrarlama Periyodu</option>
+                    <option value="D">Günlük</option>
+                    <option value="M">Aylık</option>
+                    <option value="Y">Yıllık</option>
+                </select>
+            </div>
+            <div class="field">
+                <input type="number" name="recurring_payment_interval" placeholder="Ödeme Sıklık Sayısı">
+            </div>
+        </div>
+    </div>*@
+
+    <h4 class="ui horizontal divider header">
+        <a href="javascript:return false;" style="text-decoration: underline; color: black" class="tab" id="installment-link">Taksit Seçenekleri</a>
+    </h4>
+
+    <div id="installmentTable" class="installmentTable">
+        <table cellpadding="0" cellspacing="0" style="width: 380px;border: solid 1px #CCCCCC;margin: 10px auto 20px auto;">
+            <thead>
+                <tr>
+                    <td align="center" style="border-top: solid 1px #CCCCCC;border-right: solid 1px #CCCCCC; width: 80px; height:28px;">
+                        <span style="padding:3px;font-weight: bold;color: black;">Taksit Sayısı</span>
+                    </td>
+
+                    <td align="center" style="border-top: solid 1px #CCCCCC; width: 80px; height:28px;">
+                        <span style="padding:3px;font-weight: bold;color: black;">Toplam</span>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+
+        <input type="hidden" name="SelectedPosData" />
+    </div>
+
+    <div class="ui center aligned segment">
+        <button class="ui button" name="paymentButton" type="submit" style="background-color: #0094b1; color: #ffffff; width: 60%;
+          margin-left: 0;">
+            ÖDEMEYİ TAMAMLA
+        </button>
+    </div>
+    <div style="clear:both;"></div>
+</form>
+
+@section Scripts {
+    <script src="~/Areas/Assets/payment/lib/semantic/semantic.min.js"></script>
+    <script src="~/Areas/Assets/payment/lib/card/card-js.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        var posDatas = [];
+
+        $(document).ready(function () {
+            //empOwn yazılmış ama Cus Id !
+            var cusId = $("#empOwnId").val();
+            if (cusId) {
+                $("#paymentCusId").val(cusId);
+            }
+            else {
+                alert("Kişi tanımlı değil");
+                setTimeout(function myfunction() {
+                    window.location.href("/");
+                }, 1000);
+            }
+
+
+            sixDigitLastValue = 0;
+            previousRecurring = false;
+
+            $("#CardNumber").on("propertychange change keyup paste input", function () {
+                checkBinCode();
+            });
+
+            //$('#recurringPayment').click(function () {
+            //    if ($(this).is(':checked')) {
+            //        $("#recurringArea").show();
+            //    } else {
+            //        $("#recurringArea").hide();
+            //    }
+
+            //    checkBinCode();
+            //});
+
+            $('#payment-form').submit(function (e) {
+                if ($("input[name='Installment']:checked").length > 0) {
+                    var radioValue = $("input[name='Installment']:checked").val();
+                    if (!radioValue) {
+
+                        alert("Please select installment");
+                        e.preventDefault();
+                        return;
+                    }
+
+                    var selectedPostData = posDatas.find(l => l.installments_number == radioValue);
+
+                    if (!selectedPostData) {
+                        alert("Please select installment");
+                        e.preventDefault();
+                        return;
+                    }
+
+                    $("input[name='SelectedPosData']").val(JSON.stringify(selectedPostData));
+                }
+            });
+
+            function checkBinCode() {
+                cardNumberValue = $("#CardNumber").val().replace(/\s+/g, '');
+                isRecurring = $('#recurringPayment').is(':checked');
+
+                if (cardNumberValue.length >= 6) {
+                    if (cardNumberValue.substring(0, 6) != sixDigitLastValue || previousRecurring != isRecurring) {
+
+                        sixDigitLastValue = cardNumberValue;
+                        previousRecurring = isRecurring;
+
+                        var postUrl = "/Customer/Checkout/CheckBinCode";
+                        var amount = $("input[name='Amount']").val();
+                        if (!amount) { alert("Sipariş Miktarı Giriniz"); return; }
+
+                        $.ajax({
+                            cache: false,
+                            type: "GET",
+                            url: postUrl,
+                            data: {
+                                "binCode": cardNumberValue,
+                                "amount": amount,
+                                "isRecurring": isRecurring
+                            },
+                            success: function (res) {
+                                if (res == false) {
+                                    alert("Hata ile karşılaşıldı");
+                                }
+                                else {
+                                    fillInstalmentTable(res.posResponse.Data);
+                                    $("input[name='Is3D']").val(res.is_3d);
+                                 
+                                    
+                                }
+                               
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+
+                            }
+                        });
+                    }
+                }
+            }
+
+           async function fillInstalmentTable(datas) {
+             
+               posDatas = datas;
+             
+                $("table tbody tr").remove();
+              
+               await  posDatas.forEach(l => {
+                    var markup = `<tr data-id='${l.installments_number}'>
+                                                    <td align="center"> <input type="radio" name="Installment" value="${l.installments_number}"/>${l.installments_number}</td>
+                                                    <td align="center">${l.amount_to_be_paid}</td>
+                                                  </tr>`;
+                    $("table tbody").append(markup)
+                });
+
+                $('input[type=radio][name="Installment"]').first().prop('checked', true)
+            }
+        });
+    </script>
+
+}
+

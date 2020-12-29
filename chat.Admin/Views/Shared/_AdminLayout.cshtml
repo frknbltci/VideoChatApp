@@ -1,0 +1,268 @@
+﻿@{
+    var deg = ((chat.UTILITIES.SessionOperations.AdminSessionContext)Session["AdminSessionContext"]).UserName;
+    var id = ((chat.UTILITIES.SessionOperations.AdminSessionContext)Session["AdminSessionContext"]).ID;
+
+}
+
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Yazılımer Teknoloji">
+    <title>
+        Kontrol Paneli
+    </title>
+    <link rel="apple-touch-icon" href="/Assets/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Assets/Custom/Images/Logos/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
+          rel="stylesheet">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
+          rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="/Assets/app-assets/css/vendors.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN MODERN CSS-->
+    <link rel="stylesheet" type="text/css" href="/Assets/app-assets/css/app.css">
+    <!-- END MODERN CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="/Assets/app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="/Assets/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="/Assets/app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css">
+    <link rel="stylesheet" type="text/css" href="/Assets/app-assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css" href="/Assets/app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="/Assets/app-assets/css/core/colors/palette-gradient.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/Assets/assets/css/style.css">
+    <link href="~/Assets/toastr/toastr.css" rel="stylesheet" />
+    <!-- END Custom CSS-->
+</head>
+<body class="vertical-layout vertical-menu-modern 2-columns   menu-expanded fixed-navbar"
+      data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+    <!-- fixed-top-->
+    <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-dark navbar-shadow">
+        <div class="navbar-wrapper">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
+                    <li class="nav-item mr-auto">
+                        <a class="navbar-brand" href="#">
+                            @*<img class="brand-logo" alt="modern admin logo" src="/Assets/app-assets/images/logo/logo.png">*@
+
+                            <img style="
+    width: 200px;" src="~/Assets/Custom/Images/Logos/logo.png" />
+                        </a>
+                    </li>
+                    @*<li class="nav-item d-none d-md-block float-right"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="toggle-icon ft-toggle-right font-medium-3 white" data-ticon="ft-toggle-right"></i></a></li>*@
+                    <li class="nav-item d-md-none">
+                        <a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="la la-ellipsis-v"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-container content">
+                <div class="collapse navbar-collapse" id="navbar-mobile">
+                    <ul class="nav navbar-nav mr-auto float-left"></ul>
+                    <ul class="nav navbar-nav float-right">
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <span class="mr-1 white">
+                                    Merhaba,
+                                    <span class="user-name text-bold-700">@deg</span>
+                                    <span class="hidden" style="display:none;">@id</span>
+                                </span>
+
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="/Login/Logout"><i class="ft-power"></i> Çıkış Yap</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" nav-item">
+                    <a href="/Home/Index"><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">Ana Sayfa</span></a>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-users"></i><span class="menu-title" data-i18n="nav.dash.main">Kullanıcı İşlemleri</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/ACustomer/Index" data-i18n="nav.dash.ecommerce"><i class="la la-male"></i>Müşteri İşlemleri</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/AEmployee/Index" data-i18n="nav.dash.ecommerce"><i class="la la-female"></i>Model İşlemleri</a>
+                        </li>
+                        @*<li>
+                                <a class="menu-item" href="/Customer/Insert" data-i18n="nav.dash.ecommerce"><i class="la la-user-plus"></i>Müşteri Ekle</a>
+                            </li>*@
+
+                    </ul>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-envelope"></i><span class="menu-title" data-i18n="nav.dash.main">Mesaj İşlemleri</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/AMessage/CustomerMessageList" data-i18n="nav.dash.ecommerce"><i class="la la-male"></i>Müşterilere Mesaj Gönder</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/AMessage/EmpMessageList" data-i18n="nav.dash.ecommerce"><i class="la la-female"></i>Modellere Mesaj Gönder</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/AMessage/AllUserSend" data-i18n="nav.dash.ecommerce"><i class="la la-users"></i>Tüm Kullanıcılara Mesaj Gönder</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class=" nav-item">
+                    <a href="#"><i class="la la-money"></i><span class="menu-title" data-i18n="nav.dash.main">Ödeme İşlemleri</span></a>
+                    <ul class="menu-content">
+                        <li>
+                            <a class="menu-item" href="/Payment/takePayment" data-i18n="nav.dash.ecommerce"><i class="la la-sort-up green"></i>Alınan Ödemeler</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/Payment/makePayment" data-i18n="nav.dash.ecommerce"><i class="la la-sort-desc red"></i>Yapılan Ödemeler</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="/Payment/Deserve" data-i18n="nav.dash.ecommerce"><i class="la la-money red"></i>Hakediş Hesabı</a>
+                        </li>
+
+                    </ul>
+                </li>
+                @*<li class=" nav-item">
+                        <a href="#"><i class="la la-shopping-cart"></i><span class="menu-title" data-i18n="nav.dash.main">Ürün İşlemleri</span></a>
+                        <ul class="menu-content">
+                            <li>
+                                <a class="menu-item" href="/Product/Index" data-i18n="nav.dash.ecommerce"><i class="la la-list"></i>Tüm Ürünler</a>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="/Product/CriticalProduct" data-i18n="nav.dash.ecommerce"><i class="la la-ambulance text-danger"></i>Kritik Ürünler</a>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="/Product/Insert" data-i18n="nav.dash.crypto"><i class="la la-plus"></i> Ürün Ekle</a>
+                            </li>
+                        </ul>
+                    </li>
+                                <li class=" nav-item">
+                                <a href="#"><i class="la la-bar-chart"></i><span class="menu-title" data-i18n="nav.dash.main">Sipariş İşlemleri</span></a>
+                                <ul id="magaza" class="menu-content"></ul>
+                            </li>
+                *@
+                @*<li class=" nav-item">
+                        <a href="#"><i class="la la-cogs"></i><span class="menu-title" data-i18n="nav.dash.main">Ayarlar</span></a>
+                        <ul class="menu-content">
+                            <li>
+                                <a class="menu-item" href="#" data-i18n="nav.dash.ecommerce"><i class="la la-building"></i>Mağaza İşlemleri</a>
+                                <ul class="menu-content">
+                                    <li>
+                                        <a class="menu-item" href="/Setup/StoreIndex" data-i18n="nav.dash.ecommerce">Tüm Mağazalar</a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item" href="/Setup/StoreInsert" data-i18n="nav.dash.ecommerce">Mağaza Ekle</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="#" data-i18n="nav.dash.ecommerce"><i class="la la-users"></i>Kullanıcı İşlemleri</a>
+                                <ul class="menu-content">
+                                    <li>
+                                        <a class="menu-item" href="/Setup/UserIndex" data-i18n="nav.dash.ecommerce">Tüm Kullanıcılar</a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item" href="/Setup/UserInsert" data-i18n="nav.dash.ecommerce">Kullanıcı Ekle</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="#" data-i18n="nav.dash.ecommerce"><i class="la la-user"></i>Toptancı İşlemleri</a>
+                                <ul class="menu-content">
+                                    <li>
+                                        <a class="menu-item" href="/Setup/SupplierIndex" data-i18n="nav.dash.ecommerce">Tüm Toptancılar</a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item" href="/Setup/SupplierInsert" data-i18n="nav.dash.ecommerce">Toptancı Ekle</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="" data-i18n="nav.dash.ecommerce"><i class="la la-list"></i>Kategori İşlemleri</a>
+                                <ul class="menu-content">
+                                    <li>
+                                        <a class="menu-item" href="/Setup/CategoryIndex" data-i18n="nav.dash.ecommerce">Tüm Kategoriler</a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-item" href="/Setup/CategoryInsert" data-i18n="nav.dash.ecommerce">Kategori Ekle</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>*@
+            </ul>
+
+        </div>
+    </div>
+    <div class="app-content content">
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+        <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+            <span class="float-md-left d-block d-md-inline-block">
+                Copyright &copy; @DateTime.Now.Year <a class="text-bold-800 grey darken-2" href="//www.canlisohbetevi.com" target="_blank">Canlı Sohbet Evi</a>, All rights reserved.
+            </span>
+            <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
+        </p>
+    </footer>
+    <!-- BEGIN VENDOR JS-->
+    <script src="/Assets/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="/Assets/app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
+    <script src="/Assets/app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
+    <script src="/Assets/app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
+    <script src="/Assets/app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js"
+            type="text/javascript"></script>
+    <script src="/Assets/app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js"
+            type="text/javascript"></script>
+    <script src="/Assets/app-assets/data/jvector/visitor-data.js" type="text/javascript"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!--DATA TABLE-->
+
+    <script src="~/Assets/app-assets/js/scripts/tables/datatables/datatable-basic.js"></script>
+    <!--DATA TABLE END-->
+    <!-- BEGIN MODERN JS-->
+    <script src="/Assets/app-assets/js/core/app-menu.js" type="text/javascript"></script>
+    <script src="/Assets/app-assets/js/core/app.js" type="text/javascript"></script>
+    <script src="/Assets/app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+    <!-- END MODERN JS-->
+    <script src="~/Assets/app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+    <script src="~/Assets/app-assets/js/scripts/tables/datatables/datatable-advanced.js"></script>
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="~/Assets/app-assets/js/scripts/pages/dashboard-sales.js" type="text/javascript"></script>
+    <script src="~/Assets/Custom/Util.js"></script>
+    <!-- END PAGE LEVEL JS-->
+
+    @RenderSection("TU", false)
+    @RenderSection("JS", false)
+    <script src="~/Assets/toastr/toastr.js"></script>
+
+
+</body>
+</html>

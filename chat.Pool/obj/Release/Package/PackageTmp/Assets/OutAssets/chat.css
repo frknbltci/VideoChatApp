@@ -1,0 +1,428 @@
+﻿body {
+    background: url("img/background.jpg") no-repeat fixed top center / 100% auto rgba(0, 1, 2, 0);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+}
+
+nav {
+    background: none repeat scroll 0 0 rgba(112, 21, 122, 0);
+    position: absolute;
+    top: 0;
+    z-index: 500;
+}
+
+.top-nav {
+    background: none repeat scroll 0 0 rgba(110, 10, 110, 0.85);
+}
+
+    .top-nav ul {
+        padding: 0;
+    }
+
+.logo {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+}
+
+.top-nav li a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.top-nav .logo a, .top-nav .logo.active-item a {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+    .top-nav .logo a strong {
+        font-weight: 800;
+        line-height: 1.5;
+    }
+
+.top-nav {
+    text-align: center;
+}
+
+    .top-nav li a:hover, .top-nav li.active-item a, .top-nav .logo.active-item a:hover {
+    }
+
+    .top-nav li.logo a, .top-nav li.logo.active-item a, .top-nav .logo {
+    }
+
+nav ul li ul li {
+    text-align: left;
+}
+
+.top-nav ul ul {
+    background: none repeat scroll 0 0 rgb(12, 22, 11);
+}
+
+.top-nav li ul li a {
+    background: none repeat scroll 0 0 rgb(12, 22, 11);
+}
+
+#fourth-block h2 {
+    color: #fff;
+}
+
+#fourth-block p {
+    color: #fff;
+}
+
+#first-block, #second-block, #third-block, #fourth-block {
+    text-align: center;
+    padding: 1.0rem 0;
+}
+
+#carousel {
+    background: #fff;
+}
+
+#first-block {
+    background: #fff;
+}
+
+#second-block {
+    background: none repeat scroll 0 0 rgba(110, 22, 110, 0.93);
+}
+
+#third-block {
+    background: #fff;
+    min-height: 300px;
+}
+
+#fourth-block {
+    background: rgb(0, 30, 34);
+}
+
+footer {
+    background: none repeat scroll 0 0 #59114C;
+    padding: 1.5em 0;
+}
+
+    footer p, footer a:link, footer a:visited, footer a:hover {
+        color: #fff;
+    }
+/*frm*/
+.form-clear {
+    clear: both;
+    height: 20px;
+}
+
+.sign-up-form {
+    background: linear-gradient(to bottom, rgb(110, 10, 100), rgba(50, 10, 5, 0.44) 68%);
+    position: relative;
+    width: 400px;
+    height: auto;
+    padding: 40px 30px;
+    text-align: center;
+    color: #fff;
+    z-index: 1000;
+    border-radius: 15px 50px;
+    margin: auto;
+}
+
+    .sign-up-form:after {
+        content: "";
+        border-color: #b14f14 transparent transparent;
+        border-width: 40px 170px 0;
+        bottom: -40px;
+        height: 0;
+        left: 0;
+        position: absolute;
+        width: 0;
+    }
+
+    .sign-up-form h4 {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .sign-up-form .line-divider {
+        background: none;
+        height: 1px;
+        border-top: 1px solid rgba(255, 255, 255, .20);
+        width: 180px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .sign-up-form .form-wrapper {
+        padding: 20px 20px 0;
+        border: 1px solid rgba(255, 255, 255, .2);
+        border-top: none;
+        margin-bottom: 30px;
+    }
+
+        .sign-up-form .form-wrapper .signup-text {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .sign-up-form .form-wrapper .form-group {
+            margin-bottom: 10px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, .20);
+            border-radius: 5px 15px;
+        }
+
+            .sign-up-form .form-wrapper .form-group .form-control {
+                border: none;
+                box-shadow: none;
+                border-radius: 17px;
+                padding-left: 20px;
+                height: 40px;
+                width: 100%;
+            }
+
+        .sign-up-form .form-wrapper button {
+            position: relative;
+            top: 20px;
+            border-radius: 17px;
+        }
+
+    .sign-up-form a {
+        color: #fff;
+    }
+
+    .sign-up-form img.form-shadow {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 100%;
+    }
+
+.btn-secondary {
+    background: linear-gradient(to bottom, rgba(100,100,113,1), rgb(85, 45, 95));
+    padding: 0 40px;
+    border: none;
+    min-height: 36px;
+    font-size: 18px;
+    border-radius: 6px;
+    color: #fff;
+    position: relative;
+    outline: none;
+    top: 20px;
+    cursor: pointer;
+}
+
+.carousel-text {
+    display: block;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    z-index: 999;
+}
+
+    .carousel-text h2 {
+        background: none repeat scroll 0 0 #fff;
+        color: rgb(85, 30, 34);
+        display: inline-block;
+        padding: 0.3125rem 0.625rem;
+        font-size: 2em;
+    }
+
+    .carousel-text p {
+        background: none repeat scroll 0 0 rgba(85, 10, 85, 0.98);
+        color: #fff;
+        display: inline-block;
+        font-size: 1.2rem;
+        padding: 0.625rem 0.8rem;
+    }
+
+#first-block i {
+    background: none repeat scroll 0 0 #7851A6;
+    border-radius: 100px;
+    color: #fff;
+    display: block;
+    line-height: 100px;
+    margin: 0 auto;
+    width: 100px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+p.subtitile {
+    margin: 10px;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+section h3 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin: 0.8rem 0;
+    text-transform: uppercase;
+}
+
+section p {
+    font-size: 0.9rem;
+}
+
+section h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#second-block p {
+    color: #fff;
+}
+
+a.button {
+    background: none repeat scroll 0 0 #7851A6;
+    border: 0 none;
+    border-radius: 5px;
+    color: rgb(0, 30, 34);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.625rem;
+    text-transform: uppercase;
+}
+
+#head {
+    background: linear-gradient(to bottom, rgb(90, 10, 90), rgba(12, 13, 15, 0.60) 70%);
+    padding: 9rem 0 5rem;
+    text-align: center;
+}
+
+#content {
+    background: none repeat scroll 0 0 #fff;
+    padding: 5rem 0;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+    #content h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 1rem 0 0.3rem;
+        text-transform: none;
+    }
+
+.content-block {
+    background: none repeat scroll 0 0 rgb(0, 30, 34);
+    padding: 2.5rem;
+}
+
+    .content-block h3 {
+        color: #fff;
+    }
+
+    .content-block p {
+        color: #fff;
+    }
+
+#content.left-align {
+    text-align: left;
+}
+
+#content.contact-page h2 {
+    margin: 0 0 0.625rem;
+}
+
+.contact-page p {
+    font-size: 1rem;
+    font-style: normal;
+}
+
+.contact-page i {
+    background: none repeat scroll 0 0 rgb(0, 30, 34);
+    border-radius: 100px;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin: 0.3125rem 0.3125rem 0.3125rem 0;
+    text-align: center;
+    width: 35px;
+}
+
+form.customform button {
+    background: none repeat scroll 0 0 rgb(0, 30, 34);
+    border-radius: 5px;
+    transition: background 0.20s linear 0s;
+    -o-transition: background 0.20s linear 0s;
+    -ms-transition: background 0.20s linear 0s;
+    -moz-transition: background 0.20s linear 0s;
+    -webkit-transition: background 0.20s linear 0s;
+}
+
+    form.customform button:hover {
+        background: none repeat scroll 0 0 #000;
+    }
+
+form.customform input, form.customform select, form.customform textarea {
+    border-radius: 5px;
+}
+
+#map-block iframe {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background: none repeat scroll 0 0 rgb(1, 20, 35);
+    }
+
+    nav {
+        background: none repeat scroll 0 0 rgb(1, 30, 34);
+        line-height: 1rem;
+        position: relative;
+    }
+
+    .sign-up-form {
+        width: 100%;
+    }
+
+    #head {
+        padding: 10px;
+        background: #7821A6;
+    }
+
+    .top-nav {
+        text-align: left;
+    }
+
+        .top-nav li {
+            line-height: 3rem;
+        }
+
+        .top-nav .logo {
+            padding: 1.25rem;
+        }
+
+    .carousel-text h2 {
+        font-size: 1.3rem;
+    }
+
+    .carousel-text p {
+        font-size: 1rem;
+    }
+
+    ul.top-ul {
+        padding: 0;
+    }
+
+        ul.top-ul.right {
+            float: none;
+        }
+
+    footer {
+        text-align: center;
+    }
+
+        footer .right {
+            float: none;
+        }
+}

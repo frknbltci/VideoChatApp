@@ -1,0 +1,56 @@
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\bin\Debug\chat.DATA.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\bin\Debug\chat.DATA.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\obj\Debug\chat.DATA.csprojAssemblyReference.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\obj\Debug\chat.DATA.csproj.CoreCompileInputs.cache
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\obj\Debug\chat.DATA.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\obj\Debug\chat.DATA.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\bin\Debug\chat.DATA.dll.config
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\bin\Debug\chat.CORE.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\bin\Debug\EntityFramework.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\bin\Debug\chat.CORE.pdb
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\bin\Debug\EntityFramework.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TURAN\Desktop\yazılım işleri\Canlı Chat\Chato\chat.CORE\chat.DATA\obj\Debug\chat.DATA.csproj.CopyComplete
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\bin\Debug\chat.DATA.dll.config
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\bin\Debug\chat.DATA.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\bin\Debug\chat.DATA.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\bin\Debug\chat.CORE.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\bin\Debug\EntityFramework.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\bin\Debug\chat.CORE.pdb
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\bin\Debug\EntityFramework.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\obj\Debug\chat.DATA.csprojAssemblyReference.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\obj\Debug\chat.DATA.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\obj\Debug\chat.DATA.csproj.CopyComplete
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\obj\Debug\chat.DATA.dll
+C:\Users\fbalt\Source\Repos\chatroom\chat.DATA\obj\Debug\chat.DATA.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\bin\Debug\chat.DATA.dll.config
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\bin\Debug\chat.DATA.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\bin\Debug\chat.DATA.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\bin\Debug\chat.CORE.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\bin\Debug\EntityFramework.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\bin\Debug\chat.CORE.pdb
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\bin\Debug\EntityFramework.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\obj\Debug\chat.DATA.csprojAssemblyReference.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\obj\Debug\chat.DATA.csproj.CoreCompileInputs.cache
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\obj\Debug\chat.DATA.csproj.CopyComplete
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\obj\Debug\chat.DATA.dll
+C:\Users\fbalt\source\repos\chatroom\chatroom\chat.DATA\obj\Debug\chat.DATA.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\bin\Debug\chat.DATA.dll.config
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\bin\Debug\chat.DATA.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\bin\Debug\chat.DATA.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\bin\Debug\chat.CORE.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\bin\Debug\chat.CORE.pdb
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\obj\Debug\chat.DATA.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\obj\Debug\chat.DATA.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\obj\Debug\chat.DATA.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\obj\Debug\chat.DATA.dll
+C:\Users\ASUS\Desktop\Furkan\ChatDB\chatroom\chat.DATA\obj\Debug\chat.DATA.pdb

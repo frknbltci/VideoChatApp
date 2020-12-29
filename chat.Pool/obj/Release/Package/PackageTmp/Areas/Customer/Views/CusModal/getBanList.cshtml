@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "getBanList";
+    Layout = "~/Areas/Customer/Views/Shared/_CustomerLayout.cshtml";
+}
+@model List<chat.DTO.EEntity.CusBanDTO>
+
+<h6>Engellediğiniz Modeller</h6>
+<div class="card-content collapse show">
+    <div class="card-body">
+        <div class="row">
+            <table class="table table-striped table-bordered default-ordering">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Yaş</th>
+                        <th>Profil Fotoğrafı</th>
+                        <th>Yönet</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ModelName</td>
+                            <td>@item.Age</td>
+                            <td>
+                                @{ if (item.ImageUrl==null)
+                                    {
+                                        item.ImageUrl = "/Areas/Assets/ModelImg/women.png";
+                                    }}
+                           
+                                <div class="media-left pr-1">
+                                    <span  class="avatar avatar-md ">
+                                        <img class="media-object rounded-circle" src="@item.ImageUrl" />
+
+                                    </span>
+                                </div>
+                            </td>
+                           
+                          
+                            <td>
+                                <button data-toggle="modal" data-target="#showBanConfirm" type="button" value="Oku" mid="@item.ModelID" class="btn btn-sm btn-danger outBan"><i class="la la-ban"></i></button>
+
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="showBanConfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mesaj İçeriği</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+            <div class="modal-content" style="word-wrap: break-word !important; padding:10px;">
+                Kullanıcının engelini kaldırmak üzeresiniz, eminmisiniz ?
+
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-success sendBanId" eid="" data-dismiss="modal">Engeli Kaldır</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
